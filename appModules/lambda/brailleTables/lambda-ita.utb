@@ -102,6 +102,39 @@ sign  \x007F  4567   #Delete
 #--- Unicode latin
 #sign  \x0080  1578   #Control
 #From \x0080 to \x009F control characters
+#Added from lambdaIta.jbt
+sign \x0080  1578
+sign \x0081  125678
+sign \x0082  24578
+sign \x0083  1248
+sign \x0084  1378
+sign \x0085  128
+sign \x0086  12458
+sign \x0087  12345678
+sign \x0088  138
+sign \x0089  158
+sign \x008A  23478
+sign \x008B  12378
+sign \x008C  457
+sign \x008D  235678
+sign \x008E  23456
+sign \x008F  124678
+sign \x0090  23567
+sign \x0091  7
+sign \x0092  8
+sign \x0093  1235678
+sign \x0094  2345678
+sign \x0095  234578
+sign \x0096  245678
+sign \x0097  13568
+sign \x0098  56
+sign \x0099  1245678
+sign \x009A  2348
+sign \x009B  124578
+sign \x009C  458
+sign \x009D  23568
+sign \x009E  23458
+sign \x009F  12478
 
 space \x00A0 0				#no-break space
 punctuation \x00A1  2358   #Inverted exclamation mark
