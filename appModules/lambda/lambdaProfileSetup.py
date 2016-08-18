@@ -1,15 +1,16 @@
 #A part of NonVisual Desktop Access (NVDA)
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
-#Copyright (C) 2016 Alberto Zanella
+#Copyright (C) 2016 Alberto Zanella <lapostadialberto@gmail.com>
 
 import config
 import os
 import globalVars
-from logHandler import log
+
 
 PROFILE_NAME = "lambda"
-TABLE_NAME = "lambda-ita.utb"
+#Translators: This string represents the file name of the Lambda braille table for the translated language. The file should be present in the "brailleTables" directory in this addon. The default is the italian braille translation table.
+TABLE_NAME = _("lambda-ita.utb")
 
 def profileExists() :
 	try :
@@ -26,8 +27,13 @@ def createLambdaProfile() :
 	brlcfg = {}
 	brlcfg["translationTable"] = _getBrlTablePath(TABLE_NAME)
 	brlcfg["tetherTo"] = "focus"
+	brlcfg["readByParagraph"] = False
+	#lambda entry
+	lcfg = {}
+	lcfg['brailleFlatMode'] = True
 	#Write profile
 	lp["braille"] = brlcfg
+	lp['lambda'] = lcfg
 	lp.write()
 	#Update profile trigger
 	trigs = config.conf.triggersToProfiles["app:"+PROFILE_NAME] = PROFILE_NAME

@@ -3,8 +3,8 @@
 This project is an appModule for the LAMBDA Software.
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) is a software that helps blind people to read and write math using a braille display and/or a speech synthesizer.
 LAMBDA is the result of an EU-Project. For more information about LAMBDA please visit [http://www.lambdaproject.org/](http://www.lambdaproject.org/).  
-The current version of this addon is available only in Italian (including braille tables) and because of that, what follows is in Italian language. 
-If you are a non-italian user of LAMBDA and would like to contribute with translation in your language, feel free to contact the author (see below) or fork this project.
+The current version of this addon has braille tables only for the Italian language and because of that, what follows is in Italian. 
+If you are a non-italian user of LAMBDA and you would like to contribute with translations in your language, feel free to contact the author (see below) or fork this project.
 
 Thanks
 
@@ -38,11 +38,19 @@ Per quello che riguarda il braille:
 * Crea e configura un profilo applicativo apposito (in questo modo la tabella braille speciale per LAMBDA sarà attivata solo su questo software e non su altri);
 * Permette la navigazione nei menù e nelle finestre di dialogo in braille;
 * Espone in braille il testo matematico e permette di raggiungere le porzioni dello schermo grazie ai tasti di cursor routing (CR) presenti;
+* A partire dalla versione 1.1.0 presenta una doppia modalità per il braille: "Flat Mode" e non "Flat Mode". Quando "Flat Mode" è attivata, NVDA userà l'intercettatore grafico per determinare cosa è presente a schermo. Questo è utile per poter spaziare con il braille anche in aree "bianche", dove non è presente testo. Con la modalità "Flat Mode" disattivata, si avrà maggior potenza nell'elaborazione del testo, in quanto NVDA utilizzerà le funzioni messe a disposizione dal sistema operativo Windows per determinare la presenza di testo. Di contro però, non sarà possibile esplorare in braille aree bianche, prive di alcun testo. Di default la modalità "Flat Mode" è attiva. Per attivarla o disattivarla usare il comando NVDA+SHIFT+F. Si consiglia caldamente di disattivare la "Flat Mode" qualora si sia cambiato il valore dei DPI dello schermo (da 100% ad un ingrandimento maggiore).
 * Rende più sintetiche le finestre di dialogo delle matrici e della esplorazione struttura in modo che non confondano l'utente che le deve leggere;
 * Marca in braille in modo corretto quando il testo viene selezionato.
 
 ##Installazione
 Per installare l'Addon, con NVDA attivato portarsi in "Releases" quindi all'intestazione Downloads. Il primo file scaricabile si chiama "lambda.nvda-addon". Scaricarlo ed aprirlo. NVDA procederà all'installazione del componente aggiuntivo in modo automatico.
+
+##Consigli post l'installazione
+L'addon crea un profilo di NVDA chiamato "lambda" associato all'applicativo di Lambda. Il profilo imposta correttamente la tabella braille personalizzata e si assicura che il braille insegua il focus.
+Nel caso esista un precedente profilo chiamato "lambda", questo non verrà sovrascritto e quindi questi parametri dovranno essere impostati a mano dall'utente all'interno del file di configurazione dei profili.
+Per evitare questo si consiglia caldamente di cancellare ogni precedente profilo chiamato "lambda" dopo l'installazione.
+Ciò può essere utile anche nel caso di problemi legati alla configurazione di NVDA con LAMBDA.
+Se si nota, dopo un certo periodo, che NVDA non funziona più correttamente con LAMBDA, provare a rimuovere il profilo "lambda" dalla lista dei profili. In questo modo l'addon si preoccuperà di creare un nuovo profilo con i parametri configurati nel modo corretto e l'utente non dovrà preoccuparsi di modificare manualmente i file di configurazione.
 
 #Author
 
