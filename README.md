@@ -15,7 +15,7 @@ Per maggiori informazioni sul software LAMBDA si invita a consultare:
 e [http://veia.it/](http://veia.it/)
 
 Si precisa che lo sviluppo di questo add-on è avvenuto in maniera volontaria e del tutto indipendente dall'azienda rivenditore del prodotto LAMBDA, con la quale l'autore non intrattiene alcun rapporto di lavoro e/o di collaborazione. 
-Per richieste in merito al prodotto si invita pertanto a contattare l'eventuale supporto dell'azienda distributrice.
+Per richieste in merito al prodotto si invita pertanto a contattare il servizio di supporto tecnico messo a disposizione dal fornitore del prodotto.
 Per ulteriori informazioni sull'addon, richieste o altro è possibile contattare l'autore tramite email o utilizzando gli strumenti messi a disposizione su queste pagine.
 
 ##Audio presentazione
