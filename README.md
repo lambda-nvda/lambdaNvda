@@ -9,7 +9,7 @@ If you are a non-italian user of LAMBDA and you would like to contribute with tr
 Thanks
 
 #Add-On di NVDA per LAMBDA
-Questo add-on permette di utilizzare il software LAMBDA con NVDA. Deriva da un lavoro precedente di Peter Lecky della  Comenius University.  ed è stato studiato e realizzato per rendere l'accesso all'ambiente LAMBDA il più semplice e simile a ciò che già avviene con altri screen reader.
+Questo add-on permette di utilizzare il software LAMBDA con NVDA. Deriva da un lavoro precedente di Peter Lecky della  Comenius University ed è stato studiato e realizzato per rendere l'accesso all'ambiente LAMBDA il più semplice e simile a ciò che già avviene con altri screen reader.
 Per maggiori informazioni sul software LAMBDA si invita a consultare:
 [http://www.lambdaproject.org/it/](http://www.lambdaproject.org/it/)
 e [http://veia.it/](http://veia.it/)
