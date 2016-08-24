@@ -41,4 +41,4 @@ def createLambdaProfile() :
 	config.conf.saveProfileTriggers()
 
 def _getBrlTablePath(tableName) :
-	return os.path.join(globalVars.appArgs.configPath, "addons", "Lambda", "appModules",PROFILE_NAME,"brailleTables",tableName)
+	return os.path.abspath(os.path.join(globalVars.appArgs.configPath, "addons", "Lambda", "appModules",PROFILE_NAME,"brailleTables",tableName))
