@@ -40,5 +40,14 @@ def createLambdaProfile() :
 	#Update profile configs
 	config.conf.saveProfileTriggers()
 
+
+def updateTablePath() :
+	basepath = os.path.abspath(globalVars.appArgs.configPath)
+	lp = config.conf._getProfile(PROFILE_NAME,True)
+	if basepath not in lp["braille"]["translationTable"] : #Directory has been moved
+		lp["braille"]["translationTable"] = _getBrlTablePath(TABLE_NAME)
+		lp.write()	
+    
+
 def _getBrlTablePath(tableName) :
 	return os.path.abspath(os.path.join(globalVars.appArgs.configPath, "addons", "Lambda", "appModules",PROFILE_NAME,"brailleTables",tableName))

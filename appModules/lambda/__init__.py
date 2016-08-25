@@ -13,7 +13,9 @@ class AppModule(appModuleHandler.AppModule):
 	
 	def __init__(self, *args, **kwargs):
 		super(AppModule, self).__init__(*args, **kwargs)
-		if not (lp.profileExists()) :
+		if  (lp.profileExists()) :
+			lp.updateTablePath() 
+		else:
 			lp.createLambdaProfile()
 	
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
