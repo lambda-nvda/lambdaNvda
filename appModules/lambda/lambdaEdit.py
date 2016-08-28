@@ -28,10 +28,11 @@ class LambdaEditorTextInfo(edit.EditTextInfo) :
 	#JVEditor Bug: can't move the caret to \n, force move to \r
 	def move(self,unit,direction,endPoint=None):
 		retval = super(LambdaEditorTextInfo,self).move(unit,direction,endPoint)
-		if retval and unit == textInfos.UNIT_CHARACTER :
+		if retval and unit == textInfos.UNIT_CHARACTER and endPoint == None :
 			ti = self.copy()
 			ti.expand(textInfos.UNIT_CHARACTER)
-			return super(LambdaEditorTextInfo,self).move(unit,direction,endPoint)
+			if ti.text == '\n' :
+				return super(LambdaEditorTextInfo,self).move(unit,direction,endPoint)
 		return retval
 	
 	def updateCaret(self):
