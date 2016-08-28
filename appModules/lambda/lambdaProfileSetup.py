@@ -6,6 +6,7 @@
 import config
 import os
 import globalVars
+import braille
 
 
 PROFILE_NAME = "lambda"
@@ -40,6 +41,8 @@ def createLambdaProfile() :
 	#Update profile configs
 	config.conf.saveProfileTriggers()
 
+def addBrailleTableToGUI():
+	braille.TABLES = braille.TABLES + ((_getBrlTablePath(TABLE_NAME),TABLE_NAME,False,),)
 
 def updateTablePath() :
 	basepath = os.path.abspath(globalVars.appArgs.configPath)

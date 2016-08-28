@@ -13,7 +13,7 @@ import config
 import textInfos
 import ui
 import api
-
+from logHandler import log
 
 #We used EditableTextDisplayModelTextInfo to render cursor when in white spaces
 class LambdaEditorFlatTextInfo(EditableTextDisplayModelTextInfo) :
@@ -24,6 +24,16 @@ class LambdaEditorFlatTextInfo(EditableTextDisplayModelTextInfo) :
 
 #Broken implementation of EditTextInfo
 class LambdaEditorTextInfo(edit.EditTextInfo) :
+	
+	#JVEditor Bug: can't move the caret to \n, force move to \r
+	def move(self,unit,direction,endPoint=None):
+		retval = super(LambdaEditorTextInfo,self).move(unit,direction,endPoint)
+		if retval and unit == textInfos.UNIT_CHARACTER :
+			ti = self.copy()
+			ti.expand(textInfos.UNIT_CHARACTER)
+			return super(LambdaEditorTextInfo,self).move(unit,direction,endPoint)
+		return retval
+	
 	def updateCaret(self):
 		self._setSelectionOffsets(self._startOffset,0)
 		braille.handler.mainBuffer.clear()

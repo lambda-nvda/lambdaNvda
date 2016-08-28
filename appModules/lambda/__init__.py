@@ -17,6 +17,7 @@ class AppModule(appModuleHandler.AppModule):
 			lp.updateTablePath() 
 		else:
 			lp.createLambdaProfile()
+		lp.addBrailleTableToGUI()
 	
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if (obj.windowClassName == u'TJvEditor') or (obj.windowClassName == u'TLambdaEdit') :  
