@@ -3,11 +3,13 @@
 #See the file COPYING for more details.
 #Copyright (C) 2016 Alberto Zanella <lapostadialberto@gmail.com>
 
+import addonHandler
 import appModuleHandler
 import controlTypes
 from . import lambdaProfileSetup as lp
 from lambdaEdit import LambdaEditField
 
+addonHandler.initTranslation()
 
 class AppModule(appModuleHandler.AppModule):
 	
