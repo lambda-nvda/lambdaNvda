@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 'Lambda' '1.1.2'\n"
+"POT-Creation-Date: 2016-08-29 13:44+0200\n"
+"PO-Revision-Date: 2016-08-29 13:54+0200\n"
+"Last-Translator: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
+"Language-Team: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: appModules/lambda/lambdaEdit.py:149
+msgid "flat mode "
+msgstr "modo plano "
+
+#: appModules/lambda/lambdaEdit.py:151
+msgid "on"
+msgstr "activado"
+
+#: appModules/lambda/lambdaEdit.py:151
+msgid "off"
+msgstr "desactivado"
+
+#: appModules/lambda/lambdaEdit.py:175
+msgid "selected"
+msgstr "seleccionado"
+
+#: appModules/lambda/lambdaEdit.py:177
+msgid "not selected"
+msgstr "no seleccionado"
+
+#: appModules/lambda/lambdaProfileSetup.py:14
+#, fuzzy
+msgid "lambda-ita.utb"
+msgstr "lambda-ita.utb"
