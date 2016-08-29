@@ -41,9 +41,9 @@ msgid "lambda-ita.utb"
 msgstr "lambda-ita.utb"
 
 #: buildVars.py:17
-msgid "Lambda Editor application"
+msgid "Lambda math editor addon"
 msgstr "Aplicación editora Lambda"
 
 #: buildVars.py:20
-msgid "AppModule per Lambda"
+msgid "This addon provides access to the Lambda math editor with both braille and speech support."
 msgstr "Módulo de aplicación para Lambda"

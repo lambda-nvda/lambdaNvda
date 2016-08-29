@@ -14,16 +14,18 @@ addon_info = {
 	"addon_name" : "Lambda",
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on to be shown on installation and add-on information.
-	"addon_summary" : _("Lambda Editor application"),
-	# Add-on description
+	"addon_summary" : _("Lambda math editor addon"),
+	# Add-on description: can span multiple lines with """ syntax """
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description" : _("""AppModule per Lambda"""),
+	"addon_description" : _("This addon provides access to the Lambda math editor with both braille and speech support."),
 	# version
 	"addon_version" : "1.1.2",
 	# Author(s)
-	"addon_author" : u"Alberto Zanella",
+	"addon_author" : "Alberto Zanella <lapostadialberto@gmail.com>",
 	# URL for the add-on documentation support
-	"addon_url" : None,
+	
+	"addon_url" : "https://github.com/albzan/lambda-nvda",
+	
 	# Documentation file name
 	"addon_docFileName" : "readme.html",
 }
@@ -33,7 +35,13 @@ import os.path
 
 # Define the python files that are the sources of your add-on.
 # You can use glob expressions here, they will be expanded.
-pythonSources = ['addon/appModules/*/*.py']
+pythonSources = [
+	
+	
+	os.path.join("addon", "appModules", "**"),
+	
+]
+
 
 # Files that contain strings for translation. Usually your python sources
 i18nSources = pythonSources + ["buildVars.py"]

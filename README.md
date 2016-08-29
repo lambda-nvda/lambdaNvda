@@ -1,66 +1,74 @@
-#Lambda Add-On for NVDA
+<!---
+This is not the source for the readme file of NVDA Addon. This is just for the Github repository. The source for the NVDA Addon build is readme-src.md. Thanks!
+-->
+
+#Lambda Add-On for NVDA#
+
+Se sei un utente italiano [visita questa pagina](https://github.com/albzan/lambda-nvda/wiki/benvenuto)
+
+If you are an italian user please [visit this page](https://github.com/albzan/lambda-nvda/wiki/benvenuto)
 
 This project is an appModule for the LAMBDA Software. It has been inspired by the work of Peter Lecky at the Comenius University. 
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) is a software that helps blind people to read and write math using a braille display and/or a speech synthesizer.
 LAMBDA is the result of an EU-Project. For more information about LAMBDA please visit [http://www.lambdaproject.org/](http://www.lambdaproject.org/).  
-The current version of this addon has braille tables only for the Italian language and because of that, what follows is in Italian. 
+The current version of this addon has braille tables only for the Italian language but its interface is available both in Italian and Spanish right now.
 If you are a non-italian user of LAMBDA and you would like to contribute with translations in your language, feel free to contact the author (see below) or fork this project.
 
+**Please note:** This addon has been developed by Alberto Zanella as a voluntary activity. Nor the author or the contributors are enrolled in selling and / or developing the software Lambda. If you would like to get more information about Lambda, address issues or get support, please contact your local distributor. If you are encountering any difficulties using or installing this addon, please contact the author or use "Issues" link available on the Github project page.
+
+##Addon Features:
+
+###Speech support:
+
+* Dialogs and menus are properly spoken;
+* It speaks math formulas using the internal Lambda processor engine, by this way the text on the editor sounds natural (i.e. "compound root 3 sep compound root 3 x plus 24, close compound root, minus 3 equals 0");
+* Reading by character, words, lines and Say All implemented;
+* Speaks when a block of text is selected or extended (using CTRL+B and SHIFT+CTRL+B);
+* Speaks when moving in the text editor using standard Windows commands and Lambda-specific commands too;
+* Both Extended and Short speech modes are supported (you can set it using the Tools menu in Lambda);
+*  Special dialog windows like structure mode, calculator, and matrix are now correctly reported and NVDA reads correctly when you move around or input the text ;
+* Typing echo uses the Lambda text processor, so symbols and markers will be correctly spoken.
+
+###Braille support:
+* The addon install (inside the user profile directory) and activates a custom braille table. This table may differs in different languages. The table was made starting from the one present in the Lamba plugin for JAWS (jbt file). Then symbols and markers are represented using the same dot patterns;
+* The addon creates an NVDA profile and sets the proper braille configuration. Then, the output is set to the custom braille table only when the Lambda application is active;
+* Dialogs and menus are properly reported in braille;
+* The content of the editor is correctly redered in braille and the user is able to move using braille scrolling keys or cursor routing keys;
+* Starting from the addon version 1.1.0 there are two ways in which the text in the Lambda editor is rendered: "Flat mode" and "non-Flat Mode". When the "Flat mode" is on, NVDA will use the Display Model to retrieve the information from the editor and to determine the caret position. This is especially beneficial when the user needs to move around on the screen, even in white spaces of the editor. When the  "Flat Mode" is set to "off", text rendering on the braille display is more stable, since NVDA uses Windows API to retrieve it. By this way, though, when the user moves in white spaces the caret on the braille display will not follows the real cursor as long as a non-white space will be inserted by the user. 
+
+The "flat mode" is active by default. You can toggle "flat mode" on or off by pressing NVDA+SHIFT+F.
+
+We strongly recommend to disable the Flat Mode if you are using custom DPI in Windows (Custom sizing option), especially when you are enlarging the size (larger than 100%).
+* Simplifies the structure of dialog boxes removing repeated information;
+* The selection will be marked properly using dots 7 and 8, and properly refreshed when pressing standard Windows commands (SHIFT+ARROWS) or Lambda specific commands (CTRL+B, CTRL+SHIFT+B).
+
+##Setup
+To install this addon go to "Releases" in the Github repository page, then jump to the Downloads heading. Open the first link you'll locate, which is named "lambda.nvda-addon". Download it and run it using your NVDA Screen Reader. The setup will be automatically performed.
+
+##Before start using this addon.
+This addon creates an NVDA profile named "lambda" which is associated with the "lambda.exe" application. The profile is configured with all option regarding the custom braille tables, the focus tethering and the flat mode settings.
 
 
-Thanks
+If a previous existing profile with the same name is present, this will not be override and you have to manually put this configuration inside your profile setting file. 
 
-#Add-On di NVDA per LAMBDA
-Questo add-on permette di utilizzare il software LAMBDA con NVDA. Deriva da un lavoro precedente di Peter Lecky della  Comenius University ed è stato studiato e realizzato per rendere l'accesso all'ambiente LAMBDA il più semplice e simile a ciò che già avviene con altri screen reader.
+To stave off this situation, after the installation of the addon we suggest to delete old versions of the "lambda" profile. To do so, open the NVDA menu, select the "Configuration profiles" menu Item and press ENTER.
 
-Per maggiori informazioni sul software LAMBDA si invita a consultare:
-[http://www.lambdaproject.org/it/](http://www.lambdaproject.org/it/)
-e [http://veia.it/](http://veia.it/)
-
-Si precisa che lo sviluppo di questo add-on è avvenuto in maniera volontaria e del tutto indipendente dall'azienda rivenditore del prodotto LAMBDA, con la quale l'autore non intrattiene alcun rapporto di lavoro e/o di collaborazione. 
-Per richieste in merito al prodotto si invita pertanto a contattare il servizio di supporto tecnico messo a disposizione dal fornitore del prodotto.
-
-Per ulteriori informazioni sull'addon, richieste o altro è possibile contattare l'autore tramite email o utilizzando gli strumenti messi a disposizione su queste pagine.
-
-##Audio presentazione
-Se volete scoprire nel dettaglio alcune delle caratteristiche di questo addon potete ascoltare la audio presentazione disponibile a 
-[questo indirizzo](https://drive.google.com/file/d/0B52OCBeOqw26ZU5aZnptTWFNTVk/view?usp=sharing)
-
-##Caratteristiche principali:
-Per quello che riguarda l'accesso in sintesi vocale:
-* Vocalizza correttamente le finestre di dialogo ed i menù;
-* Vocalizza le formule matematiche utilizzando il sistema di processamento di testi di LAMBDA, quindi legge correttamente ed in modo naturale il testo matematico (ad esempio "radice 3 di 3x più 24, fine radice");
-* Permette di leggere per carattere, riga, o con il leggi-tutto;
-* Vocalizza correttamente la selezione dei blocchi;
-* Vocalizza correttamente gli spostamenti all'interno del testo utilizzando i principali tasti standard di Windows e quelli specifici di LAMBDA;
-* Vocalizza sia in maniera compatta che estesa;
-* Vocalizza le finestre di esplorazione struttura, la calcolatrice e la finestra di esplorazione delle matrici;
-* Il riscontro in scrittura avviene usando il sistema di processamento testi di LAMBDA.
-
-Per quello che riguarda il braille:
-* Installa una tabella braille personalizzata costruita a partire da quella a standard di LAMBDA per JAWS (la simbologia quindi è identica a quella usata per JAWS);
-* Crea e configura un profilo applicativo apposito (in questo modo la tabella braille speciale per LAMBDA sarà attivata solo su questo software e non su altri);
-* Permette la navigazione nei menù e nelle finestre di dialogo in braille;
-* Espone in braille il testo matematico e permette di raggiungere le porzioni dello schermo grazie ai tasti di cursor routing (CR) presenti;
-* A partire dalla versione 1.1.0 presenta una doppia modalità per il braille: "Flat Mode" e non "Flat Mode". Quando "Flat Mode" è attivata, NVDA userà l'intercettatore grafico per determinare cosa è presente a schermo. Questo è utile per poter spaziare con il braille anche in aree "bianche", dove non è presente testo. Con la modalità "Flat Mode" disattivata, si avrà maggior potenza nell'elaborazione del testo, in quanto NVDA utilizzerà le funzioni messe a disposizione dal sistema operativo Windows per determinare la presenza di testo. Di contro però, non sarà possibile esplorare in braille aree bianche, prive di alcun testo. Di default la modalità "Flat Mode" è attiva. Per attivarla o disattivarla usare il comando NVDA+SHIFT+F. Si consiglia caldamente di disattivare la "Flat Mode" qualora si sia cambiato il valore dei DPI dello schermo (da 100% ad un ingrandimento maggiore).
-* Rende più sintetiche le finestre di dialogo delle matrici e della esplorazione struttura in modo che non confondano l'utente che le deve leggere;
-* Marca in braille in modo corretto quando il testo viene selezionato.
-
-##Installazione
-Per installare l'Addon, con NVDA attivato portarsi in "Releases" quindi all'intestazione Downloads. Il primo file scaricabile si chiama "lambda.nvda-addon". Scaricarlo ed aprirlo. NVDA procederà all'installazione del componente aggiuntivo in modo automatico.
-
-##Consigli post l'installazione
-L'addon crea un profilo di NVDA chiamato "lambda" associato all'applicativo di Lambda. Il profilo imposta correttamente la tabella braille personalizzata e si assicura che il braille insegua il focus.
-Nel caso esista un precedente profilo chiamato "lambda", questo non verrà sovrascritto e quindi questi parametri dovranno essere impostati a mano dall'utente all'interno del file di configurazione dei profili.
-Per evitare questo, dopo ogni installazione o aggiornamento dell'addon di NVDA per Lambda, **si consiglia caldamente di cancellare ogni precedente profilo chiamato "lambda"** accedendo al menù di NVDA, quindi andando in "Gestione profili".
-
-Se si preferisce è possibile procedere manualmente, in questo caso consultare le note di rilascio per capire come modificare il file profilo "lambda.ini".
+In the Configuration profiles dialog, you'll be able to locate and delete the "lambda" profile. The profile will be re-created the next time you'll launch the Lambda application.
 
 
+Deleting the "lambda" profile should be an easy solution also when you find any issue that "appears" at some point using the addon. For instance, if the braille table is not properly set, instead of manually configuring the profile you can simply delete it. The addon will create a new one the next time you'll load the Lambda editor.
 
-La rimozione del profilo può essere utile anche nel caso di problemi legati alla configurazione di NVDA con LAMBDA.
-Se si nota, dopo un certo periodo, che NVDA non funziona più correttamente con LAMBDA, provare a rimuovere il profilo "lambda" dalla lista dei profili. In questo modo l'addon si preoccuperà di creare un nuovo profilo con i parametri configurati nel modo corretto e l'utente non dovrà preoccuparsi di modificare manualmente i file di configurazione.
 
-#Author
+#Authors and Contributors, Supporters...:
+First author:
+Alberto Zanella <lapostadi[myfirstname]@gmail.com>
 
-Alberto Zanella - lapostadi[firstname]@gmail.com
+Translators:
+Iván Novegil
+
+Other people enrolled in this project:
+Alessandro Albano
+Christian Leo
+Simone Dal Maso
+
+
