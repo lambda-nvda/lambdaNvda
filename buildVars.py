@@ -19,7 +19,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("This addon provides access to the Lambda math editor with both braille and speech support."),
 	# version
-	"addon_version" : "1.1.2",
+	"addon_version" : "1.1.3-dev",
 	# Author(s)
 	"addon_author" : "Alberto Zanella <lapostadialberto@gmail.com>",
 	# URL for the add-on documentation support
@@ -38,7 +38,9 @@ import os.path
 pythonSources = [
 	
 	
-	os.path.join("addon", "appModules", "**"),
+	os.path.join("addon","appModules","lambda", "*.py"),
+	os.path.join("addon", "*.py"),
+	
 	
 ]
 

@@ -1,33 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: 'Lambda' '1.1.2'\n"
-"POT-Creation-Date: 2016-08-29 14:07+0200\n"
-"PO-Revision-Date: 2016-08-29 14:09+0200\n"
-"Last-Translator: Alberto Zanella\n"
-"Language-Team: Alberto Zanella\n"
-"Language: it\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
+"POT-Creation-Date: 2016-08-30 11:31+0200\n"
+"PO-Revision-Date: 2016-08-30 11:38+0100\n"
+"Last-Translator: \n"
+"Language-Team: Alberto Zanella <lapostadialberto@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: None\n"
-"X-Poedit-Basepath: ../../../..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SearchPath-0: addon\n"
-"X-Poedit-SearchPath-1: buildVars.py\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: it\n"
 
-#: addon/appModules/lambda/lambdaEdit.py:149
+#. Translators: This is the API / DisplayMode approach for the editor window. It is a toggle (on/off)
+#: addon\appModules\lambda\lambdaEdit.py:149
 msgid "flat mode "
-msgstr "modalità flat "
+msgstr "modalità flat"
 
-#: addon/appModules/lambda/lambdaProfileSetup.py:14
-#, fuzzy
+#: addon\appModules\lambda\lambdaEdit.py:151
+msgid "on"
+msgstr ""
+
+#: addon\appModules\lambda\lambdaEdit.py:151
+msgid "off"
+msgstr ""
+
+#: addon\appModules\lambda\lambdaEdit.py:175
+msgid "selected"
+msgstr ""
+
+#: addon\appModules\lambda\lambdaEdit.py:177
+msgid "not selected"
+msgstr ""
+
+#. Translators: This string represents the file name of the Lambda braille table for the translated language. The file should be present in the "brailleTables" directory in this addon. The default is the italian braille translation table.
+#: addon\appModules\lambda\lambdaProfileSetup.py:14
 msgid "lambda-ita.utb"
-msgstr "lambda-ita.utb"
+msgstr ""
 
+#. # Translators: message box when user is installing the addon in NVDA and a previous "lambda" profile was found..
+#: addon\installTasks.py:14
+msgid ""
+"Another profile named \"lambda\" is already present in your NVDA "
+"configuration. \n"
+"This prevents the addon on create and configure the lambda profile "
+"correctly.\n"
+"If you want the addon to configure a lambda profile for you, please delete "
+"the old one named \"lambda\" using the NVDA \"Configuration Profiles\" "
+"dialog.\n"
+"The new profile will be created the next time you'll start the Lambda app.\n"
+"Otherwise please edit your profile configuration file manually.\n"
+msgstr ""
+"Un altro profilo chiamato \"lambda\" è già presente nell'attuale "
+"configurazione di NVDA. \n"
+"Ciò comporta che l'addon non creerà e configurerà correttamente un profilo "
+"per Lambda.\n"
+"Se si desidera che l'addon proceda in modo automatico alla creazione di un "
+"profilo per Lambda, si prega di cancellare il profilo esistente utilizzando "
+"la finestra di dialogo \"Configurazione Profili\" richiamabile dal menù di "
+"NVDA.\n"
+"Il nuovo profilo verrà creato automaticamente al successivo avvio "
+"dell'applicazione Lambda.\n"
+"In alternativa è possibile configurare manualmente il profilo modificando i "
+"file di configurazione.\n"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
 #: buildVars.py:17
 msgid "Lambda math editor addon"
-msgstr "Lambda per NVDA"
+msgstr "LAMBDA per NVDA"
 
+#. Add-on description: can span multiple lines with """ syntax """
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 #: buildVars.py:20
-msgid "This addon provides access to the Lambda math editor with both braille and speech support."
-msgstr "Questo componente aggiuntivo offre supporto braille e vocale all'editor Lambda"
+msgid ""
+"This addon provides access to the Lambda math editor with both braille and "
+"speech support."
+msgstr ""
+"Questo addon facilita l'uso di Lambda con NVDA offrendo il supporto braille "
+"ed in sintesi vocale."
