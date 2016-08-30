@@ -46,15 +46,9 @@ Se si preferisce è possibile procedere manualmente, in questo caso consultare l
 La rimozione del profilo può essere utile anche nel caso di problemi legati alla configurazione di NVDA con LAMBDA.
 Se si nota, dopo un certo periodo, che NVDA non funziona più correttamente con LAMBDA, provare a rimuovere il profilo "lambda" dalla lista dei profili. In questo modo l'addon si preoccuperà di creare un nuovo profilo con i parametri configurati nel modo corretto e l'utente non dovrà preoccuparsi di modificare manualmente i file di configurazione.
 
-#Autori, Collaboratori, Supporters...
-
-Sviluppatore iniziale:
-Alberto Zanella - lapostadi[mionome]@gmail.com
-
-Traduttori:
-Iván Novegil
-
-Altre persone che hanno contribuito:
-Alessandro Albano
-Christian Leo
-Simone Dal Maso
+#Autore e collaboratori:
+* Autore: Alberto Zanella - lapostadi[mionome]@gmail.com
+* Iván Novegil
+* Alessandro Albano
+* Christian Leo
+* Simone Dal Maso

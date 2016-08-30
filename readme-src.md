@@ -10,7 +10,7 @@ LAMBDA is the result of an EU-Project. For more information about LAMBDA please 
 The current version of this addon has braille tables only for the Italian language but its interface is available both in Italian and Spanish right now.
 If you are a non-italian user of LAMBDA and you would like to contribute with translations in your language, feel free to contact the author (see below) or fork this project.
 
-**Please note:** This addon has been developed by Alberto Zanella as a voluntary activity. Nor the author or the contributors are enrolled in selling and / or developing the software Lambda. If you would like to get more information about Lambda, address issues or get support, please contact your local distributor. If you are encountering any difficulties using or installing this addon, please contact the author or use "Issues" link available on the Github project page.
+**Please note:** This addon has been developed by Alberto Zanella as a voluntary activity. Nor the author or the contributors are involved in selling and / or developing the software Lambda. If you would like to get more information about Lambda, address issues or get support, please contact your local distributor. If you are encountering any difficulties using or installing this addon, please contact the author or use "Issues" link available on the Github project page.
 
 ##Addon Features:
 
@@ -52,16 +52,11 @@ In the Configuration profiles dialog, you'll be able to locate and delete the "l
 Deleting the "lambda" profile should be an easy solution also when you find any issue that "appears" at some point using the addon. For instance, if the braille table is not properly set, instead of manually configuring the profile you can simply delete it. The addon will create a new one the next time you'll load the Lambda editor.
 
 
-#Authors and Contributors, Supporters...:
-First author:
-Alberto Zanella <lapostadi[myfirstname]@gmail.com>
-
-Translators:
-Iván Novegil
-
-Other people enrolled in this project:
-Alessandro Albano
-Christian Leo
-Simone Dal Maso
+#Authors and Contributors:
+* Author: Alberto Zanella <lapostadi[myfirstname]@gmail.com>
+* Iván Novegil
+* Alessandro Albano
+* Christian Leo
+* Simone Dal Maso
 
 
