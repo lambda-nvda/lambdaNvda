@@ -21,6 +21,8 @@ Otherwise please edit your profile configuration file manually.
 """)
 
 def onInstall():
-	if config.conf._getProfile("lambda") :
-		gui.messageBox(profilefoundmsg)
+	try :
+		if config.conf._getProfile("lambda") :
+			gui.messageBox(profilefoundmsg)
+	except : return
     

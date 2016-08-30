@@ -7,44 +7,44 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'Lambda' '1.1.2'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2016-08-30 11:31+0200\n"
-"PO-Revision-Date: 2016-08-30 11:38+0100\n"
+"POT-Creation-Date: 2016-08-30 11:53+0200\n"
+"PO-Revision-Date: 2016-08-30 12:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: Alberto Zanella <lapostadialberto@gmail.com>\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
-"Language: it\n"
 
 #. Translators: This is the API / DisplayMode approach for the editor window. It is a toggle (on/off)
 #: addon\appModules\lambda\lambdaEdit.py:149
 msgid "flat mode "
-msgstr "modalità flat"
+msgstr "modalità flat "
 
 #: addon\appModules\lambda\lambdaEdit.py:151
 msgid "on"
-msgstr ""
+msgstr "attivato"
 
 #: addon\appModules\lambda\lambdaEdit.py:151
 msgid "off"
-msgstr ""
+msgstr "non attivato"
 
 #: addon\appModules\lambda\lambdaEdit.py:175
 msgid "selected"
-msgstr ""
+msgstr "selezionato"
 
 #: addon\appModules\lambda\lambdaEdit.py:177
 msgid "not selected"
-msgstr ""
+msgstr "non selezionato"
 
 #. Translators: This string represents the file name of the Lambda braille table for the translated language. The file should be present in the "brailleTables" directory in this addon. The default is the italian braille translation table.
 #: addon\appModules\lambda\lambdaProfileSetup.py:14
 msgid "lambda-ita.utb"
-msgstr ""
+msgstr "lambda-ita.utb"
 
 #. # Translators: message box when user is installing the addon in NVDA and a previous "lambda" profile was found..
-#: addon\installTasks.py:14
+#: addon\installTasks.py:16
 msgid ""
 "Another profile named \"lambda\" is already present in your NVDA "
 "configuration. \n"

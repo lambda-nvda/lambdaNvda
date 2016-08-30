@@ -3,6 +3,7 @@
 #See the file COPYING for more details.
 #Copyright (C) 2016 Alberto Zanella <lapostadialberto@gmail.com>
 
+import addonHandler
 import speech
 from displayModel import EditableTextDisplayModelTextInfo
 import NVDAObjects.window.edit as edit
@@ -14,6 +15,8 @@ import textInfos
 import ui
 import api
 from logHandler import log
+
+addonHandler.initTranslation()
 
 #We used EditableTextDisplayModelTextInfo to render cursor when in white spaces
 class LambdaEditorFlatTextInfo(EditableTextDisplayModelTextInfo) :
