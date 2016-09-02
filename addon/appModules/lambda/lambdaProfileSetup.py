@@ -55,4 +55,4 @@ def updateTablePath() :
     
 
 def _getBrlTablePath(tableName) :
-	return os.path.abspath(os.path.join(globalVars.appArgs.configPath, "addons", "Lambda", "appModules",PROFILE_NAME,"brailleTables",tableName))
+	return os.path.abspath(os.path.join(globalVars.appArgs.configPath, "addons", "lambda", "appModules",PROFILE_NAME,"brailleTables",tableName))
