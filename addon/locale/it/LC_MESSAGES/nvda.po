@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'Lambda' '1.1.2'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2016-08-30 11:53+0200\n"
-"PO-Revision-Date: 2016-08-30 12:21+0100\n"
+"POT-Creation-Date: 2016-09-10 20:46+0200\n"
+"PO-Revision-Date: 2016-09-10 20:50+0100\n"
 "Last-Translator: \n"
 "Language-Team: Alberto Zanella <lapostadialberto@gmail.com>\n"
 "Language: it\n"
@@ -17,33 +17,63 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#. Translators: This is the API / DisplayMode approach for the editor window. It is a toggle (on/off)
-#: addon\appModules\lambda\lambdaEdit.py:149
-msgid "flat mode "
-msgstr "modalità flat "
+#: addon\appModules\lambda\lambdaEdit.py:80
+msgid "Reports the current line under the application cursor."
+msgstr "Legge la riga in cui si trova il cursore."
 
-#: addon\appModules\lambda\lambdaEdit.py:151
-msgid "on"
-msgstr "attivato"
+#: addon\appModules\lambda\lambdaEdit.py:86
+msgid "reads from the beginning of the document up to the end of the text."
+msgstr "Legge il testo dall'inizio alla fine del documento."
 
-#: addon\appModules\lambda\lambdaEdit.py:151
-msgid "off"
-msgstr "non attivato"
+#: addon\appModules\lambda\lambdaEdit.py:92
+msgid ""
+"Announces the current selection in edit controls and documents. If there is "
+"no selection it says so."
+msgstr "Legge il testo attualmente selezionato."
 
-#: addon\appModules\lambda\lambdaEdit.py:175
+#: addon\appModules\lambda\lambdaEdit.py:159
 msgid "selected"
 msgstr "selezionato"
 
-#: addon\appModules\lambda\lambdaEdit.py:177
+#: addon\appModules\lambda\lambdaEdit.py:161
 msgid "not selected"
 msgstr "non selezionato"
 
-#. Translators: This string represents the file name of the Lambda braille table for the translated language. The file should be present in the "brailleTables" directory in this addon. The default is the italian braille translation table.
-#: addon\appModules\lambda\lambdaProfileSetup.py:14
+#: addon\appModules\lambda\lambdaEdit.py:211
+msgid ""
+"Extends the selection to the surrounding block and reads it. If used with "
+"shift key, reduce the block and read it."
+msgstr ""
+"Estende la selezione del blocco di testo e la legge. Se viene premuto anche "
+"SHIFT la selezione verrà ridotta di un blocco."
+
+#: addon\appModules\lambda\lambdaEdit.py:218
+msgid "Duplicates the current line and reads it"
+msgstr "Duplica la riga corrente e la legge."
+
+#. Translators: This determines whether to use API or DisplayMode to render the editor window on a braille display. It is a toggle (on/off)
+#: addon\appModules\lambda\lambdaEdit.py:225
+msgid "flat mode "
+msgstr "modalità flat "
+
+#: addon\appModules\lambda\lambdaEdit.py:227
+msgid "on"
+msgstr "attivato"
+
+#: addon\appModules\lambda\lambdaEdit.py:227
+msgid "off"
+msgstr "non attivato"
+
+#: addon\appModules\lambda\lambdaEdit.py:230
+msgid "Toggle the braille flat mode on or off."
+msgstr "Attiva o disattiva la modalità braille flat."
+
+#. Translators: This string is the file name of the Lambda braille table for the translated language. The file should be present in the "brailleTables" directory in this addon. The default is the italian braille translation table.
+#: addon\appModules\lambda\lambdaProfileSetup.py:16
 msgid "lambda-ita.utb"
 msgstr "lambda-ita.utb"
 
-#. # Translators: message box when user is installing the addon in NVDA and a previous "lambda" profile was found..
+#. # Translators: message box when user is installing the addon in NVDA and a "lambda" profile is already present.
 #: addon\installTasks.py:16
 msgid ""
 "Another profile named \"lambda\" is already present in your NVDA "
