@@ -1,4 +1,4 @@
-#A part of NonVisual Desktop Access (NVDA)
+#Addon for Lambda Math Editor
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
 #Copyright (C) 2016 Alberto Zanella <lapostadialberto@gmail.com>
@@ -13,22 +13,19 @@ import braille
 import config
 import textInfos
 import ui
-import api
-from logHandler import log
 
 addonHandler.initTranslation()
 
-#We used EditableTextDisplayModelTextInfo to render cursor when in white spaces
+#We've used EditableTextDisplayModelTextInfo when user want white spaces to be rendered in braille.
 class LambdaEditorFlatTextInfo(EditableTextDisplayModelTextInfo) :
 	def updateCaret(self):
 		self.obj.invalidateCache()
 		self.obj.redraw()
 		self._setCaretOffset(self._startOffset)
 
-#Broken implementation of EditTextInfo
+#Custom implementation of EditTextInfo because the Lambda editor seems to use different messages to set caret position.
 class LambdaEditorTextInfo(edit.EditTextInfo) :
-	
-	#JVEditor Bug: can't move the caret to \n, force move to \r
+	#JVEditor Bug: can't move the caret to \n, force move to \r (for braille CR keys)
 	def move(self,unit,direction,endPoint=None):
 		retval = super(LambdaEditorTextInfo,self).move(unit,direction,endPoint)
 		if retval and unit == textInfos.UNIT_CHARACTER and endPoint == None :
@@ -43,23 +40,20 @@ class LambdaEditorTextInfo(edit.EditTextInfo) :
 		braille.handler.mainBuffer.clear()
 		braille.handler.handleGainFocus(self.obj)
 
-
-class LambdaEditField(edit.Edit):
+'''
+Base class for Lambda edit fields with COM support. These controls shares the following behaviour:
+* Speech is retrieved from the Lambda application through a COM object;
+* Braille is rendered from textInfos.
+'''
+class LambdaEditField(edit.Edit):		
+	#Standard NVDAObject properties setters:
 	description = None
 	name = None
-	_editorClass = u'TJvEditor' 
-	_LambdaObjName = 'lambda.lambdaobj'
-	_oLambda = None
+	_LambdaObjName = 'lambda.lambdaobj' #OLE Object name
+	_oLambda = None #global object (use getLambdaObj to retrieve it)
 	editAPIVersion = 0
-	
-	def _get_TextInfo(self) :
-		if self.windowClassName == self._editorClass :
-		#Broken implementation of selection primitives in TJvEditor, fix with:
-			if (config.conf['lambda']['brailleFlatMode']) :
-				return LambdaEditorFlatTextInfo
-			else : return LambdaEditorTextInfo
-		else : return edit.EditTextInfo
-			
+
+	#OLE Lambda Object and convenient speak function
 	def getLambdaObj(self) :
 		if self._oLambda : 
 			return self._oLambda
@@ -76,10 +70,30 @@ class LambdaEditField(edit.Edit):
 		if msg == self.empty:
 			return
 		speech.speakText(msg)
-		
+	
+	#Convinent scripts to reports text and selection
+	#Translators: this is a custom implementation of the globalCommands gesture, it doesn't support spelling.
+	def script_reportCurrentLine(self,gesture) :
+		s = self.getLambdaObj().getline(self.windowHandle, -1, -1)
+		self.say(s)
+	script_reportCurrentLine.__doc__=_("Reports the current line under the application cursor.")
+	
+	#Translators: Lambda can't read from the current caret position, the implementation of sayAll provided starts reading from the top of the document.
+	def script_sayAll(self, gesture):
+		s = self.getLambdaObj().getall(self.windowHandle)
+		self.say(s)
+	script_sayAll.__doc__ = _("reads from the beginning of the document up to the end of the text.")	
+
+	#Translators: this is a custom implementation of the globalCommands gesture.
+	def script_reportCurrentSelection(self, gesture):
+		s = self.getLambdaObj().getselected(self.windowHandle)
+		self.say(s)
+	script_reportCurrentSelection.__doc__=_("Announces the current selection in edit controls and documents. If there is no selection it says so.")	
+	
+	#Events section
 	def event_valueChange(self) :
 		braille.handler.handleUpdate(self)
-
+		
 	def event_caret(self) :
 		super(edit.Edit, self).event_caret()
 		self.detectPossibleSelectionChange()
@@ -98,20 +112,16 @@ class LambdaEditField(edit.Edit):
 
 	def event_typedCharacter(self, ch):
 		pass
-
+		
+	#Scripts to handle caret movements (editableText.EditableText)
 	def script_caret_moveByCharacter(self, gesture):
 		gesture.send()
 		s = self.getLambdaObj().getchar(self.windowHandle, -1, -1)
 		self.say(s)
-
-	
+		
 	def script_caret_moveByLine(self, gesture):
 		gesture.send()
-		self.script_sayLine(gesture)
-		
-	def script_sayLine(self,gesture) :
-		s = self.getLambdaObj().getline(self.windowHandle, -1, -1)
-		self.say(s)
+		self.script_reportCurrentLine(gesture)
 
 	def script_caret_moveByWord(self, gesture):
 		gesture.send()
@@ -131,37 +141,7 @@ class LambdaEditField(edit.Edit):
 		#It loses focus - set focus on this window
 		braille.handler.handleGainFocus(self)
 
-	def script_sayAll(self, gesture):
-		s = self.getLambdaObj().getall(self.windowHandle)
-		self.say(s)
-		
-	def script_sayDuplicate(self,gesture) :
-		gesture.send()
-		line = self.getLambdaObj().getline(self.windowHandle, -1, -1)
-		self.say(line)
-		braille.handler.handleUpdate(self)
-	
-	def script_sayHighlighted(self, gesture):
-		s = self.getLambdaObj().getselected(self.windowHandle)
-		self.say(s)
-
-	def script_switch_flatMode(self,gesture) :
-		global config
-		val = config.conf['lambda']['brailleFlatMode'] = not config.conf['lambda']['brailleFlatMode']
-		#Translators: This is the API / DisplayMode approach for the editor window. It is a toggle (on/off)
-		flatModeMessage = _("flat mode ")
-		self.TextInfo = self._get_TextInfo()	
-		ui.message(flatModeMessage + ((lambda x: _("on") if x else _("off"))(val)))
-		braille.handler.mainBuffer.clear()
-		braille.handler.handleGainFocus(self)
-		
-	
-	def script_saySpecialHighlight(self, gesture):
-		gesture.send()
-		self.initAutoSelectDetection()
-		self.script_sayHighlighted(gesture)
-		braille.handler.handleUpdate(self)
-
+	#Selection detection
 	def initAutoSelectDetection(self):
 		self.s = ''
 		s = self.getLambdaObj().getselected(self.windowHandle)
@@ -175,28 +155,89 @@ class LambdaEditField(edit.Edit):
 		else :
 			s = s.strip().rstrip()
 		if len(s) > len(self.s):
-			self.say(self.getSChunk(self.s,s) + ' ' + _('selected'))
+			self.say(self._getSChunk(self.s,s) + ' ' + _('selected'))
 		elif len(s) < len(self.s) and len(s) > 0:
-			self.say(self.getSChunk(s,self.s) + ' ' + _('not selected'))
+			self.say(self._getSChunk(s,self.s) + ' ' + _('not selected'))
 		self.s = s
 	
-	def getSChunk(self, oldm, newm) :
-		if oldm in newm :
-			return newm.replace(oldm,'',1)
-		else : return newm
+	def _getSChunk(self, oldmessage, newmessage) :
+		if oldmessage in newmessage :
+			return newmessage.replace(oldmessage,'',1)
+		return newmessage
 	
-	
-
-		
-	__gestures = {'kb:control+shift+b': 'saySpecialHighlight',
-	'kb:control+b': 'saySpecialHighlight',
-	'kb:control+d':'sayDuplicate',
+	#Gestures binding:
+	__gestures = {
+	#Lambda specific commands
 	'kb:alt+leftArrow': 'caret_moveByCharacter',
 	'kb:alt+rightArrow': 'caret_moveByCharacter',
-	'kb:nvda+downArrow': 'sayAll',
-    'kb:nvda+a': 'sayAll',
-	'kb:nvda+shift+upArrow': 'sayHighlighted',
-	'kb:nvda+l': 'sayLine',
+	#SayAll override
+	"kb(desktop):NVDA+downArrow": "sayAll",
+    "kb(laptop):NVDA+a": "sayAll",
+	#Report selection
+	'kb(desktop):NVDA+shift+upArrow': 'reportCurrentSelection',
+	'kb(laptop):NVDA+shift+s': 'reportCurrentSelection',
+	#Say Line
+	'kb(desktop):NVDA+upArrow': 'reportCurrentLine',
+	'kb(laptop):NVDA+l': 'reportCurrentLine',
+	}
+
+'''
+This class extends the LambdaEditField for calculator dialog.
+'''
+class LambdaDialogEdit(LambdaEditField):
+	def script_caret_newLine(self,gesture) :
+		#Prevents NVDA speaks the calculator result twice
+		gesture.send()
+
+'''
+This class extends the LambdaEditField for matrix dialog.
+'''
+class LambdaMatrixEdit(LambdaEditField):
+	TextInfo = LambdaEditorFlatTextInfo
+
+		
+'''
+This class extends the LambdaEditField for the main editor. It adds scripts that can be used only in the main editor of Lambda.
+'''
+class LambdaMainEditor(LambdaEditField):
+	def _get_TextInfo(self) :
+		if (config.conf['lambda']['brailleFlatMode']) :
+			return LambdaEditorFlatTextInfo
+		return LambdaEditorTextInfo
+	
+	#Lambda hotkeys
+	#Translators: This is a Lambda hotkey ctrl+b extends the selection to the next surrounding block, ctrl+shift+b reduce the selection to a smaller block.
+	def script_selectBlocks(self, gesture):
+		gesture.send()
+		self.initAutoSelectDetection()
+		self.script_reportCurrentSelection(gesture)
+		braille.handler.handleUpdate(self)
+	script_selectBlocks.__doc__=_("Extends the selection to the surrounding block and reads it. If used with shift key, reduce the block and read it.")
+	
+	def script_sayDuplicate(self,gesture) :
+		gesture.send()
+		line = self.getLambdaObj().getline(self.windowHandle, -1, -1)
+		self.say(line)
+		braille.handler.handleUpdate(self)
+	script_sayDuplicate.__doc__=_("Duplicates the current line and reads it")
+	
+	#This script set the desired textInfo for braille, when flat mode is on, the LambdaEditorFlatTextInfo is used, otherwise the LambdaEditorTextInfo is set.
+	def script_switch_flatMode(self,gesture) :
+		global config
+		val = config.conf['lambda']['brailleFlatMode'] = not config.conf['lambda']['brailleFlatMode']
+		#Translators: This determines whether to use API or DisplayMode to render the editor window on a braille display. It is a toggle (on/off)
+		flatModeMessage = _("flat mode ")
+		self.TextInfo = self._get_TextInfo()	
+		ui.message(flatModeMessage + ((lambda x: _("on") if x else _("off"))(val)))
+		braille.handler.mainBuffer.clear()
+		braille.handler.handleGainFocus(self)
+	script_switch_flatMode.__doc__=_("Toggle the braille flat mode on or off.")
+
+	__gestures = {
+	#Braille flat mode
 	'kb:nvda+shift+f': 'switch_flatMode',
-	'kb:nvda+upArrow': 'sayLine',
+	#Lambda editor commands
+	'kb:control+shift+b': 'selectBlocks',
+	'kb:control+b': 'selectBlocks',
+	'kb:control+d':'sayDuplicate',
 	}

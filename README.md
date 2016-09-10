@@ -45,9 +45,8 @@ We strongly recommend to disable the Flat Mode if you are using custom DPI in Wi
 ##Setup
 To install this addon go to "Releases" in the Github repository page, then jump to the Downloads heading. Open the first link you'll locate, which is named "lambda.nvda-addon". Download it and run it using your NVDA Screen Reader. The setup will be automatically performed.
 
-##Before start using this addon.
-This addon creates an NVDA profile named "lambda" which is associated with the "lambda.exe" application. The profile is configured with all option regarding the custom braille tables, the focus tethering and the flat mode settings.
-
+##Before starting to use this addon.
+This addon creates an NVDA profile named "lambda" which is associated with the "lambda.exe" application. The profile automatically sets all braille options: the custom braille tables, the focus tethering and the flat mode settings.
 
 If a previous existing profile with the same name is present, this will not be override and you have to manually put this configuration inside your profile setting file. 
 
@@ -55,8 +54,27 @@ To stave off this situation, after the installation of the addon we suggest to d
 
 In the Configuration profiles dialog, you'll be able to locate and delete the "lambda" profile. The profile will be re-created the next time you'll launch the Lambda application.
 
-
 Deleting the "lambda" profile should be an easy solution also when you find any issue that "appears" at some point using the addon. For instance, if the braille table is not properly set, instead of manually configuring the profile you can simply delete it. The addon will create a new one the next time you'll load the Lambda editor.
+
+Each time the Lambda editor is started, this addon checks if a profile with the name "lambda" exists. If it doesn't exists it automatically generate a profile with the following form:
+
+```
+filename : userData\profiles\lambda.ini :
+
+[braille]
+	readByParagraph = False
+	tetherTo = focus
+	translationTable = path-to-the-addon-brailleTable-dir\tableName
+
+[lambda]
+	brailleFlatMode = True
+
+```
+Where :
+* path-to-the-addon-brailleTable-dir : is the absolute path of the addon directory + "\brailleTable"
+* tableName : depends to the selected language. Currently only the italian braille table, "lambda-ita.utb" , is present.
+
+
 
 
 #Authors and Contributors:

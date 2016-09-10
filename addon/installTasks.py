@@ -12,7 +12,7 @@ import config
 
 addonHandler.initTranslation()
 
-## Translators: message box when user is installing the addon in NVDA and a previous "lambda" profile was found.. 
+## Translators: message box when user is installing the addon in NVDA and a "lambda" profile is already present. 
 profilefoundmsg = _("""Another profile named "lambda" is already present in your NVDA configuration. 
 This prevents the addon on create and configure the lambda profile correctly.
 If you want the addon to configure a lambda profile for you, please delete the old one named "lambda" using the NVDA "Configuration Profiles" dialog.
