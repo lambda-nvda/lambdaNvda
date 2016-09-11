@@ -47,6 +47,7 @@ Base class for Lambda edit fields with COM support. These controls shares the fo
 '''
 class LambdaEditField(edit.Edit):		
 	#Standard NVDAObject properties setters:
+	_inDuplicate = False
 	description = None
 	name = None
 	_LambdaObjName = 'lambda.lambdaobj' #OLE Object name
@@ -98,7 +99,8 @@ class LambdaEditField(edit.Edit):
 		super(edit.Edit, self).event_caret()
 		self.detectPossibleSelectionChange()
 		self.invalidateCache()
-		self.redraw()
+		if not self._inDuplicate : #Prevents redraw during duplicateLine
+			self.redraw()
 		#Ugly but it works... This fires more quickly than valueChange
 		if config.conf['keyboard']['speakTypedCharacters']:
 			s = self.getLambdaObj().getlastinsertedel(self.windowHandle, 1)
@@ -201,7 +203,8 @@ This class extends the LambdaEditField for the main editor. It adds scripts that
 '''
 class LambdaMainEditor(LambdaEditField):
 	def _get_TextInfo(self) :
-		if (config.conf['lambda']['brailleFlatMode']) :
+		config.conf['lambda']['brailleFlatMode'] = str(config.conf['lambda']['brailleFlatMode']) == 'True'
+		if config.conf['lambda']['brailleFlatMode'] :
 			return LambdaEditorFlatTextInfo
 		return LambdaEditorTextInfo
 	
@@ -215,15 +218,19 @@ class LambdaMainEditor(LambdaEditField):
 	script_selectBlocks.__doc__=_("Extends the selection to the surrounding block and reads it. If used with shift key, reduce the block and read it.")
 	
 	def script_sayDuplicate(self,gesture) :
+		self._inDuplicate = True
 		gesture.send()
-		line = self.getLambdaObj().getline(self.windowHandle, -1, -1)
-		self.say(line)
 		braille.handler.handleUpdate(self)
+		self._inDuplicate = False
+		#line is not immediatly available
+		line = self.empty
+		while not line or line == '@@@' : 
+			line = self.getLambdaObj().getline(self.windowHandle, -1, -1)
+		self.say(line)
 	script_sayDuplicate.__doc__=_("Duplicates the current line and reads it")
 	
 	#This script set the desired textInfo for braille, when flat mode is on, the LambdaEditorFlatTextInfo is used, otherwise the LambdaEditorTextInfo is set.
 	def script_switch_flatMode(self,gesture) :
-		global config
 		val = config.conf['lambda']['brailleFlatMode'] = not config.conf['lambda']['brailleFlatMode']
 		#Translators: This determines whether to use API or DisplayMode to render the editor window on a braille display. It is a toggle (on/off)
 		flatModeMessage = _("flat mode ")
