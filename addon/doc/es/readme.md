@@ -40,7 +40,7 @@ Se recomienda vivamente deshabilitar el "Modo plano" cuando se use DPI personali
 * La selección es marcada correctamente usando los puntos 7 y 8, y correctamente refrescada al presionar comandos estándar de Windows (SHIFT+FLECHAS) o comandos específicos de Lambda (CTRL+B, CTRL+SHIFT+B).
 
 ##Antes de empezar a usar este complemento.
-Este complemento crea un perfil de NVDA nombrado como "lambda" que está asociado con la aplicación lambda.exe. Este perfil está configurado con todas las opciones en lo que a las tablas braille, a la localización del foco y a las opciones del modo plano se refiere.
+Este complemento crea un perfil de NVDA nombrado como "lambda" que está asociado con la aplicación lambda.exe. Este perfil está configurado con todas las opciones en lo que a las opciones braille, a las tablas braille personalizadas, a la localización del foco y a las opciones del modo plano se refiere.
 
 
 Si un perfil previamente existente con el mismo nombre está presente, no será sobreescrito y deberá poner manualmente esta configuración dentro del archivo de configuración del perfil.
@@ -49,8 +49,26 @@ Para salir de esta situación, después de la instalación del complemento suger
 
 En el diálogo de Perfiles de configuración, podrá localizar y borrar el perfil "lambda". El perfil será creado nuevamente la próxima vez que ejecute la aplicación Lambda.
 
-
 Eliminar el perfil "lambda" debería de ser una solución fácil también cuando encuentre algún fallo que "aparezca" en algún punto mientras se use el complemento. Por ejemplo, si la tabla braille no está correctamente establecida, en lugar de configurar manualmente el perfil puede simplemente borrarlo. El complemento creará uno nuevo la próxima vez que abra el editor Lambda.
+
+Cada vez que el editor Lambda es arrancado, el complemento verifica si existe un perfil con el nombre "lambda". Si no existe crea automáticamente un perfil con la siguiente forma:
+
+```
+Nombre del fichero: userData\profiles\lambda.ini :
+
+[braille]
+	readByParagraph = False
+	tetherTo = focus
+	translationTable = path-to-the-addon-brailleTable-dir\tableName
+
+[lambda]
+	brailleFlatMode = True
+
+```
+Where :
+* path-to-the-addon-brailleTable-dir : Es la ruta absoluta del directorio del complemento + "\brailleTables"
+* tableName : Depende del idioma seleccionado. Actualmente la tabla braille italiana, "lambda-ita.utb" , está presente.
+
 
 
 #Autores y Contribuyentes:
