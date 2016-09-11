@@ -64,7 +64,7 @@ filename : userData\profiles\lambda.ini :
 
 ```
 Where :
-* path-to-the-addon-brailleTable-dir : is the absolute path of the addon directory + "\brailleTable"
+* path-to-the-addon-brailleTable-dir : is the absolute path of the addon directory + "\brailleTables"
 * tableName : depends to the selected language. Currently only the italian braille table, "lambda-ita.utb" , is present.
 
 
