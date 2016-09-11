@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 'Lambda' '1.1.2'\n"
-"POT-Creation-Date: 2016-08-29 14:07+0200\n"
-"PO-Revision-Date: 2016-08-29 14:09+0200\n"
+"POT-Creation-Date: 2016-09-11 12:55+0200\n"
+"PO-Revision-Date: 2016-09-11 12:58+0200\n"
 "Last-Translator: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
 "Language-Team: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
 "Language: es\n"
@@ -15,35 +15,93 @@ msgstr ""
 "X-Poedit-SearchPath-0: addon\n"
 "X-Poedit-SearchPath-1: buildVars.py\n"
 
-#: addon/appModules/lambda/lambdaEdit.py:149
-msgid "flat mode "
-msgstr "modo plano "
+#: addon/appModules/lambda/lambdaEdit.py:80
+msgid "Reports the current line under the application cursor."
+msgstr "Informa de la línea actual bajo el cursor de la aplicación."
 
-#: addon/appModules/lambda/lambdaEdit.py:151
-msgid "on"
-msgstr "activado"
+#: addon/appModules/lambda/lambdaEdit.py:86
+msgid "reads from the beginning of the document up to the end of the text."
+msgstr "lee desde el comienzo del documento hasta el final del texto."
 
-#: addon/appModules/lambda/lambdaEdit.py:151
-msgid "off"
-msgstr "desactivado"
+#: addon/appModules/lambda/lambdaEdit.py:92
+msgid ""
+"Announces the current selection in edit controls and documents. If there is "
+"no selection it says so."
+msgstr ""
+"Anuncia la selección actual en controles de edición y documentos. Si no hay "
+"selección lo habla."
 
-#: addon/appModules/lambda/lambdaEdit.py:175
+#: addon/appModules/lambda/lambdaEdit.py:160
 msgid "selected"
 msgstr "seleccionado"
 
-#: addon/appModules/lambda/lambdaEdit.py:177
+#: addon/appModules/lambda/lambdaEdit.py:162
 msgid "not selected"
 msgstr "no seleccionado"
 
-#: addon/appModules/lambda/lambdaProfileSetup.py:14
+#: addon/appModules/lambda/lambdaEdit.py:218
+msgid ""
+"Extends the selection to the surrounding block and reads it. If used with "
+"shift key, reduce the block and read it."
+msgstr ""
+"Extiende la selección al bloque de alrededor y lo lee. Si es usado con la "
+"tecla shift, reduce el bloque y lo dice."
+
+#: addon/appModules/lambda/lambdaEdit.py:230
+msgid "Duplicates the current line and reads it"
+msgstr "Duplica la línea actual y la lee"
+
+#: addon/appModules/lambda/lambdaEdit.py:236
+msgid "flat mode "
+msgstr "modo plano "
+
+#: addon/appModules/lambda/lambdaEdit.py:238
+msgid "on"
+msgstr "activado"
+
+#: addon/appModules/lambda/lambdaEdit.py:238
+msgid "off"
+msgstr "desactivado"
+
+#: addon/appModules/lambda/lambdaEdit.py:241
+msgid "Toggle the braille flat mode on or off."
+msgstr "Conmuta el modo plano de braille entre activado y desactivado."
+
+#: addon/appModules/lambda/lambdaProfileSetup.py:16
 #, fuzzy
 msgid "lambda-ita.utb"
 msgstr "lambda-ita.utb"
 
+#: addon/installTasks.py:16
+msgid ""
+"Another profile named \"lambda\" is already present in your NVDA "
+"configuration. \n"
+"This prevents the addon on create and configure the lambda profile "
+"correctly.\n"
+"If you want the addon to configure a lambda profile for you, please delete "
+"the old one named \"lambda\" using the NVDA \"Configuration Profiles\" "
+"dialog.\n"
+"The new profile will be created the next time you'll start the Lambda app.\n"
+"Otherwise please edit your profile configuration file manually.\n"
+msgstr ""
+"Otro perfil llamado \"lambda\" está presente en la configuración de su "
+"NVDA.\n"
+"Esto impide al complemento el crear y configurar el perfil \"lambda\" "
+"correctamente.\n"
+"Si desea que el complemento configure un nuevo pefil \"lambda\" para usted, "
+"por favor elimine el viejo perfil \"lambda\" desde el dia´logo \"Perfiles ce "
+"configuración\".\n"
+"El nuevo perfil será creado la próxima vez que reinicie la app Lambda.\n"
+"De otra forma edite el archivo del Perfil de configuración de forma manual.\n"
+
 #: buildVars.py:17
 msgid "Lambda math editor addon"
-msgstr "Aplicación editora Lambda"
+msgstr "Complemento para el editor matemático Lambda"
 
 #: buildVars.py:20
-msgid "This addon provides access to the Lambda math editor with both braille and speech support."
-msgstr "Módulo de aplicación para Lambda"
+msgid ""
+"This addon provides access to the Lambda math editor with both braille and "
+"speech support."
+msgstr ""
+"Este complemento proporciona el acceso al editor Lambda con soporte para "
+"braille y habla."
