@@ -56,16 +56,13 @@ class LambdaEditField(edit.Edit):
 
 	#OLE Lambda Object and convenient speak function
 	def getLambdaObj(self) :
-		if self._oLambda : 
-			return self._oLambda
-		else  :
+		if not self._oLambda : 
 			self.empty = ''
 			oLambda = comHelper.getActiveObject(self._LambdaObjName,dynamic=True)
 			if (oLambda) :
 				self._oLambda = oLambda
 				self.empty = self._oLambda.getnone()
-				return self._oLambda
-		return None
+		return self._oLambda
 			
 	def say(self, msg):
 		if msg == self.empty:
