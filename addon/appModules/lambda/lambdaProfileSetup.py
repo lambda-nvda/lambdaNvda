@@ -57,16 +57,27 @@ def createLambdaProfile() :
 
 # Adds the braille table to the list in braille settings dialog
 def addBrailleTableToGUI():
-	braille.TABLES = braille.TABLES + ((_getBrlTablePath(TABLE_NAME),TABLE_NAME,False,),)
+	#Retrieves all tables in addon directory with prefix 'lamda-'
+	newTables = tuple((_getBrlTablePath(file),file,False,) for file in os.listdir(_getBrlTablesDir()) if os.path.isfile(os.path.join(_getBrlTablesDir(), file)) and file.startswith("lambda-"))
+	braille.TABLES = braille.TABLES + newTables
+
+# Removes the braille table to the list in braille settings dialog
+def removeBrailleTableToGUI():
+	braille.TABLES = tuple(table for table in braille.TABLES if table[0] != _getBrlTablePath(TABLE_NAME))
 
 # Retrieves the current absolute path for the braille table and updates the profile entry (useful for portable NVDA)
 def updateTablePath() :
-	basepath = os.path.abspath(globalVars.appArgs.configPath)
+	basepath = _getBrlTablesDir()
 	lp = config.conf._getProfile(PROFILE_NAME,True)
+	tablename = os.path.basename(lp["braille"]["translationTable"])
 	if basepath not in lp["braille"]["translationTable"] : #Directory has been moved
-		lp["braille"]["translationTable"] = _getBrlTablePath(TABLE_NAME)
-		lp.write()	
-    
-# Gets the absolute path of the braille table for the current language
+		lp["braille"]["translationTable"] = _getBrlTablePath(tablename)
+		lp.write()
+
+# Gets the absolute path of the braille table in tableName
 def _getBrlTablePath(tableName) :
-	return os.path.abspath(os.path.join(globalVars.appArgs.configPath, "addons", "lambda", "appModules",PROFILE_NAME,"brailleTables",tableName))
+	return os.path.join(_getBrlTablesDir(),tableName)
+	
+#Get the absolute path to the brailleTables directory
+def _getBrlTablesDir() :
+	return os.path.abspath(os.path.join(globalVars.appArgs.configPath, "addons", "lambda", "appModules",PROFILE_NAME,"brailleTables"))

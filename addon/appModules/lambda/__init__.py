@@ -15,11 +15,11 @@ addonHandler.initTranslation()
 class AppModule(appModuleHandler.AppModule):
 	
 # Dialogs which has edit fields like the main Lambda Editor
-	_customDialogsNames = [
+	_customDialogsNames = (
 	"TStructureW", #Structure view Window
 	"TFrm_Matrix", #Matrix Window
 	"TFrm_Calculator_Simple", #Calculator 
-	]
+	)
 	
 	def __init__(self, *args, **kwargs):
 		super(AppModule, self).__init__(*args, **kwargs)
@@ -50,3 +50,8 @@ class AppModule(appModuleHandler.AppModule):
 					clsList.insert(0, LambdaMatrixEdit)
 					clsList.remove(DisplayModelEditableText)
 			except : pass
+	
+	def terminate(self) :
+		super(AppModule, self).terminate()
+		#Clean-up custom braille tables
+		lambdaProfileSetup.removeBrailleTableToGUI()
