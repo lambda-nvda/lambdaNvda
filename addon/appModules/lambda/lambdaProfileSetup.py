@@ -63,7 +63,7 @@ def addBrailleTableToGUI():
 
 # Removes the braille table to the list in braille settings dialog
 def removeBrailleTableToGUI():
-	braille.TABLES = tuple(table for table in braille.TABLES if table[0] != _getBrlTablePath(TABLE_NAME))
+	braille.TABLES = tuple(table for table in braille.TABLES if not table[1].startswith("lambda-"))
 
 # Retrieves the current absolute path for the braille table and updates the profile entry (useful for portable NVDA)
 def updateTablePath() :
