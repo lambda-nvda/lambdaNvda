@@ -80,6 +80,7 @@ Where :
 #Authors and Contributors:
 * Author: Alberto Zanella <lapostadi[myfirstname]@gmail.com>
 * Iván Novegil
+* Noelia Ruiz Martínez
 * Alessandro Albano
 * Christian Leo
 * Simone Dal Maso

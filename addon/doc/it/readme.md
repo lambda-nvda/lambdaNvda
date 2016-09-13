@@ -49,6 +49,7 @@ Se si nota, dopo un certo periodo, che NVDA non funziona più correttamente con 
 #Autore e collaboratori:
 * Autore: Alberto Zanella - lapostadi[mionome]@gmail.com
 * Iván Novegil
+* Noelia Ruiz Martínez
 * Alessandro Albano
 * Christian Leo
 * Simone Dal Maso

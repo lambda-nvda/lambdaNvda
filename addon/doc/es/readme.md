@@ -74,6 +74,7 @@ Where :
 #Autores y Contribuyentes:
 * Autor: Alberto Zanella <lapostadi[miprimernombre]@gmail.com>
 * Iván Novegil
+* Noelia Ruiz Martínez
 * Alessandro Albano
 * Christian Leo
 * Simone Dal Maso
