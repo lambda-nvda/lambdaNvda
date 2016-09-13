@@ -49,7 +49,6 @@ class LambdaEditField(edit.Edit):
 	scriptCategory = "Lambda"
 	
 	#Standard NVDAObject properties setters:
-	_inDuplicate = False
 	description = None
 	name = None
 	_LambdaObjName = 'lambda.lambdaobj' #OLE Object name
@@ -98,8 +97,7 @@ class LambdaEditField(edit.Edit):
 		super(edit.Edit, self).event_caret()
 		self.detectPossibleSelectionChange()
 		self.invalidateCache()
-		if not self._inDuplicate : #Prevents redraw during duplicateLine
-			self.redraw()
+		self.redraw()
 		#Ugly but it works... This fires more quickly than valueChange
 		if config.conf['keyboard']['speakTypedCharacters']:
 			s = self.getLambdaObj().getlastinsertedel(self.windowHandle, 1)
@@ -217,12 +215,10 @@ class LambdaMainEditor(LambdaEditField):
 	script_selectBlocks.__doc__=_("Extends the selection to the surrounding block and reads it. If used with shift key, reduce the block and read it.")
 	
 	def script_sayDuplicate(self,gesture) :
-		self._inDuplicate = True
 		#Retrieves the line before sending gesture, duplicate line is the same as the current one.
 		line = self.getLambdaObj().getline(self.windowHandle, -1, -1)
 		gesture.send()
 		braille.handler.handleUpdate(self)
-		self._inDuplicate = False
 		self.say(line)
 	#Translators: This is a Lambda hotkey. ctrl+d is a macro that duplicates current line. The script reports the duplicated line.
 	script_sayDuplicate.__doc__=_("Duplicates the current line and reads it")
