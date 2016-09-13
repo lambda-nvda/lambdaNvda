@@ -46,6 +46,8 @@ Base class for Lambda edit fields with COM support. These controls shares the fo
 * Braille is rendered from textInfos.
 '''
 class LambdaEditField(edit.Edit):		
+	scriptCategory = "Lambda"
+	
 	#Standard NVDAObject properties setters:
 	_inDuplicate = False
 	description = None
@@ -70,22 +72,22 @@ class LambdaEditField(edit.Edit):
 		speech.speakText(msg)
 	
 	#Convinent scripts to reports text and selection
-	#Translators: this is a custom implementation of the globalCommands gesture, it doesn't support spelling.
 	def script_reportCurrentLine(self,gesture) :
 		s = self.getLambdaObj().getline(self.windowHandle, -1, -1)
 		self.say(s)
+	#Translators: this is a custom implementation of the globalCommands gesture, it doesn't support spelling.
 	script_reportCurrentLine.__doc__=_("Reports the current line under the application cursor.")
 	
-	#Translators: Lambda can't read from the current caret position, the implementation of sayAll provided starts reading from the top of the document.
 	def script_sayAll(self, gesture):
 		s = self.getLambdaObj().getall(self.windowHandle)
 		self.say(s)
+	#Translators: Lambda can't read from the current caret position, the implementation of sayAll provided starts reading from the top of the document.
 	script_sayAll.__doc__ = _("reads from the beginning of the document up to the end of the text.")	
 
-	#Translators: this is a custom implementation of the globalCommands gesture.
 	def script_reportCurrentSelection(self, gesture):
 		s = self.getLambdaObj().getselected(self.windowHandle)
 		self.say(s)
+	#Translators: this is a custom implementation of the globalCommands gesture.
 	script_reportCurrentSelection.__doc__=_("Announces the current selection in edit controls and documents. If there is no selection it says so.")	
 	
 	#Events section
@@ -171,7 +173,7 @@ class LambdaEditField(edit.Edit):
 	'kb:alt+rightArrow': 'caret_moveByCharacter',
 	#SayAll override
 	"kb(desktop):NVDA+downArrow": "sayAll",
-    "kb(laptop):NVDA+a": "sayAll",
+	"kb(laptop):NVDA+a": "sayAll",
 	#Report selection
 	'kb(desktop):NVDA+shift+upArrow': 'reportCurrentSelection',
 	'kb(laptop):NVDA+shift+s': 'reportCurrentSelection',
@@ -206,12 +208,12 @@ class LambdaMainEditor(LambdaEditField):
 		return LambdaEditorTextInfo
 	
 	#Lambda hotkeys
-	#Translators: This is a Lambda hotkey ctrl+b extends the selection to the next surrounding block, ctrl+shift+b reduce the selection to a smaller block.
 	def script_selectBlocks(self, gesture):
 		gesture.send()
 		self.initAutoSelectDetection()
 		self.script_reportCurrentSelection(gesture)
 		braille.handler.handleUpdate(self)
+	#Translators: This is a Lambda hotkey ctrl+b extends the selection to the next surrounding block, ctrl+shift+b reduce the selection to a smaller block.
 	script_selectBlocks.__doc__=_("Extends the selection to the surrounding block and reads it. If used with shift key, reduce the block and read it.")
 	
 	def script_sayDuplicate(self,gesture) :
@@ -222,9 +224,9 @@ class LambdaMainEditor(LambdaEditField):
 		braille.handler.handleUpdate(self)
 		self._inDuplicate = False
 		self.say(line)
+	#Translators: This is a Lambda hotkey. ctrl+d is a macro that duplicates current line. The script reports the duplicated line.
 	script_sayDuplicate.__doc__=_("Duplicates the current line and reads it")
 	
-	#This script set the desired textInfo for braille, when flat mode is on, the LambdaEditorFlatTextInfo is used, otherwise the LambdaEditorTextInfo is set.
 	def script_switch_flatMode(self,gesture) :
 		val = config.conf['lambda']['brailleFlatMode'] = not config.conf['lambda']['brailleFlatMode']
 		#Translators: This determines whether to use API or DisplayMode to render the editor window on a braille display. It is a toggle (on/off)
@@ -233,6 +235,7 @@ class LambdaMainEditor(LambdaEditField):
 		ui.message(flatModeMessage + ((lambda x: _("on") if x else _("off"))(val)))
 		braille.handler.mainBuffer.clear()
 		braille.handler.handleGainFocus(self)
+	#This script set the desired textInfo for braille, when flat mode is on, the LambdaEditorFlatTextInfo is used, otherwise the LambdaEditorTextInfo is set.
 	script_switch_flatMode.__doc__=_("Toggle the braille flat mode on or off.")
 
 	__gestures = {

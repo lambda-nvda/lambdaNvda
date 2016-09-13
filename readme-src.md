@@ -1,9 +1,5 @@
 #Lambda Add-On for NVDA#
 
-lambda-nvda was written by Alberto Zanella
-
-You can find out more about this add-on at: https://github.com/albzan/lambda-nvda.
-
 This project is an appModule for the LAMBDA Software. It has been inspired by the work of Peter Lecky at the Comenius University. 
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) is a software that helps blind people to read and write math using a braille display and/or a speech synthesizer.
 LAMBDA is the result of an EU-Project. For more information about LAMBDA please visit [http://www.lambdaproject.org/](http://www.lambdaproject.org/).  
@@ -22,7 +18,7 @@ If you are a non-italian user of LAMBDA and you would like to contribute with tr
 * Speaks when a block of text is selected or extended (using CTRL+B and SHIFT+CTRL+B);
 * Speaks when moving in the text editor using standard Windows commands and Lambda-specific commands too;
 * Both Extended and Short speech modes are supported (you can set it using the Tools menu in Lambda);
-*  Special dialog windows like structure mode, calculator, and matrix are now correctly reported and NVDA reads correctly when you move around or input the text ;
+* Special dialog windows like structure mode, calculator, and matrix are now correctly reported and NVDA reads correctly when you move around or input the text ;
 * Typing echo uses the Lambda text processor, so symbols and markers will be correctly spoken.
 
 ###Braille support:
@@ -41,13 +37,13 @@ We strongly recommend to disable the Flat Mode if you are using custom DPI in Wi
 ##Before starting to use this addon.
 This addon creates an NVDA profile named "lambda" which is associated with the "lambda.exe" application. The profile automatically sets all braille options: the custom braille tables, the focus tethering and the flat mode settings.
 
-If a previous existing profile with the same name is present, this will not be override and you have to manually put this configuration inside your profile setting file. 
+If a previous existing profile with the same name is present, the addon will not override it and you have to manually put this configuration inside your profile setting file. 
 
 To stave off this situation, after the installation of the addon we suggest to delete old versions of the "lambda" profile. To do so, open the NVDA menu, select the "Configuration profiles" menu Item and press ENTER.
 
 In the Configuration profiles dialog, you'll be able to locate and delete the "lambda" profile. The profile will be re-created the next time you'll launch the Lambda application.
 
-Deleting the "lambda" profile should be an easy solution also when you find any issue that "appears" at some point using the addon. For instance, if the braille table is not properly set, instead of manually configuring the profile you can simply delete it. The addon will create a new one the next time you'll load the Lambda editor.
+Deleting the "lambda" profile should be an easy solution also when you find any issues that "appears" at some point using the addon. For instance, if the braille table is not properly set, instead of manually configuring the profile, you can simply delete it. The addon will create a new one the next time you'll load the Lambda editor.
 
 Each time the Lambda editor is started, this addon checks if a profile with the name "lambda" exists. If it doesn't exists it automatically generate a profile with the following form:
 
@@ -65,7 +61,8 @@ filename : userData\profiles\lambda.ini :
 ```
 Where :
 * path-to-the-addon-brailleTable-dir : is the absolute path of the addon directory + "\brailleTables"
-* tableName : depends to the selected language. Currently only the italian braille table, "lambda-ita.utb" , is present.
+* tableName : depends on the active NVDA language. Currently only the italian braille table, "lambda-ita.utb" , is present.
+
 
 
 
@@ -75,5 +72,7 @@ Where :
 * Alessandro Albano
 * Christian Leo
 * Simone Dal Maso
+
+
 
 
