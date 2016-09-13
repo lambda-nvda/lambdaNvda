@@ -216,7 +216,7 @@ class LambdaMainEditor(LambdaEditField):
 	
 	def script_sayDuplicate(self,gesture) :
 		self._inDuplicate = True
-		#Retrive the line before sending gesture, duplicate line is the same a s the current.
+		#Retrieves the line before sending gesture, duplicate line is the same as the current one.
 		line = self.getLambdaObj().getline(self.windowHandle, -1, -1)
 		gesture.send()
 		braille.handler.handleUpdate(self)
