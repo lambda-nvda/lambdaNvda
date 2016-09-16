@@ -35,7 +35,7 @@ If you are a non-italian user of LAMBDA and you would like to contribute with tr
 The "flat mode" is active by default. You can toggle "flat mode" on or off by pressing NVDA+SHIFT+F.
 
 We strongly recommend to disable the Flat Mode if you are using custom DPI in Windows (Custom sizing option), especially when you have screen settings with more than 96 dpi (larger than 100%).
-* The structure of dialog boxes is more easy, repeated information have been removed;
+* The structure of dialog boxes is more easy, repeated information has been removed;
 * The selection will be marked properly using dots 7 and 8, and marking is properly refreshed while standard Windows commands (SHIFT+ARROWS) or Lambda specific commands (CTRL+B, CTRL+SHIFT+B) are pressed.
 
 ##Setup
