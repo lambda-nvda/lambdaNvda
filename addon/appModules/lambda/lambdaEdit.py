@@ -87,7 +87,7 @@ class LambdaEditField(edit.Edit):
 		s = self.getLambdaObj().getselected(self.windowHandle)
 		self.say(s)
 	#Translators: this is a custom implementation of the globalCommands gesture.
-	script_reportCurrentSelection.__doc__=_("Announces the current selection in edit controls and documents. If there is no selection it says so.")	
+	script_reportCurrentSelection.__doc__=_("Announces the current selection in edit controls and documents.")	
 	
 	#Events section
 	def event_valueChange(self) :
