@@ -10,19 +10,19 @@ LAMBDA is the result of an EU-Project. For more information about LAMBDA please 
 The current version of the addon has braille tables for the Italian language only but its interface is available both in Italian and Spanish right now.
 If you are a non-italian user of LAMBDA and you would like to contribute with translations in your language, feel free to contact the author (see below) or fork this project.
 
-**Please note:** This addon has been developed by Alberto Zanella as a voluntary activity. Nor the author or the contributors are involved in selling and / or development of the software Lambda. If you need more information about Lambda, or you need support on how to use it, please contact your local distributor. If you are encountering any difficulties using or installing this addon, please contact the author or use the "Issues" link on the Github project page.
+**Please note:** This addon has been developed by Alberto Zanella as a voluntary activity. Nor the author or the contributors are involved in selling and / or development of the software Lambda. If you need more information about Lambda, or you need support on how to use it, please contact your local distributor. If you are encountering any difficulties when using or installing this addon, please contact the author or use the "Issues" link on the Github project page.
 
 ##Addon Features:
 
 ###Speech support:
 
 * Dialogs and menus are properly reported;
-* It speaks math formulas using the Lambda math engine, by this way the text on the editor sounds natural (i.e. "compound root 3 sep compound root 3 x plus 24, close compound root, minus 3 equals 0");
+* Natural speech support for math formulas using the Lambda math engine, i.e. "compound root 3 sep compound root 3 x plus 24, close compound root, minus 3 equals 0";
 * implemented the Reading by character, words, lines and Say All;
 * Speaks when a block of text is selected or extended (using CTRL+B and SHIFT+CTRL+B);
 * Speaks when moving in the text editor using standard Windows commands and Lambda-specific commands;
 * Both Extended and Short speech modes are supported (you can select it using the Tools menu in Lambda);
-* Special dialogs like structure mode, calculator, and matrix window are now correctly reported and NVDA reads correctly when moving around or new text is typed ;
+* Special dialogs like structure mode, calculator, and matrix window are now correctly reported and NVDA reads correctly when moving the cursor around or when new text is typed ;
 * Typing echo uses the Lambda text processor, so symbols and markers will be correctly reported.
 
 ###Braille support:
