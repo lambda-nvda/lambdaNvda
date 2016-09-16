@@ -12,6 +12,12 @@ import config
 
 addonHandler.initTranslation()
 
+## Translators: message box when user is installing the addon in NVDA and an older version prevents the update to be done.
+oldaddonmsg = _("""An older version of this addon has been detected.
+This prevents the installation to be completed.
+Please uninstall the previous version before proceeding with the Lambda addon setup.
+""")
+
 ## Translators: message box when user is installing the addon in NVDA and a "lambda" profile is already present. 
 profilefoundmsg = _("""Another profile named "lambda" is already present in your NVDA configuration. 
 This prevents the addon on create and configure the lambda profile correctly.
@@ -21,6 +27,10 @@ Otherwise please edit your profile configuration file manually.
 """)
 
 def onInstall():
+	if "Lambda" in [a.name for a in addonHandler.getRunningAddons()] :
+		gui.messageBox(oldaddonmsg)
+		raise Exception("Old version prevents the update.")
+	
 	try :
 		if config.conf._getProfile("lambda") :
 			gui.messageBox(profilefoundmsg)
