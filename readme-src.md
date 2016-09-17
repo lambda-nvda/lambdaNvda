@@ -1,4 +1,4 @@
-#Lambda Add-On for NVDA#
+﻿#Lambda Add-On for NVDA#
 
 This project is an appModule for the LAMBDA Software. It has been inspired by the work of Peter Lecky at the Comenius University. 
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) is a software that helps blind people to read and write math using a braille display and/or a speech synthesizer.
@@ -31,7 +31,7 @@ If you are a non-italian user of LAMBDA and you would like to contribute with tr
 The "flat mode" is active by default. You can toggle "flat mode" on or off by pressing NVDA+SHIFT+F.
 
 We strongly recommend to disable the Flat Mode if you are using custom DPI in Windows (Custom sizing option), especially when you have screen settings with more than 96 dpi (larger than 100%).
-* The structure of dialog boxes is more easy, repeated information have been removed;
+* The structure of dialog boxes is easier, repeated information has been removed;
 * The selection will be marked properly using dots 7 and 8, and marking is properly refreshed while standard Windows commands (SHIFT+ARROWS) or Lambda specific commands (CTRL+B, CTRL+SHIFT+B) are pressed.
 
 ##Before starting to use this addon.
@@ -45,7 +45,7 @@ In the Configuration profiles dialog, you'll be able to locate and delete the "l
 
 Deleting the "lambda" profile should be an easy solution also when the addon runs into any problem. For instance, if the braille table is not properly set, instead of manually configuring the profile, you can simply delete it. The addon will create a new one the next time you'll load the Lambda editor.
 
-Each time the Lambda editor is started, this addon checks if a profile with the name "lambda" exists. If it doesn't, it automatically generate a profile with the following form:
+Each time the Lambda editor is started, this addon checks if a profile with the name "lambda" exists. If it doesn't, it automatically generates a profile with the following form:
 
 ```
 filename : userData\profiles\lambda.ini :
