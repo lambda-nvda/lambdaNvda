@@ -2,7 +2,12 @@
 This is not the source for the readme file of NVDA Addon. This is just for the Github repository. The source for the NVDA Addon build is readme-src.md. Thanks!
 -->
 
-#Lambda Add-On for NVDA#
+#Lambda Add-On for NVDA
+
+* [Download latest stable release](https://github.com/nvdaaddons/lambda/releases/download/latest/lambda.nvda-addon)
+* [Download latest development release](https://github.com/nvdaaddons/lambda/releases/download/dev/lambda-dev.nvda-addon)
+
+Se sei un utente italiano vista [questa pagina](https://github.com/nvdaaddons/lambda/wiki/Benvenuto)
 
 This project is an appModule for the LAMBDA Software. It has been inspired by the work of Peter Lecky at the Comenius University. 
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) is a software that helps blind people to read and write math using a braille display and/or a speech synthesizer.
