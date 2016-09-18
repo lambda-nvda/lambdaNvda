@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'Lambda' '1.1.2'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2016-09-16 18:56+0200\n"
-"PO-Revision-Date: 2016-09-16 19:11+0100\n"
+"POT-Creation-Date: 2016-09-18 21:24+0200\n"
+"PO-Revision-Date: 2016-09-18 21:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: Alberto Zanella <lapostadialberto@gmail.com>\n"
 "Language: it\n"
@@ -18,30 +18,22 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 
 #. Translators: this is a custom implementation of the globalCommands gesture, it doesn't support spelling.
-#: addon\appModules\lambda\lambdaEdit.py:78
+#: addon\appModules\lambda\lambdaEdit.py:79
 msgid "Reports the current line under the application cursor."
 msgstr "Legge la riga in cui si trova il cursore."
 
 #. Translators: Lambda can't read from the current caret position, the implementation of sayAll provided starts reading from the top of the document.
-#: addon\appModules\lambda\lambdaEdit.py:84
+#: addon\appModules\lambda\lambdaEdit.py:85
 msgid "reads from the beginning of the document up to the end of the text."
 msgstr "Legge il testo dall'inizio alla fine del documento."
 
 #. Translators: this is a custom implementation of the globalCommands gesture.
-#: addon\appModules\lambda\lambdaEdit.py:90
+#: addon\appModules\lambda\lambdaEdit.py:91
 msgid "Announces the current selection in edit controls and documents."
 msgstr "Legge il testo attualmente selezionato."
 
-#: addon\appModules\lambda\lambdaEdit.py:157
-msgid "selected"
-msgstr "selezionato"
-
-#: addon\appModules\lambda\lambdaEdit.py:159
-msgid "not selected"
-msgstr "non selezionato"
-
 #. Translators: This is a Lambda hotkey ctrl+b extends the selection to the next surrounding block, ctrl+shift+b reduce the selection to a smaller block.
-#: addon\appModules\lambda\lambdaEdit.py:215
+#: addon\appModules\lambda\lambdaEdit.py:216
 msgid ""
 "Extends the selection to the surrounding block and reads it. If used with "
 "shift key, reduce the block and read it."
@@ -50,25 +42,17 @@ msgstr ""
 "SHIFT la selezione verrà ridotta di un blocco."
 
 #. Translators: This is a Lambda hotkey. ctrl+d is a macro that duplicates current line. The script reports the duplicated line.
-#: addon\appModules\lambda\lambdaEdit.py:224
+#: addon\appModules\lambda\lambdaEdit.py:225
 msgid "Duplicates the current line and reads it"
 msgstr "Duplica la riga corrente e la legge."
 
 #. Translators: This determines whether to use API or DisplayMode to render the editor window on a braille display. It is a toggle (on/off)
-#: addon\appModules\lambda\lambdaEdit.py:229
+#: addon\appModules\lambda\lambdaEdit.py:230
 msgid "flat mode "
 msgstr "modalità flat "
 
-#: addon\appModules\lambda\lambdaEdit.py:231
-msgid "on"
-msgstr "attivato"
-
-#: addon\appModules\lambda\lambdaEdit.py:231
-msgid "off"
-msgstr "non attivato"
-
 #. This script set the desired textInfo for braille, when flat mode is on, the LambdaEditorFlatTextInfo is used, otherwise the LambdaEditorTextInfo is set.
-#: addon\appModules\lambda\lambdaEdit.py:235
+#: addon\appModules\lambda\lambdaEdit.py:236
 msgid "Toggle the braille flat mode on or off."
 msgstr "Attiva o disattiva la modalità braille flat."
 
@@ -77,21 +61,32 @@ msgstr "Attiva o disattiva la modalità braille flat."
 msgid "lambda-ita.utb"
 msgstr "lambda-ita.utb"
 
-#. # Translators: message box when user is installing the addon in NVDA and an older version prevents the update to be done.
-#: addon\installTasks.py:16
+#. # Translators: title of the message box that appears when the user is installing the addon and an older version prevents the update to be completed.
+#: addon\installTasks.py:17
+msgid "Incompatible version of the addon detected"
+msgstr "Individuata una incompabilità di versione"
+
+#. # Translators: text of the message box that appears when the user is installing the addon and an older version prevents the update to be completed.
+#: addon\installTasks.py:20
 msgid ""
-"An older version of this addon has been detected.\n"
+"An old, incompatible version of this addon has been detected.\n"
 "This prevents the installation to be completed.\n"
 "Please uninstall the previous version before proceeding with the Lambda "
 "addon setup.\n"
 msgstr ""
-"E' stata rilevata la presenza di una precedente installazione dell'addon.\n"
-"Questo non consente di proseguire con l'installazione.\n"
+"E' stata rilevata la presenza di una precedente installazione dell'addon che "
+"risulta incompatibile.\n"
+"Questo non consente di completare l'installazione in modo corretto.\n"
 "Prima di procedere disinstallare la precedente versione dell'addon per "
 "Lambda.\n"
 
-#. # Translators: message box when user is installing the addon in NVDA and a "lambda" profile is already present.
-#: addon\installTasks.py:22
+#. # Translators: title of the message box that appears when user is installing the addon in NVDA and a "lambda" profile is already present.
+#: addon\installTasks.py:26
+msgid "lambda profile already exists"
+msgstr "Profilo lambda esistente"
+
+#. # Translators: text of the message box that appears when user is installing the addon in NVDA and a "lambda" profile is already present.
+#: addon\installTasks.py:29
 msgid ""
 "Another profile named \"lambda\" is already present in your NVDA "
 "configuration. \n"

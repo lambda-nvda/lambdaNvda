@@ -6,6 +6,7 @@
 import addonHandler
 import speech
 from displayModel import EditableTextDisplayModelTextInfo
+from . import sharedMessages as shMsg
 import NVDAObjects.window.edit as edit
 import comHelper
 import controlTypes
@@ -154,9 +155,9 @@ class LambdaEditField(edit.Edit):
 		else :
 			s = s.strip().rstrip()
 		if len(s) > len(self.s):
-			self.say(self._getSChunk(self.s,s) + ' ' + _('selected'))
+			self.say(self._getSChunk(self.s,s) + ' ' + shMsg.GLB_SELECTED)
 		elif len(s) < len(self.s) and len(s) > 0:
-			self.say(self._getSChunk(s,self.s) + ' ' + _('not selected'))
+			self.say(self._getSChunk(s,self.s) + ' ' + shMsg.GLB_UNSELECTED)
 		self.s = s
 	
 	def _getSChunk(self, oldmessage, newmessage) :
@@ -228,7 +229,7 @@ class LambdaMainEditor(LambdaEditField):
 		#Translators: This determines whether to use API or DisplayMode to render the editor window on a braille display. It is a toggle (on/off)
 		flatModeMessage = _("flat mode ")
 		self.TextInfo = self._get_TextInfo()	
-		ui.message(flatModeMessage + ((lambda x: _("on") if x else _("off"))(val)))
+		ui.message(flatModeMessage + ((lambda x: shMsg.GLB_ON if x else shMsg.GLB_OFF)(val)))
 		braille.handler.mainBuffer.clear()
 		braille.handler.handleGainFocus(self)
 	#This script set the desired textInfo for braille, when flat mode is on, the LambdaEditorFlatTextInfo is used, otherwise the LambdaEditorTextInfo is set.
