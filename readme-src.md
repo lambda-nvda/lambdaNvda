@@ -1,4 +1,5 @@
-﻿#Lambda Add-On for NVDA#
+﻿
+#Lambda Add-On for NVDA
 
 This project is an appModule for the LAMBDA Software. It has been inspired by the work of Peter Lecky at the Comenius University. 
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) is a software that helps blind people to read and write math using a braille display and/or a speech synthesizer.
