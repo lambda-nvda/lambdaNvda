@@ -1,4 +1,3 @@
-﻿
 #Complemento de Lambda para NVDA#
 
 lambda-nvda ha sido escrito por alberto Zanella.

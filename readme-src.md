@@ -1,4 +1,3 @@
-
 #Lambda Add-On for NVDA
 
 This project is an appModule for the LAMBDA Software. It has been inspired by the work of Peter Lecky at the Comenius University. 
