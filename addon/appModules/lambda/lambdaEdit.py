@@ -1,8 +1,9 @@
 #Addon for Lambda Math Editor
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
-#Copyright (C) 2016 Alberto Zanella <lapostadialberto@gmail.com>
+#Copyright (C) 2016-2017 Alberto Zanella <lapostadialberto@gmail.com>
 
+import eventHandler
 import addonHandler
 import speech
 from displayModel import EditableTextDisplayModelTextInfo
@@ -38,8 +39,9 @@ class LambdaEditorTextInfo(edit.EditTextInfo) :
 	
 	def updateCaret(self):
 		self._setSelectionOffsets(self._startOffset,0)
-		braille.handler.mainBuffer.clear()
-		braille.handler.handleGainFocus(self.obj)
+		braille.handler.handleUpdate(self.obj)
+		
+		
 
 '''
 Base class for Lambda edit fields with COM support. These controls shares the following behaviour:
@@ -48,15 +50,14 @@ Base class for Lambda edit fields with COM support. These controls shares the fo
 '''
 class LambdaEditField(edit.Edit):		
 	scriptCategory = "Lambda"
-	
 	#Standard NVDAObject properties setters:
+	s = None
 	description = None
 	name = None
+	editAPIVersion = 0
 	_LambdaObjName = 'lambda.lambdaobj' #OLE Object name
 	_oLambda = None #global object (use getLambdaObj to retrieve it)
-	editAPIVersion = 0
-
-	#OLE Lambda Object and convenient speak function
+	
 	def getLambdaObj(self) :
 		if not self._oLambda : 
 			self.empty = ''
@@ -92,17 +93,16 @@ class LambdaEditField(edit.Edit):
 	
 	#Events section
 	def event_valueChange(self) :
-		braille.handler.handleUpdate(self)
+		if str(config.conf['lambda']['brailleFlatMode']) == 'True' :
+			braille.handler.handleUpdate(self)
+		else : 
+			braille.handler.mainBuffer.clear()
+			braille.handler.handleGainFocus(self)
+			
 		
 	def event_caret(self) :
 		super(edit.Edit, self).event_caret()
-		self.detectPossibleSelectionChange()
-		self.invalidateCache()
-		self.redraw()
-		#Ugly but it works... This fires more quickly than valueChange
-		if config.conf['keyboard']['speakTypedCharacters']:
-			s = self.getLambdaObj().getlastinsertedel(self.windowHandle, 1)
-			speech.speakText(s)
+		self.appModule.reportLastInsertedText(self,"typed")
 		
 	def event_gainFocus(self):
 		s = self.getLambdaObj().getline(self.windowHandle, -1, -1)
@@ -111,17 +111,23 @@ class LambdaEditField(edit.Edit):
 		braille.handler.handleGainFocus(self)
 
 	def event_typedCharacter(self, ch):
-		pass
+		if eventHandler.isPendingEvents("caret") :
+			return
+		self.appModule.reportLastInsertedText(self,"typed")
 		
 	#Scripts to handle caret movements (editableText.EditableText)
 	def script_caret_moveByCharacter(self, gesture):
 		gesture.send()
 		s = self.getLambdaObj().getchar(self.windowHandle, -1, -1)
 		self.say(s)
+		braille.handler.mainBuffer.clear()
+		braille.handler.handleGainFocus(self)
 		
 	def script_caret_moveByLine(self, gesture):
 		gesture.send()
 		self.script_reportCurrentLine(gesture)
+		braille.handler.mainBuffer.clear()
+		braille.handler.handleGainFocus(self)
 
 	def script_caret_moveByWord(self, gesture):
 		gesture.send()
@@ -149,6 +155,7 @@ class LambdaEditField(edit.Edit):
 			self.s = s.strip().rstrip()
 
 	def detectPossibleSelectionChange(self):
+		if self.s is None : return
 		s = self.getLambdaObj().gethighlightedtext(self.windowHandle)
 		if not s:
 			s = ''
@@ -164,6 +171,8 @@ class LambdaEditField(edit.Edit):
 		if oldmessage in newmessage :
 			return newmessage.replace(oldmessage,'',1)
 		return newmessage
+	
+
 	
 	#Gestures binding:
 	__gestures = {
@@ -200,6 +209,16 @@ class LambdaMatrixEdit(LambdaEditField):
 This class extends the LambdaEditField for the main editor. It adds scripts that can be used only in the main editor of Lambda.
 '''
 class LambdaMainEditor(LambdaEditField):
+	ctrlGestures = ("kb:leftControl","kb:rightControl","kb:control+k","kb:control+i","kb:control+j","kb:control+q","kb:control+7","kb:control+shift+r","kb:control+r","kb:control+m","kb:control+e","kb:control+l","kb:control+t","kb:control+g")
+	
+	def initOverlayClass(self):
+		for g in self.ctrlGestures:
+			self.bindGesture(g,"speakInput")
+	
+	def script_speakInput(self,gesture) :
+		self.appModule.force_symbol_speak()
+		gesture.send()
+	
 	def _get_TextInfo(self) :
 		config.conf['lambda']['brailleFlatMode'] = str(config.conf['lambda']['brailleFlatMode']) == 'True'
 		if config.conf['lambda']['brailleFlatMode'] :

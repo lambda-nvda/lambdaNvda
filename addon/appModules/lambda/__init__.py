@@ -1,8 +1,10 @@
 #Addon for Lambda Math Editor
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
-#Copyright (C) 2016 Alberto Zanella <lapostadialberto@gmail.com>
+#Copyright (C) 2016-2017 Alberto Zanella <lapostadialberto@gmail.com>
 
+import config
+import speech
 import addonHandler
 import appModuleHandler
 import controlTypes
@@ -13,7 +15,6 @@ from NVDAObjects.window import DisplayModelEditableText
 addonHandler.initTranslation()
 
 class AppModule(appModuleHandler.AppModule):
-	
 # Dialogs which has edit fields like the main Lambda Editor
 	_customDialogsNames = (
 	"TStructureW", #Structure view Window
@@ -28,7 +29,6 @@ class AppModule(appModuleHandler.AppModule):
 			lambdaProfileSetup.updateTablePath()
 		else: #If a lambda profile doesn't exists:
 			lambdaProfileSetup.createLambdaProfile()
-		
 		lambdaProfileSetup.addBrailleTableToGUI()
 	
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
@@ -50,6 +50,27 @@ class AppModule(appModuleHandler.AppModule):
 					clsList.insert(0, LambdaMatrixEdit)
 					clsList.remove(DisplayModelEditableText)
 			except : pass
+	
+	#report input symbols general handler
+	shouldValueChangeSpeak = False
+	def reportLastInsertedText(self,obj,reason=None) :
+		obj.detectPossibleSelectionChange()
+		obj.invalidateCache()
+		obj.redraw()
+		s = obj.getLambdaObj().getlastinsertedel(obj.windowHandle, 1)
+		if s == None or len(s) == 0 : return
+		self.shouldValueChangeSpeak = False
+		if config.conf['keyboard']['speakTypedCharacters']:
+			speech.speakText(s)
+
+	def force_symbol_speak(self) :
+		self.shouldValueChangeSpeak = True
+	
+	def event_valueChange(self,obj,nh) :
+		if isinstance(obj,LambdaMainEditor):
+			if self.shouldValueChangeSpeak :
+				self.reportLastInsertedText(obj,"value")
+		return nh()
 	
 	def terminate(self) :
 		super(AppModule, self).terminate()
