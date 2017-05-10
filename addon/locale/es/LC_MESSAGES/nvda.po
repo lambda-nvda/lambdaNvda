@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'Lambda' '1.1.4'\n"
 "POT-Creation-Date: 2017-05-10 09:09+0200\n"
-"PO-Revision-Date: 2017-05-10 09:23+0200\n"
+"PO-Revision-Date: 2017-05-10 12:34+0200\n"
 "Last-Translator: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
 "Language-Team: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
 "Language: es\n"
@@ -111,7 +111,7 @@ msgstr ""
 
 #: buildVars.py:17
 msgid "Lambda math editor addon"
-msgstr "Complemento para el editor matemático Lambda"
+msgstr "Lambda (editor matemático) como complemento"
 
 #: buildVars.py:20
 msgid ""
