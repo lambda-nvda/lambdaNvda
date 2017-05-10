@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: 'Lambda' '1.1.2'\n"
-"POT-Creation-Date: 2016-09-19 15:43+0200\n"
-"PO-Revision-Date: 2016-09-19 15:46+0200\n"
+"Project-Id-Version: 'Lambda' '1.1.4'\n"
+"POT-Creation-Date: 2017-05-10 09:09+0200\n"
+"PO-Revision-Date: 2017-05-10 09:23+0200\n"
 "Last-Translator: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
 "Language-Team: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
 "Language: es\n"
@@ -15,19 +15,19 @@ msgstr ""
 "X-Poedit-SearchPath-0: addon\n"
 "X-Poedit-SearchPath-1: buildVars.py\n"
 
-#: addon/appModules/lambda/lambdaEdit.py:79
+#: addon/appModules/lambda/lambdaEdit.py:80
 msgid "Reports the current line under the application cursor."
 msgstr "Informa de la línea actual bajo el cursor de la aplicación."
 
-#: addon/appModules/lambda/lambdaEdit.py:85
+#: addon/appModules/lambda/lambdaEdit.py:86
 msgid "reads from the beginning of the document up to the end of the text."
 msgstr "lee desde el comienzo del documento hasta el final del texto."
 
-#: addon/appModules/lambda/lambdaEdit.py:91
+#: addon/appModules/lambda/lambdaEdit.py:92
 msgid "Announces the current selection in edit controls and documents."
-msgstr ""
+msgstr "Anuncia la selección actual en controles de edición y documentos."
 
-#: addon/appModules/lambda/lambdaEdit.py:216
+#: addon/appModules/lambda/lambdaEdit.py:235
 msgid ""
 "Extends the selection to the surrounding block and reads it. If used with "
 "shift key, reduce the block and read it."
@@ -35,15 +35,15 @@ msgstr ""
 "Extiende la selección al bloque de alrededor y lo lee. Si es usado con la "
 "tecla shift, reduce el bloque y lo dice."
 
-#: addon/appModules/lambda/lambdaEdit.py:225
+#: addon/appModules/lambda/lambdaEdit.py:244
 msgid "Duplicates the current line and reads it"
 msgstr "Duplica la línea actual y la lee"
 
-#: addon/appModules/lambda/lambdaEdit.py:230
+#: addon/appModules/lambda/lambdaEdit.py:249
 msgid "flat mode "
 msgstr "modo plano "
 
-#: addon/appModules/lambda/lambdaEdit.py:236
+#: addon/appModules/lambda/lambdaEdit.py:255
 msgid "Toggle the braille flat mode on or off."
 msgstr "Conmuta el modo plano de braille entre activado y desactivado."
 
