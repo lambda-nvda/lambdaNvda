@@ -1,8 +1,4 @@
-#Complemento de Lambda para NVDA#
-
-lambda-nvda ha sido escrito por alberto Zanella.
-
-Puede encontrar más información sobre este complemento en: https://github.com/albzan/lambda-nvda.
+﻿#Complemento de Lambda para NVDA#
 
 Este proyecto es un módulo de aplicación para el software Lambda. Ha sido inspirado por el trabajo de Peter Lecky en la Comenius University.
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis, acceso lineal a las matemáticas mediante pantallas braille y síntesis de audio) es un programa que ayuda a las personas ciegas a leer y escribir matemáticas usando una pantalla braile y/o un sintetizador de audio.
