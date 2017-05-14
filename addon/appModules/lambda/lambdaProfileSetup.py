@@ -67,10 +67,12 @@ def removeBrailleTableToGUI():
 
 # Retrieves the current absolute path for the braille table and updates the profile entry (useful for portable NVDA)
 def updateTablePath() :
-	basepath = _getBrlTablesDir()
 	lp = config.conf._getProfile(PROFILE_NAME,True)
+	#If a system table has been selected, do not force the abspath
+	if "lambda-" not in lp["braille"]["translationTable"] : return
+	basepath = _getBrlTablesDir()
 	tablename = os.path.basename(lp["braille"]["translationTable"])
-	if basepath not in lp["braille"]["translationTable"] : #Directory has been moved
+	if basepath not in lp["braille"]["translationTable"]: #Directory has been moved
 		lp["braille"]["translationTable"] = _getBrlTablePath(tablename)
 		lp.write()
 
