@@ -211,22 +211,22 @@ sign \x00B8 1234567     z con caron
 noback sign \x25CF 256 black circle
 
 # Mathematic symbols only on Jaws's Lambda Braille table are adapted below
-math \x000 578
-math \x001 278
-math \x002 1278
-math \x003 1478
-math \x004 48
-math \x005 2678
-math \x006 12478
-math \x007 124578
-math \x008 12578
-math \x009 1467
-math \x00a 24578
-math \x00b 1378
-math \x00c 12378
-math \x00d 13478
-math \x00e 134578
-math \x00f 23678
+math \x0000 578
+math \x0001 278
+math \x0002 1278
+math \x0003 1478
+math \x0004 48
+math \x0005 2678
+math \x0006 12478
+math \x0007 124578
+math \x0008 12578
+math \x0009 1467
+math \x000a 24578
+math \x000b 1378
+math \x000c 12378
+math \x000d 13478
+math \x000e 134578
+math \x000f 23678
 math \x0010 123478
 math \x0011 1234578
 math \x0012 123578
@@ -242,7 +242,6 @@ math \x001c 12345678
 math \x001d 4678
 math \x001e 4578
 math \x001f 678
-math \x0020 
 math \x002f 3478
 math \x0030 34678
 math \x0031 16
@@ -251,9 +250,9 @@ math \x0033 146
 math \x0034 1456
 math \x0035 156
 math \x0036 1246
-math \x0037 12456
+math \x0037 12456
 math \x0038 1256
-math \x0039 246
+math \x0039 246
 math \x0041 17
 math \x0042 127
 math \x0043 147
