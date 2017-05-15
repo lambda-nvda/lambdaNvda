@@ -15,6 +15,7 @@ PROFILE_NAME = "lambda"
 #Translators: This string is the file name of the Lambda braille table for the translated language. The file should be present in the "brailleTables" directory in this addon. The default is the italian braille translation table.
 TABLE_NAME = _("lambda-ita.utb")
 
+
 # Check whether the lambda profile already exists
 def profileExists() :
 	try :
@@ -44,11 +45,11 @@ def createLambdaProfile() :
 	brlcfg["tetherTo"] = "focus"
 	brlcfg["readByParagraph"] = False
 	#lambda entry
-	lcfg = {}
-	lcfg['brailleFlatMode'] = True
+	#lcfg = {}
+	#lcfg['brailleFlatMode'] = True
 	#Write profile
 	lp["braille"] = brlcfg
-	lp['lambda'] = lcfg
+	#lp['lambda'] = lcfg
 	lp.write()
 	#Update profile trigger
 	trigs = config.conf.triggersToProfiles["app:"+PROFILE_NAME] = PROFILE_NAME

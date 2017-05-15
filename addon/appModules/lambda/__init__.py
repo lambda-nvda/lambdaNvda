@@ -14,6 +14,11 @@ from NVDAObjects.window import DisplayModelEditableText
 
 addonHandler.initTranslation()
 
+confspec = {
+	"brailleFlatMode": "boolean(default=True)",
+}
+config.conf.spec["lambda"] = confspec
+
 class AppModule(appModuleHandler.AppModule):
 # Dialogs which has edit fields like the main Lambda Editor
 	_customDialogsNames = (
