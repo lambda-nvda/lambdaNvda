@@ -1,4 +1,4 @@
-﻿#Complemento de Lambda para NVDA#
+﻿# Complemento de Lambda para NVDA#
 
 Este proxecto é un módulo de aplicación para a aplicación Lambda. foi inspirado polo traballo de Peter Lecky na Comenius University.
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis, acceso lineal ás matemáticas mediante pantallas braille e síntesis de fala) é un programa que axuda ás persoas cegas a eer e escribir matemáticas utilizando unha pantalla braile e/ou un sintetizador de audio.
@@ -8,9 +8,9 @@ Si é vostede un usuario non italiano de LAMBDA e gostaríalle contribuír con t
 
 **Nota:** Este complemento foi desenvolvido por Alberto Zanella como unha actividade voluntaria. Nin o autor nin os contribuíntes están relacionados coa venda ou co desenvolvemento do programa LAMBDA. Se quixese obter máis información sobre LAMBDA, reportar problemas ou obter soporte, por favor contacte co seu distribuidor local (en España, ONCE-CIDAT). Se está atopando dificultades usando ou instalando este complemento, por favor contacte co autor ou utilice a liga "Issues" (erros) dispoñible na páxina do proxecto en Github.
 
-##Características do complemento
+## Características do complemento
 
-###Soporte para fala:
+### Soporte para fala:
 
 * Infórmase dos menús e diálogos correctamente;
 * Soporte para fala natural das fórmulas matemáticas utilizando o motor interno de LAMBDA (p.ex. "raíz composta 3 de raíz composta 3 x máis 24, fin da raíz, menos 3 igual 0");
@@ -21,7 +21,7 @@ Si é vostede un usuario non italiano de LAMBDA e gostaríalle contribuír con t
 * Xanelas de diálogos especiais como a do modo estrutura, a calculadora, e a de matriz son agora correctamente reportadas e NVDA le correctamente ao mover o cursor por elas ou ao introducir texto;
 * O eco de escritura utiliza o procesador de texto de Lambda, de xeito que se informará correctamente de símbolos e marcadores serán.
 
-###Soporte para Braille:
+### Soporte para Braille:
 
 *O complemento instala (dentro do directorio de perfil de usuario) e activa un perfil de NVDA cunha táboa braille. Esta táboa pode diferir entre distintas linguas. A táboa foi construída dende a presente nos scripts de Jaws para LAMBDA (arquivo jbt). Entón os símbolos e marcadores son representados mediante os mesmos patróns de puntos;
 * O complemento crea un perfil de configuración e establece a configuración de braille estándar. De xeito que a saída á táboa braille personalizada só está establecida cando LAMBDA está activo;
@@ -35,7 +35,7 @@ Recoméndase encarecidamente deshabilitar o "Modo plano" cando se utilice DPI pe
 * A estrutura dos cadros de diálogo é máis sinxela, eliminando información repetida;
 * A selección é marcada correctamente utilizando os puntos 7 e 8, e correctamente refrescada ao premer comandos estándar de Windows (SHIFT+FRECHAS) ou comandos específicos de Lambda (CTRL+B, CTRL+SHIFT+B).
 
-##Antes de empezar a usar este complemento.
+## Antes de empezar a usar este complemento.
 Este complemento crea un perfil de NVDA nomeado como "lambda" que está asociado coa aplicación lambda.exe. Este perfil está configurado con todas as opcións no que ás opcións braille, á táboa braille personalizada, á localización do foco e ás opcións do modo plano se refire.
 
 
@@ -66,14 +66,6 @@ Onde :
 * path-to-the-addon-brailleTable-dir : É a ruta absoluta do directorio do complemento + "\brailleTables"
 * tableName : Depende do idioma seleccionado. Actualmente a tabla braille italiana, "lambda-ita.utb" , está presente.
 
-
-
-#Autores y Contribuyentes:
-* Autor: Alberto Zanella <lapostadi[omeuprimeironome]@gmail.com>
-* Iván Novegil
-* Noelia Ruiz Martínez
-* Alessandro Albano
-* Christian Leo
 
 
 
