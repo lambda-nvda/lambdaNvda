@@ -93,7 +93,12 @@ class LambdaEditField(edit.Edit):
 	
 	#Events section
 	def event_valueChange(self) :
-		if str(config.conf['lambda']['brailleFlatMode']) == 'True' :
+		cfgFlatMode = True
+		#When lambda profile is not loaded because of #27
+		try :
+			cfg = config.conf['lambda']['brailleFlatMode']
+		except KeyError: pass
+		if str(cfgFlatMode) == 'True' :
 			braille.handler.handleUpdate(self)
 		else : 
 			braille.handler.mainBuffer.clear()
@@ -220,7 +225,11 @@ class LambdaMainEditor(LambdaEditField):
 		gesture.send()
 	
 	def _get_TextInfo(self) :
-		config.conf['lambda']['brailleFlatMode'] = str(config.conf['lambda']['brailleFlatMode']) == 'True'
+		try :
+			config.conf['lambda']['brailleFlatMode'] = str(config.conf['lambda']['brailleFlatMode']) == 'True'
+		#When lambda profile is not loaded because of #27
+		except KeyError :
+			config.conf['lambda']['brailleFlatMode'] = True
 		if config.conf['lambda']['brailleFlatMode'] :
 			return LambdaEditorFlatTextInfo
 		return LambdaEditorTextInfo
@@ -231,8 +240,6 @@ class LambdaMainEditor(LambdaEditField):
 		self.initAutoSelectDetection()
 		self.script_reportCurrentSelection(gesture)
 		braille.handler.handleUpdate(self)
-	#Translators: This is a Lambda hotkey ctrl+b extends the selection to the next surrounding block, ctrl+shift+b reduce the selection to a smaller block.
-	script_selectBlocks.__doc__=_("Extends the selection to the surrounding block and reads it. If used with shift key, reduce the block and read it.")
 	
 	def script_sayDuplicate(self,gesture) :
 		#Retrieves the line before sending gesture, duplicate line is the same as the current one.
@@ -240,8 +247,7 @@ class LambdaMainEditor(LambdaEditField):
 		gesture.send()
 		braille.handler.handleUpdate(self)
 		self.say(line)
-	#Translators: This is a Lambda hotkey. ctrl+d is a macro that duplicates current line. The script reports the duplicated line.
-	script_sayDuplicate.__doc__=_("Duplicates the current line and reads it")
+
 	
 	def script_switch_flatMode(self,gesture) :
 		val = config.conf['lambda']['brailleFlatMode'] = not config.conf['lambda']['brailleFlatMode']

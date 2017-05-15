@@ -2,7 +2,7 @@
 This is not the source for the readme file of NVDA Addon. This is just for the Github repository. The source for the NVDA Addon build is readme-src.md. Thanks!
 -->
 
-#Lambda Add-On for NVDA
+# Lambda Add-On for NVDA
 
 * [Download latest stable release](https://github.com/nvdaaddons/lambda/releases/download/latest/lambda.nvda-addon)
 * [Download latest development release](https://github.com/nvdaaddons/lambda/releases/download/dev/lambda-dev.nvda-addon)
@@ -17,9 +17,9 @@ If you are a non-italian user of LAMBDA and you would like to contribute with tr
 
 **Please note:** This addon has been developed by Alberto Zanella as a voluntary activity. Nor the author or the contributors are involved in selling and / or development of the software Lambda. If you need more information about Lambda, or you need support on how to use it, please contact your local distributor. If you are encountering any difficulties when using or installing this addon, please contact the author or use the "Issues" link on the Github project page.
 
-##Addon Features:
+## Addon Features:
 
-###Speech support:
+### Speech support:
 
 * Dialogs and menus are properly reported;
 * Natural speech support for math formulas using the Lambda math engine, i.e. "compound root 3 sep compound root 3 x plus 24, close compound root, minus 3 equals 0";
@@ -30,7 +30,7 @@ If you are a non-italian user of LAMBDA and you would like to contribute with tr
 * Special dialogs like structure mode, calculator, and matrix window are now correctly reported and NVDA reads correctly when moving the cursor around or when new text is typed ;
 * Typing echo uses the Lambda text processor, so symbols and markers will be correctly reported.
 
-###Braille support:
+### Braille support:
 * The addon installs (inside the user profile directory) and activates a custom braille table. This table may be different for different languages. Custom braille tables were made from ones in the Lamba plugin for JAWS (jbt file). Then symbols and markers are represented using the same dots patterns;
 * The addon creates an NVDA profile for a standard braille configuration. By this, the output is set to the custom braille table only when the Lambda application is active;
 * Dialogs and menus are properly reported in braille;
@@ -43,10 +43,10 @@ We strongly recommend to disable the Flat Mode if you are using custom DPI in Wi
 * The structure of dialog boxes is easier, repeated information has been removed;
 * The selection will be marked properly using dots 7 and 8, and marking is properly refreshed while standard Windows commands (SHIFT+ARROWS) or Lambda specific commands (CTRL+B, CTRL+SHIFT+B) are pressed.
 
-##Setup
+## Setup
 You can get the addon by navigating to the "Releases" link in the Github repository page and activating it, then jump to the Downloads heading. Open the first link you'll locate, which is named "lambda.nvda-addon". Download it and run it using your NVDA Screen Reader. The setup will be automatically performed.
 
-##Before starting to use this addon.
+## Before starting to use this addon.
 This addon creates an NVDA profile named "lambda" which is associated with the "lambda.exe" application. The profile automatically sets all braille options: the custom braille table, the focus tethering and flat mode settings.
 
 If a previous profile with the same name is present in your system, the addon will not override it and you have to manually adjust your configuration profile. 
@@ -79,7 +79,7 @@ Where :
 
 
 
-#Authors and Contributors:
+# Authors and Contributors:
 * Author: Alberto Zanella <lapostadi[myfirstname]@gmail.com>
 * Iván Novegil
 * Noelia Ruiz Martínez

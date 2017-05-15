@@ -64,7 +64,7 @@ msgstr "lambda-ita.utb"
 #. # Translators: title of the message box that appears when the user is installing the addon and an older version prevents the update to be completed.
 #: addon\installTasks.py:17
 msgid "Incompatible version of the addon detected"
-msgstr "Individuata una incompabilità di versione"
+msgstr "Individuata una incompatibilità di versione"
 
 #. # Translators: text of the message box that appears when the user is installing the addon and an older version prevents the update to be completed.
 #: addon\installTasks.py:20

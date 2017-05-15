@@ -1,4 +1,4 @@
-#Add-On di NVDA per LAMBDA
+# Add-On di NVDA per LAMBDA
 Questo add-on permette di utilizzare il software LAMBDA con NVDA. Deriva da un lavoro precedente di Peter Lecky della  Comenius University ed è stato studiato e realizzato per rendere l'accesso all'ambiente LAMBDA il più semplice e simile a ciò che già avviene con altri screen reader.
 
 Per maggiori informazioni sul software LAMBDA si invita a consultare:
@@ -10,11 +10,11 @@ Per richieste in merito al prodotto si invita pertanto a contattare il servizio 
 
 Per ulteriori informazioni sull'addon, richieste o altro è possibile contattare l'autore tramite email o utilizzando gli strumenti messi a disposizione su queste pagine.
 
-##Audio presentazione
+## Audio presentazione
 Se volete scoprire nel dettaglio alcune delle caratteristiche di questo addon potete ascoltare la audio presentazione disponibile a 
 [questo indirizzo](https://drive.google.com/file/d/0B52OCBeOqw26ZU5aZnptTWFNTVk/view?usp=sharing)
 
-##Caratteristiche principali:
+## Caratteristiche principali:
 Per quello che riguarda l'accesso in sintesi vocale:
 * Vocalizza correttamente le finestre di dialogo ed i menù;
 * Vocalizza le formule matematiche utilizzando il sistema di processamento di testi di LAMBDA, quindi legge correttamente ed in modo naturale il testo matematico (ad esempio "radice 3 di 3x più 24, fine radice");
@@ -34,7 +34,7 @@ Per quello che riguarda il braille:
 * Rende più sintetiche le finestre di dialogo delle matrici e della esplorazione struttura in modo che non confondano l'utente che le deve leggere;
 * Marca in braille in modo corretto quando il testo viene selezionato.
 
-##Consigli post l'installazione
+## Consigli post l'installazione
 L'addon crea un profilo di NVDA chiamato "lambda" associato all'applicativo di Lambda. Il profilo imposta correttamente la tabella braille personalizzata e si assicura che il braille insegua il focus.
 Nel caso esista un precedente profilo chiamato "lambda", questo non verrà sovrascritto e quindi questi parametri dovranno essere impostati a mano dall'utente all'interno del file di configurazione dei profili.
 Per evitare questo, dopo ogni installazione o aggiornamento dell'addon di NVDA per Lambda, **si consiglia caldamente di cancellare ogni precedente profilo chiamato "lambda"** accedendo al menù di NVDA, quindi andando in "Gestione profili".
@@ -45,11 +45,3 @@ Se si preferisce è possibile procedere manualmente, in questo caso consultare l
 
 La rimozione del profilo può essere utile anche nel caso di problemi legati alla configurazione di NVDA con LAMBDA.
 Se si nota, dopo un certo periodo, che NVDA non funziona più correttamente con LAMBDA, provare a rimuovere il profilo "lambda" dalla lista dei profili. In questo modo l'addon si preoccuperà di creare un nuovo profilo con i parametri configurati nel modo corretto e l'utente non dovrà preoccuparsi di modificare manualmente i file di configurazione.
-
-#Autore e collaboratori:
-* Autore: Alberto Zanella - lapostadi[mionome]@gmail.com
-* Iván Novegil
-* Noelia Ruiz Martínez
-* Alessandro Albano
-* Christian Leo
-* Simone Dal Maso
