@@ -93,7 +93,12 @@ class LambdaEditField(edit.Edit):
 	
 	#Events section
 	def event_valueChange(self) :
-		if str(config.conf['lambda']['brailleFlatMode']) == 'True' :
+		cfgFlatMode = True
+		#When lambda profile is not loaded because of #27
+		try :
+			cfg = config.conf['lambda']['brailleFlatMode']
+		except KeyError: pass
+		if str(cfgFlatMode) == 'True' :
 			braille.handler.handleUpdate(self)
 		else : 
 			braille.handler.mainBuffer.clear()
@@ -220,7 +225,11 @@ class LambdaMainEditor(LambdaEditField):
 		gesture.send()
 	
 	def _get_TextInfo(self) :
-		config.conf['lambda']['brailleFlatMode'] = str(config.conf['lambda']['brailleFlatMode']) == 'True'
+		try :
+			config.conf['lambda']['brailleFlatMode'] = str(config.conf['lambda']['brailleFlatMode']) == 'True'
+		#When lambda profile is not loaded because of #27
+		except KeyError :
+			config.conf['lambda']['brailleFlatMode'] = True
 		if config.conf['lambda']['brailleFlatMode'] :
 			return LambdaEditorFlatTextInfo
 		return LambdaEditorTextInfo
