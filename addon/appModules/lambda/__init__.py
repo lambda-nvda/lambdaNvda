@@ -20,6 +20,7 @@ class AppModule(appModuleHandler.AppModule):
 	"TStructureW", #Structure view Window
 	"TFrm_Matrix", #Matrix Window
 	"TFrm_Calculator_Simple", #Calculator 
+	"TFrm_Calculator_Viewer", #CTRL+F9
 	)
 	
 	def __init__(self, *args, **kwargs):
