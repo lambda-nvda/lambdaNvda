@@ -1,5 +1,4 @@
-
-# Complemento de Lambda para NVDA
+﻿# Complemento de Lambda para NVDA
 
 lambda-nvda ha sido escrito por alberto Zanella.
 
@@ -9,10 +8,14 @@ Puede encontrar más información sobre este complemento en: https://github.com/
 Este proyecto es un módulo de aplicación para el software Lambda. Ha sido inspirado por el trabajo de Peter Lecky en la Comenius University.
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis, acceso lineal a las matemáticas mediante pantallas braille y síntesis de audio) es un programa que ayuda a las personas ciegas a leer y escribir matemáticas usando una pantalla braile y/o un sintetizador de audio.
 LAMBDA es el resultado de un proyecto EU. Para más información acerca de LAMBDA por favor visite [http://www.lambdaproject.org/](http://www.lambdaproject.org/).  
-La versión actual de este complemento tiene tablas braille solo para el idioma italiano pero su interfaz está disponible tanto en el idioma italiano como en español ahora mismo.
+La versión actual de este complemento tiene tablas braille solo para el idioma italiano pero su interfaz está disponible tanto en el idioma italiano como en español, inglés y gallego ahora mismo.
 Si es usted un usuario no italiano de LAMBDA y le gustaría contribuír con traducciones en su idioma, siéntase libre de contactar al autor (consulte más abajo) o bifurcar este proyecto.
 
 **Nota:** Este complemento ha sido desarrollado por Alberto Zanella como una actividad voluntaria. Ni el autor ni los contribuyentes están relacionados con la venta o el desarrollo del programa LAMBDA. si quisiera obtener más información sobre LAMBDA, reportar problemas u obtener soporte, por favor contacte con su distribuidor local (en España, ONCE-CIDAT). Si está encontrando dificultades usando o instalando este complemento, por favor contacte con el autor o use el enlace "Issues" (errores) disponible en la página del proyecto en Github.
+
+## Demostración en audio
+
+Si desea oír este complemento en acción le recomendamos escuchar la audiodemostración realizada por Salva Doménech para la lista "LAMBDA with NVDA", en el siguiente enlace: [https://drive.google.com/file/d/0B8k1H5BNRE0BY2JQNjRlVWFtV2s/view?usp=sharing] Esta demostración cubre la instalación del complemento, la escritura y verbalización de las acciones más frecuentes en LAMBDA y la explicación del soporte Braille, aún en desarrollo para el idioma español.
 
 ## Características del complemento
 
