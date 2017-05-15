@@ -12,6 +12,8 @@ import addonHandler
 addonHandler.initTranslation()
 
 PROFILE_NAME = "lambda"
+SIXDOTS_APP = "app:sixdots"
+
 #Translators: This string is the file name of the Lambda braille table for the translated language. The file should be present in the "brailleTables" directory in this addon. The default is the italian braille translation table.
 TABLE_NAME = _("lambda-ita.utb")
 
@@ -53,6 +55,7 @@ def createLambdaProfile() :
 	lp.write()
 	#Update profile trigger
 	trigs = config.conf.triggersToProfiles["app:"+PROFILE_NAME] = PROFILE_NAME
+	trigs = config.conf.triggersToProfiles[SIXDOTS_APP] = PROFILE_NAME
 	#Update profile configs
 	config.conf.saveProfileTriggers()
 
