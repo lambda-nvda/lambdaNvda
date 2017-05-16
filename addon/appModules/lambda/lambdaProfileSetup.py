@@ -8,7 +8,10 @@ import os
 import globalVars
 import braille
 import addonHandler
-from gui.settingsDialog import SettingsDialog
+import sharedMessages as shMsg
+import gui
+from gui.settingsDialogs import SettingsDialog
+import wx
 
 addonHandler.initTranslation()
 
@@ -56,7 +59,7 @@ def createLambdaProfile() :
 
 
 def setDefaultBraillevalues(brlcfg,translationTable = True,tetherTo = True,readByParagraph = True,wordWrap = True):
-	if transtranslationTable : brlcfg["translationTable"] = _getBrlTablePath(TABLE_NAME)
+	if translationTable : brlcfg["translationTable"] = _getBrlTablePath(TABLE_NAME)
 	if tetherTo : brlcfg["tetherTo"] = "focus"
 	if readByParagraph : brlcfg["readByParagraph"] = False
 	if wordWrap : brlcfg["wordWrap"]=False
@@ -91,6 +94,9 @@ def _getBrlTablesDir() :
 	return os.path.abspath(os.path.join(globalVars.appArgs.configPath, "addons", "lambda", "appModules",PROFILE_NAME,"brailleTables"))
 
 
+def onQuickProfileWizardDialog(evt) :
+	gui.mainFrame._popupSettingsDialog(QuickProfileWizardDialog)
+
 class QuickProfileWizardDialog(SettingsDialog):
 	# Translators: This is the label for the Quick Profile Wizard dialog.
 	# This dialog helps the user to reset relevant profile options without deleting his custom settings.
@@ -99,7 +105,7 @@ class QuickProfileWizardDialog(SettingsDialog):
 	def makeSettings(self, settingsSizer):
 		# Translators: This is the static text of the Quick Profile Wizard dialog.
 		msgIntro=_("Choose which options you want to reset to the default value for the Lambdas profile")
-		introStxt=wx.StaticText(self,-1,label=msgIntro)
+		self.introStxt=wx.StaticText(self,-1,label=msgIntro)
 		settingsSizer.Add(self.introStxt,flag=wx.BOTTOM)
 		# Translators: This is the label for a checkbox in the
 		# Quick Profile Wizard dialog.
@@ -123,7 +129,7 @@ class QuickProfileWizardDialog(SettingsDialog):
 		settingsSizer.Add(self.disableBrailleWordWrapCheckBox,border=10,flag=wx.BOTTOM)
 
 	def postInit(self):
-		self.followFocusCheckBox.SetFocus()
+		self.defaultTranslationTableCheckBox.SetFocus()
 
 	def onOk(self,evt):
 		lp = config.conf._getProfile(PROFILE_NAME,True)
