@@ -100,7 +100,7 @@ def onQuickProfileWizardDialog(evt) :
 class QuickProfileWizardDialog(SettingsDialog):
 	# Translators: This is the label for the Quick Profile Wizard dialog.
 	# This dialog helps the user to reset relevant profile options without deleting his custom settings.
-	title = _("LAMBDA Quick Profile Wizard")
+	title = _("Revert LAMBDA Profile Wizard")
 
 	def makeSettings(self, settingsSizer):
 		# Translators: This is the static text of the Quick Profile Wizard dialog.

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'Lambda' '1.1.2'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2017-05-16 20:20+0200\n"
-"PO-Revision-Date: 2017-05-16 20:25+0200\n"
+"POT-Creation-Date: 2017-05-16 20:52+0200\n"
+"PO-Revision-Date: 2017-05-16 20:52+0200\n"
 "Last-Translator: \n"
 "Language-Team: Alberto Zanella <lapostadialberto@gmail.com>\n"
 "Language: it\n"
@@ -50,18 +50,18 @@ msgid "Toggle the braille flat mode on or off."
 msgstr "Attiva o disattiva la modalità braille flat."
 
 #. Translators: This string is the file name of the Lambda braille table for the translated language. The file should be present in the "brailleTables" directory in this addon. The default is the italian braille translation table.
-#: addon\appModules\lambda\lambdaProfileSetup.py:20
+#: addon\appModules\lambda\lambdaProfileSetup.py:22
 msgid "lambda-ita.utb"
 msgstr "lambda-ita.utb"
 
 #. Translators: This is the label for the Quick Profile Wizard dialog.
 #. This dialog helps the user to reset relevant profile options without deleting his custom settings.
-#: addon\appModules\lambda\lambdaProfileSetup.py:101
-msgid "LAMBDA Quick Profile Wizard"
+#: addon\appModules\lambda\lambdaProfileSetup.py:103
+msgid "Revert LAMBDA Profile Wizard"
 msgstr "Ripristino guidato impostazioni di LAMBDA"
 
 #. Translators: This is the static text of the Quick Profile Wizard dialog.
-#: addon\appModules\lambda\lambdaProfileSetup.py:105
+#: addon\appModules\lambda\lambdaProfileSetup.py:107
 msgid ""
 "Choose which options you want to reset to the default value for the Lambdas "
 "profile"
@@ -71,26 +71,26 @@ msgstr ""
 
 #. Translators: This is the label for a checkbox in the
 #. Quick Profile Wizard dialog.
-#: addon\appModules\lambda\lambdaProfileSetup.py:110
+#: addon\appModules\lambda\lambdaProfileSetup.py:112
 #, python-format
 msgid "Keep the LAMBDA braille table for the current language (%s)"
 msgstr "Mantieni la tabella braille di Lambda per la lingua corrente (%s)"
 
 #. Translators: This is the label for a checkbox in the
 #. Quick Profile Wizard dialog.
-#: addon\appModules\lambda\lambdaProfileSetup.py:115
+#: addon\appModules\lambda\lambdaProfileSetup.py:117
 msgid "Set the braille cursor to tether the focus"
 msgstr "Imposta il cursore braille per inseguire il focus"
 
 #. Translators: This is the label for a checkbox in the
 #. Quick Profile Wizard dialog.
-#: addon\appModules\lambda\lambdaProfileSetup.py:120
+#: addon\appModules\lambda\lambdaProfileSetup.py:122
 msgid "Disable the Braille reading by paragraph"
 msgstr "Disabilita la lettura per paragrafi in braille"
 
 #. Translators: This is the label for a checkbox in the
 #. Quick Profile Wizard dialog.
-#: addon\appModules\lambda\lambdaProfileSetup.py:125
+#: addon\appModules\lambda\lambdaProfileSetup.py:127
 msgid "Disable word wrappping of the braille line"
 msgstr "Mantieni le parole spezzate nella riga in braille"
 
