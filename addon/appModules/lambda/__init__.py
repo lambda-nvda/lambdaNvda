@@ -11,8 +11,14 @@ import controlTypes
 from . import lambdaProfileSetup
 from lambdaEdit import LambdaDialogEdit,LambdaMainEditor
 from NVDAObjects.window import DisplayModelEditableText
+import wx
 
 addonHandler.initTranslation()
+
+confspec = {
+	"brailleFlatMode": "boolean(default=True)",
+}
+config.conf.spec["lambda"] = confspec
 
 class AppModule(appModuleHandler.AppModule):
 # Dialogs which has edit fields like the main Lambda Editor
@@ -77,3 +83,13 @@ class AppModule(appModuleHandler.AppModule):
 		super(AppModule, self).terminate()
 		#Clean-up custom braille tables
 		lambdaProfileSetup.removeBrailleTableToGUI()
+	
+	def script_openQuckProfileWizard(self, gesture):
+		wx.CallAfter(lambdaProfileSetup.onQuickProfileWizardDialog, None)
+	script_openQuckProfileWizard.category = "Lambda"
+	# Translators: Message presented in input help mode.
+	script_openQuckProfileWizard.__doc__ = _("Shows a dialog to revert lambda profile options to the default.")
+	
+	__gestures = {
+	'kb:nvda+alt+r': 'openQuckProfileWizard',
+	}
