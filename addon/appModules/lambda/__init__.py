@@ -9,7 +9,7 @@ import addonHandler
 import appModuleHandler
 import controlTypes
 from . import lambdaProfileSetup
-from lambdaEdit import LambdaDialogEdit,LambdaMainEditor
+from lambdaEdit import LambdaDialogEdit,LambdaMainEditor,LambdaMatrixEdit
 from NVDAObjects.window import DisplayModelEditableText
 import wx
 

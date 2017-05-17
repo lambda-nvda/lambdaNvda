@@ -206,7 +206,27 @@ This class extends the LambdaEditField for matrix dialog.
 '''
 class LambdaMatrixEdit(LambdaEditField):
 	TextInfo = LambdaEditorFlatTextInfo
+	name = None
+	
+	#Needed because selection doesn't fire any standard event.
+	def script_reportSelection(self,gesture) :
+		gesture.send()
+		s = self.getLambdaObj().getselected(self.windowHandle).replace("@@@",'')
+		self.say(s+ ' ' + shMsg.GLB_SELECTED)
+		
+	
+	def detectPossibleSelectionChange(self):
+		pass
+	
+	selGestures = ("kb:shift+leftArrow","kb:shift+rightArrow","kb:shift+upArrow","kb:shift+downArrow")
+	def initOverlayClass(self):
+		for g in self.selGestures:
+			self.bindGesture(g,"reportSelection")
 
+	def script_caret_moveByLine(self, gesture):
+		gesture.send()
+		braille.handler.mainBuffer.clear()
+		braille.handler.handleGainFocus(self)
 		
 '''
 This class extends the LambdaEditField for the main editor. It adds scripts that can be used only in the main editor of Lambda.
