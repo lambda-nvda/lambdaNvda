@@ -1,8 +1,8 @@
-msgid ""
+﻿msgid ""
 msgstr ""
 "Project-Id-Version: 'Lambda' '1.1.4'\n"
-"POT-Creation-Date: 2017-05-10 09:09+0200\n"
-"PO-Revision-Date: 2017-05-12 21:11+0200\n"
+"POT-Creation-Date: 2017-05-17 12:15+0200\n"
+"PO-Revision-Date: 2017-05-17 12:19+0200\n"
 "Last-Translator: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
 "Language-Team: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
 "Language: es\n"
@@ -14,6 +14,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: addon\n"
 "X-Poedit-SearchPath-1: buildVars.py\n"
+
+#: addon/appModules/lambda/__init__.py:91
+msgid "Shows a dialog to revert lambda profile options to the default."
+msgstr ""
+"Muestra un diálogo para revertir las opciones del perfil LAMBDA a las de "
+"fábrica."
 
 #: addon/appModules/lambda/lambdaEdit.py:80
 msgid "Reports the current line under the application cursor."
@@ -27,29 +33,44 @@ msgstr "lee desde el comienzo del documento hasta el final del texto."
 msgid "Announces the current selection in edit controls and documents."
 msgstr "Anuncia la selección actual en controles de edición y documentos."
 
-#: addon/appModules/lambda/lambdaEdit.py:235
-msgid ""
-"Extends the selection to the surrounding block and reads it. If used with "
-"shift key, reduce the block and read it."
-msgstr ""
-"Extiende la selección al bloque de alrededor y lo lee. Si es usado con la "
-"tecla shift, reduce el bloque y lo dice."
-
-#: addon/appModules/lambda/lambdaEdit.py:244
-msgid "Duplicates the current line and reads it"
-msgstr "Duplica la línea actual y la lee"
-
-#: addon/appModules/lambda/lambdaEdit.py:249
+#: addon/appModules/lambda/lambdaEdit.py:248
 msgid "flat mode "
 msgstr "modo plano "
 
-#: addon/appModules/lambda/lambdaEdit.py:255
+#: addon/appModules/lambda/lambdaEdit.py:254
 msgid "Toggle the braille flat mode on or off."
 msgstr "Conmuta el modo plano de braille entre activado y desactivado."
 
-#: addon/appModules/lambda/lambdaProfileSetup.py:16
+#: addon/appModules/lambda/lambdaProfileSetup.py:22
 msgid "lambda-ita.utb"
 msgstr "lambda-esp.utb"
+
+#: addon/appModules/lambda/lambdaProfileSetup.py:103
+msgid "Revert LAMBDA Profile Wizard"
+msgstr "Asistente de Reversión del Perfil LAMBDA"
+
+#: addon/appModules/lambda/lambdaProfileSetup.py:107
+msgid ""
+"Choose which options you want to reset to the default value for the Lambdas "
+"profile"
+msgstr "Elija cuáles de las opciones del perfil LAMBDA desea restablecer"
+
+#: addon/appModules/lambda/lambdaProfileSetup.py:112
+#, python-format
+msgid "Keep the LAMBDA braille table for the current language (%s)"
+msgstr "Mantener la tabla braille para el idioma actual (%s)"
+
+#: addon/appModules/lambda/lambdaProfileSetup.py:117
+msgid "Set the braille cursor to tether the focus"
+msgstr "Configurar el cursor braille para seguir al foco"
+
+#: addon/appModules/lambda/lambdaProfileSetup.py:122
+msgid "Disable the Braille reading by paragraph"
+msgstr "Deshabilitar la lectura braille por párrafo"
+
+#: addon/appModules/lambda/lambdaProfileSetup.py:127
+msgid "Disable word wrappping of the braille line"
+msgstr "Deshabilitar la no separación de palabras braille de una línea"
 
 #: addon/appModules/lambda/sharedMessages/__init__.py:8
 msgid "selected"
@@ -66,6 +87,16 @@ msgstr "activado"
 #: addon/appModules/lambda/sharedMessages/__init__.py:11
 msgid "off"
 msgstr "desactivado"
+
+#: addon/appModules/lambda/sharedMessages/__init__.py:12
+msgid "An NVDA settings dialog is already open. Please close it first."
+msgstr ""
+"Un diálogo de configuración de NVDA ya está abierto. Por favor ciérrelo "
+"primero."
+
+#: addon/appModules/lambda/sharedMessages/__init__.py:13
+msgid "Error"
+msgstr "Error"
 
 #: addon/installTasks.py:17
 msgid "Incompatible version of the addon detected"
@@ -120,6 +151,16 @@ msgid ""
 msgstr ""
 "Este complemento proporciona el acceso al editor Lambda con soporte para "
 "braille y habla."
+
+#~ msgid ""
+#~ "Extends the selection to the surrounding block and reads it. If used with "
+#~ "shift key, reduce the block and read it."
+#~ msgstr ""
+#~ "Extiende la selección al bloque de alrededor y lo lee. Si es usado con la "
+#~ "tecla shift, reduce el bloque y lo dice."
+
+#~ msgid "Duplicates the current line and reads it"
+#~ msgstr "Duplica la línea actual y la lee"
 
 #~ msgid ""
 #~ "An older version of this addon has been detected.\n"

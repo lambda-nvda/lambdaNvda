@@ -1,8 +1,8 @@
-msgid ""
+﻿msgid ""
 msgstr ""
 "Project-Id-Version: 'Lambda' '1.1.4'\n"
-"POT-Creation-Date: 2017-05-15 17:44+0200\n"
-"PO-Revision-Date: 2017-05-15 17:44+0200\n"
+"POT-Creation-Date: 2017-05-17 12:19+0200\n"
+"PO-Revision-Date: 2017-05-17 12:21+0200\n"
 "Last-Translator: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
 "Language-Team: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
 "Language: gl\n"
@@ -14,6 +14,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: addon\n"
 "X-Poedit-SearchPath-1: buildVars.py\n"
+
+#: addon/appModules/lambda/__init__.py:91
+msgid "Shows a dialog to revert lambda profile options to the default."
+msgstr ""
+"Amosa un diálogo para revertir as opcións do perfil LAMBDA ás de fábrica"
 
 #: addon/appModules/lambda/lambdaEdit.py:80
 msgid "Reports the current line under the application cursor."
@@ -27,17 +32,52 @@ msgstr "lee dende o comezo do documento ata o final do texto."
 msgid "Announces the current selection in edit controls and documents."
 msgstr "Anuncia a selección actual en controis de edición e documentos."
 
+<<<<<<< HEAD
 #: addon/appModules/lambda/lambdaEdit.py:255
 msgid "flat mode "
 msgstr "modo plano "
 
 #: addon/appModules/lambda/lambdaEdit.py:261
+=======
+#: addon/appModules/lambda/lambdaEdit.py:248
+msgid "flat mode "
+msgstr "modo plano "
+
+#: addon/appModules/lambda/lambdaEdit.py:254
+>>>>>>> master
 msgid "Toggle the braille flat mode on or off."
 msgstr "Cnmuta o modo plano do braille entre activado e desactivado."
 
-#: addon/appModules/lambda/lambdaProfileSetup.py:16
+#: addon/appModules/lambda/lambdaProfileSetup.py:22
 msgid "lambda-ita.utb"
 msgstr "lambda-esp.utb"
+
+#: addon/appModules/lambda/lambdaProfileSetup.py:103
+msgid "Revert LAMBDA Profile Wizard"
+msgstr "Asistente de Reversión do Perfil LAMBDA"
+
+#: addon/appModules/lambda/lambdaProfileSetup.py:107
+msgid ""
+"Choose which options you want to reset to the default value for the Lambdas "
+"profile"
+msgstr "Escolla cales das opcións do perfil LAMBDA desexa restablecer"
+
+#: addon/appModules/lambda/lambdaProfileSetup.py:112
+#, python-format
+msgid "Keep the LAMBDA braille table for the current language (%s)"
+msgstr "Manter a tabla braille para a lingua actual (%s)"
+
+#: addon/appModules/lambda/lambdaProfileSetup.py:117
+msgid "Set the braille cursor to tether the focus"
+msgstr "Configurar o cursor braille para seguir ó foco"
+
+#: addon/appModules/lambda/lambdaProfileSetup.py:122
+msgid "Disable the Braille reading by paragraph"
+msgstr "Deshabilitar a lectura braille por parágrafo"
+
+#: addon/appModules/lambda/lambdaProfileSetup.py:127
+msgid "Disable word wrappping of the braille line"
+msgstr "Deshabilitar a non separación de palabras braille dunha liña"
 
 #: addon/appModules/lambda/sharedMessages/__init__.py:8
 msgid "selected"
@@ -54,6 +94,16 @@ msgstr "activado"
 #: addon/appModules/lambda/sharedMessages/__init__.py:11
 msgid "off"
 msgstr "desactivado"
+
+#: addon/appModules/lambda/sharedMessages/__init__.py:12
+msgid "An NVDA settings dialog is already open. Please close it first."
+msgstr ""
+"Un diálogo de configuración de NVDA xa está aberto. Pregámoslle o peche "
+"primeiro."
+
+#: addon/appModules/lambda/sharedMessages/__init__.py:13
+msgid "Error"
+msgstr "Erro"
 
 #: addon/installTasks.py:17
 msgid "Incompatible version of the addon detected"
