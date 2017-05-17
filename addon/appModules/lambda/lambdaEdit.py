@@ -167,7 +167,9 @@ class LambdaEditField(edit.Edit):
 		if len(s) > len(self.s):
 			self.say(self._getSChunk(self.s,s) + ' ' + shMsg.GLB_SELECTED)
 		elif len(s) < len(self.s): # The last character unselected isn't reported, so we do and len(s) >= 0, so remove it as can't be negative
-			self.say(self._getSChunk(s,self.s) + ' ' + shMsg.GLB_UNSELECTED)
+			silentUnselection = config.conf["lambda"]["silentUnselection"]
+			if silentUnselection and len(s) > 0 or not silentUnselection:
+				self.say(self._getSChunk(s,self.s) + ' ' + shMsg.GLB_UNSELECTED)
 		self.s = s
 	
 	def _getSChunk(self, oldmessage, newmessage) :
@@ -261,7 +263,7 @@ class LambdaMainEditor(LambdaEditField):
 		braille.handler.handleUpdate(self)
 		self.say(line)
 
-	
+
 	def script_switch_flatMode(self,gesture) :
 		val = config.conf['lambda']['brailleFlatMode'] = not config.conf['lambda']['brailleFlatMode']
 		#Translators: This determines whether to use API or DisplayMode to render the editor window on a braille display. It is a toggle (on/off)
@@ -273,9 +275,18 @@ class LambdaMainEditor(LambdaEditField):
 	#This script set the desired textInfo for braille, when flat mode is on, the LambdaEditorFlatTextInfo is used, otherwise the LambdaEditorTextInfo is set.
 	script_switch_flatMode.__doc__=_("Toggle the braille flat mode on or off.")
 
+	def script_switchSilentUnselection(self, gesture):
+		val = config.conf['lambda']['silentUnselection'] = not config.conf['lambda']['silentUnselection']
+		#Translators: This determines whether to speak pieces of unselected text when pressing arrow keys.
+		silentUnselectionMessage = _("silent unselection ")
+		ui.message(silentUnselectionMessage + ((lambda x: shMsg.GLB_ON if x else shMsg.GLB_OFF)(val)))
+	# Translators: Input help mode message for switch silent unselection command.
+	script_switchSilentUnselection.__doc__=_("Toggles on and off the speaking of unselected pieces of text when pressing arrow keys in Lambda")
+
 	__gestures = {
 	#Braille flat mode
 	'kb:nvda+shift+f': 'switch_flatMode',
+	'kb:control+shift+s': 'switchSilentUnselection',
 	#Lambda editor commands
 	'kb:control+shift+b': 'selectBlocks',
 	'kb:control+b': 'selectBlocks',

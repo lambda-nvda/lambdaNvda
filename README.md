@@ -69,6 +69,7 @@ filename : userData\profiles\lambda.ini :
 
 [lambda]
 	brailleFlatMode = True
+	silentUnselection = True
 
 ```
 
@@ -76,6 +77,7 @@ Where :
 * path-to-the-addon-brailleTable-dir : is the absolute path of the addon directory + "\brailleTables"
 * tableName : depends on the active NVDA language. Currently only the italian braille table, "lambda-ita.utb" , is present.
 
+* silentUnselection makes that NVDA doesn't announce pieces of unselected text when arrow keys are pressed. Due to Lambda implementations, when this option is active, the last unselected character won't be announced.
 
 
 
