@@ -16,6 +16,7 @@ import config
 import textInfos
 import ui
 
+
 addonHandler.initTranslation()
 
 #We've used EditableTextDisplayModelTextInfo when user want white spaces to be rendered in braille.
@@ -153,6 +154,7 @@ class LambdaEditField(edit.Edit):
 	#Selection detection
 	def initAutoSelectDetection(self):
 		self.s = ''
+		self.shouldAnnounceUnselection = False
 		s = self.getLambdaObj().getselected(self.windowHandle)
 		if s:
 			self.s = s.strip().rstrip()
@@ -166,9 +168,24 @@ class LambdaEditField(edit.Edit):
 			s = s.strip().rstrip()
 		if len(s) > len(self.s):
 			self.say(self._getSChunk(self.s,s) + ' ' + shMsg.GLB_SELECTED)
-		elif len(s) < len(self.s) and len(s) > 0:
-			self.say(self._getSChunk(s,self.s) + ' ' + shMsg.GLB_UNSELECTED)
+			self.shouldAnnounceUnselection = self._shouldAnnounceUnselection()
+		elif len(s) < len(self.s):
+			if (len(s) > 0) :
+				self.say(self._getSChunk(s,self.s) + ' ' + shMsg.GLB_UNSELECTED)
+				self.shouldAnnounceUnselection = self._shouldAnnounceUnselection()
+			if self.shouldAnnounceUnselection :
+				self.say(self._getSChunk(s,self.s) + ' ' + shMsg.GLB_UNSELECTED)
 		self.s = s
+	
+	def _shouldAnnounceUnselection(self) :
+		try :
+			info=self.makeTextInfo(textInfos.POSITION_SELECTION)
+		except (RuntimeError, NotImplementedError):
+			return False
+		if not info or info.isCollapsed:
+			return False
+		return len(info.text) <= 2
+		
 	
 	def _getSChunk(self, oldmessage, newmessage) :
 		if oldmessage in newmessage :
