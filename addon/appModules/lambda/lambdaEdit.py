@@ -94,14 +94,7 @@ class LambdaEditField(edit.Edit):
 	
 	#Events section
 	def event_valueChange(self) :
-		cfgFlatMode = True
-		#When lambda profile is not loaded because of #27
-		cfg = config.conf['lambda']['brailleFlatMode']
-		if cfg:
-			braille.handler.handleUpdate(self)
-		else : 
-			braille.handler.mainBuffer.clear()
-			braille.handler.handleGainFocus(self)
+		braille.handler.handleUpdate(self)
 			
 		
 	def event_caret(self) :

@@ -3,6 +3,7 @@
 #See the file COPYING for more details.
 #Copyright (C) 2016-2017 Alberto Zanella <lapostadialberto@gmail.com>
 
+import braille
 import config
 import speech
 import addonHandler
@@ -62,8 +63,11 @@ class AppModule(appModuleHandler.AppModule):
 	shouldValueChangeSpeak = False
 	def reportLastInsertedText(self,obj,reason=None) :
 		obj.detectPossibleSelectionChange()
-		obj.invalidateCache()
-		obj.redraw()
+		cfg = config.conf['lambda']['brailleFlatMode']
+		if not cfg :
+			braille.handler.handleGainFocus(obj)
+		#obj.invalidateCache()
+		#obj.redraw()
 		s = obj.getLambdaObj().getlastinsertedel(obj.windowHandle, 1)
 		if s == None or len(s) == 0 : return
 		self.shouldValueChangeSpeak = False
