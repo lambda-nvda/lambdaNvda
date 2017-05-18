@@ -8,7 +8,9 @@ e [http://veia.it/](http://veia.it/)
 Si precisa che lo sviluppo di questo add-on è avvenuto in maniera volontaria e del tutto indipendente dall'azienda rivenditore del prodotto LAMBDA, con la quale l'autore non intrattiene alcun rapporto di lavoro e/o di collaborazione. 
 Per richieste in merito al prodotto si invita pertanto a contattare il servizio di supporto tecnico messo a disposizione dal fornitore del prodotto.
 
-Per ulteriori informazioni sull'addon, richieste o altro è possibile contattare l'autore tramite email o utilizzando gli strumenti messi a disposizione su queste pagine.
+Per ulteriori informazioni sull'addon, richieste o altro è possibile contattare l'autore tramite email o su GitHub.
+
+L'attuale versione del componente aggiuntivo dispone di tabelle braille adattate per l'uso con Lambda sia per l'Italiano che per lo Spagnolo. La traduzione delll'addon è disponibile in lingua inglese, Italiana, spagnola e galiziana.
 
 ## Audio presentazione
 Se volete scoprire nel dettaglio alcune delle caratteristiche di questo addon potete ascoltare la audio presentazione disponibile a 
