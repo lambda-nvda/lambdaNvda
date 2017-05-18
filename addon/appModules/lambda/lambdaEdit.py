@@ -15,7 +15,7 @@ import braille
 import config
 import textInfos
 import ui
-from logHandler import log
+
 
 addonHandler.initTranslation()
 
@@ -181,11 +181,9 @@ class LambdaEditField(edit.Edit):
 		try :
 			info=self.makeTextInfo(textInfos.POSITION_SELECTION)
 		except (RuntimeError, NotImplementedError):
-			log.info("entro")
 			return False
 		if not info or info.isCollapsed:
 			return False
-		log.info(info.text)
 		return len(info.text) <= 2
 		
 	
