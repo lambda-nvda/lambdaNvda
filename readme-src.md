@@ -39,7 +39,9 @@ This addon creates an NVDA profile named "lambda" which is associated with the "
 
 If a previous profile with the same name is present in your system, the addon will not override it and you have to manually adjust your configuration profile. 
 
-To stave off this situation, we suggest to delete old versions of the "lambda" profile after the installation of the addon. To do so, open the NVDA menu, select the "Configuration profiles" menu Item and press ENTER.
+To stave off this situation, if you have specific settings you'd like to preserve, you can use the "Revert LAMBDA Profile Wizard". The shortcut to start this tool is NVDA+alt+r.
+
+An easy option is also to delete old versions of the "lambda" profile after the installation of the addon. To do so, open the NVDA menu, select the "Configuration profiles" menu Item and press ENTER.
 
 In the Configuration profiles dialog, you'll be able to locate and delete the "lambda" profile. The profile will be re-created the next time the Lambda application is started.
 
@@ -63,3 +65,8 @@ filename : userData\profiles\lambda.ini :
 Where :
 * path-to-the-addon-brailleTable-dir : is the absolute path of the addon directory + "\brailleTables"
 * tableName : depends on the active NVDA language. Currently only the italian braille table, "lambda-ita.utb" , is present.
+
+## Addon Keyboard Shortcuts:
+
+* **NVDA+Shift+f**: Toggle braille flat mode on or off;
+* **NVDA+alt+r**: Open the "Revert LAMBDA Profile Wizard".
