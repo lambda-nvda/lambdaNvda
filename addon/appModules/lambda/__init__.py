@@ -17,6 +17,7 @@ addonHandler.initTranslation()
 
 confspec = {
 	"brailleFlatMode": "boolean(default=True)",
+	"silentUnselection": "boolean(default=True)",
 }
 config.conf.spec["lambda"] = confspec
 
