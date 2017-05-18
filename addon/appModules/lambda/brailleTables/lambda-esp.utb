@@ -1,7 +1,7 @@
 # liblouis: Computer Spanish 8 dots Braille table adapted to use with the LAMBDA NVDA addon
 #
 #  Copyright (C) original 2012 by José Enrique Fernández del Campo and Juan Carlos Buño Suárez <quetzatl@eresmas.net>
-# Copyright (C) adaptation 2017 - Iván Novegil Cancelas <info@inovegil.site40.net>, 
+# Copyright (C) adaptation 2017 - Iván Novegil Cancelas <info@inovegil.site40.net>, Salva Doménech Miguel <sdomenechmiguel@gmail.com> and José M. Delicado Alcolea, and collaborators Alberto Zanella and José E. Fernández del Campo
 #
 #  This file was taken from liblouis.
 #
@@ -24,7 +24,7 @@
 # Uncontracted Computer Spanish Table
 # Adapted for use with the NVDA's LAMBDA Addon (https://github.com/nvdaaddons/lambda)
 # Original Autor José Enrique Fernández del Campo <jefdelcampo@gmail.com> and Juan Carlos Buño Suárez <quetzatl@eresmas.net>
-# Author Iván Novegil Cancelas <info@inovegil.site40.net>, 
+# Author Iván Novegil Cancelas <info@inovegil.site40.net>, Salva Doménech Miguel <sdomenechmiguel@gmail.com> and José M. Delicado Alcolea, and collaborators Alberto Zanella and José E. Fernández del Campo
 # -----------------------------------------------------------------------------
 
 
