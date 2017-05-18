@@ -166,7 +166,7 @@ class LambdaEditField(edit.Edit):
 			s = s.strip().rstrip()
 		if len(s) > len(self.s):
 			self.say(self._getSChunk(self.s,s) + ' ' + shMsg.GLB_SELECTED)
-		elif len(s) < len(self.s): # The last character unselected isn't reported, so we do and len(s) >= 0, so remove it as can't be negative
+		elif len(s) < len(self.s) and len(s) > 0:
 			self.say(self._getSChunk(s,self.s) + ' ' + shMsg.GLB_UNSELECTED)
 		self.s = s
 	
