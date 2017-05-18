@@ -15,6 +15,7 @@ import braille
 import config
 import textInfos
 import ui
+from logHandler import log
 
 addonHandler.initTranslation()
 
@@ -153,6 +154,7 @@ class LambdaEditField(edit.Edit):
 	#Selection detection
 	def initAutoSelectDetection(self):
 		self.s = ''
+		self.shouldAnnounceUnselection = False
 		s = self.getLambdaObj().getselected(self.windowHandle)
 		if s:
 			self.s = s.strip().rstrip()
@@ -166,9 +168,23 @@ class LambdaEditField(edit.Edit):
 			s = s.strip().rstrip()
 		if len(s) > len(self.s):
 			self.say(self._getSChunk(self.s,s) + ' ' + shMsg.GLB_SELECTED)
-		elif len(s) < len(self.s) and len(s) > 0:
-			self.say(self._getSChunk(s,self.s) + ' ' + shMsg.GLB_UNSELECTED)
+		elif len(s) < len(self.s):
+			if (len(s) > 0) or self.shouldAnnounceUnselection :
+				self.say(self._getSChunk(s,self.s) + ' ' + shMsg.GLB_UNSELECTED)
+		self.shouldAnnounceUnselection = self._shouldAnnounceUnselection()
 		self.s = s
+	
+	def _shouldAnnounceUnselection(self) :
+		try :
+			info=self.makeTextInfo(textInfos.POSITION_SELECTION)
+		except (RuntimeError, NotImplementedError):
+			log.info("entro")
+			return False
+		if not info or info.isCollapsed:
+			return False
+		log.info(info.text)
+		return len(info.text) <= 2
+		
 	
 	def _getSChunk(self, oldmessage, newmessage) :
 		if oldmessage in newmessage :
