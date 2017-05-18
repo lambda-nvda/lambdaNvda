@@ -35,13 +35,39 @@ Per quello che riguarda il braille:
 * Marca in braille in modo corretto quando il testo viene selezionato.
 
 ## Consigli post l'installazione
-L'addon crea un profilo di NVDA chiamato "lambda" associato all'applicativo di Lambda. Il profilo imposta correttamente la tabella braille personalizzata e si assicura che il braille insegua il focus.
-Nel caso esista un precedente profilo chiamato "lambda", questo non verrà sovrascritto e quindi questi parametri dovranno essere impostati a mano dall'utente all'interno del file di configurazione dei profili.
-Per evitare questo, dopo ogni installazione o aggiornamento dell'addon di NVDA per Lambda, **si consiglia caldamente di cancellare ogni precedente profilo chiamato "lambda"** accedendo al menù di NVDA, quindi andando in "Gestione profili".
+L'addon provvede alla creazione automatica di un nuovo profilo di NVDA chiamato "lambda" associato all'applicazione "lambda.exe". Questa operazione viene effettuata automaticamente all'avvio dell'applicativo Lambda. In particolare vengono correttamente impostate le preferenze relative alla tabella braille, al tracciamento del cursore ed alla modalità flat del braille.
 
-Se si preferisce è possibile procedere manualmente, in questo caso consultare le note di rilascio per capire come modificare il file profilo "lambda.ini".
+Se è già presente un profilo chiamato "lambda", l'addon non lo sovrascriverà e si dovrà provvedere manualmente alla configurazione.
 
+Per rendere il compito più facile, se si desidera preservare alcune delle impostazioni del precedente profilo, è possibile utilizzare la funzionalità di "Ripristino guidato impostazioni di LAMBDA". Il comando rapido per questo comando è NVDA+alt+r.
 
+Una soluzione più semplice è quella di cancellare il precedente profilo chiamato "lambda" accedendo al menù di NVDA, quindi andando in "Gestione profili".
 
 La rimozione del profilo può essere utile anche nel caso di problemi legati alla configurazione di NVDA con LAMBDA.
 Se si nota, dopo un certo periodo, che NVDA non funziona più correttamente con LAMBDA, provare a rimuovere il profilo "lambda" dalla lista dei profili. In questo modo l'addon si preoccuperà di creare un nuovo profilo con i parametri configurati nel modo corretto e l'utente non dovrà preoccuparsi di modificare manualmente i file di configurazione.
+
+Ad ogni avvio dell'applicazione Lambda, questo componente aggiuntivo controlla se un profilo chiamato "lambda" esiste. Se non esiste, procede alla sua creazione automatica secondo questo formato:
+
+```
+nome file : userData\profiles\lambda.ini :
+
+[braille]
+	readByParagraph = False
+	tetherTo = focus
+	translationTable = percorso-della-cartella-brailleTable-del-componente-aggiuntivo\nomeTabella
+
+[lambda]
+	brailleFlatMode = True
+
+```
+
+Dove :
+* percorso-della-cartella-brailleTable-del-componente-aggiuntivo : è il percorso assoluto della directory dell'addon a cui segue "\brailleTables"
+* nomeTabella : dipende dalla lingua di NVDA.
+
+## Comandi da tastiera del componente aggiuntivo:
+
+* **NVDA+Shift+f**: Abilita o disabilita la modalità braille flat;
+* **NVDA+alt+r**: Apre la finestra di dialogo "Ripristino guidato impostazioni di LAMBDA".
+
+
