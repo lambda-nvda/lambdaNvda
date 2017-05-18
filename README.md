@@ -1,4 +1,4 @@
-<!---
+﻿<!---
 This is not the source for the readme file of NVDA Addon. This is just for the Github repository. The source for the NVDA Addon build is readme-src.md. Thanks!
 -->
 
@@ -12,7 +12,7 @@ Se sei un utente italiano vista [questa pagina](https://github.com/nvdaaddons/la
 This project is an appModule for the LAMBDA Software. It has been inspired by the work of Peter Lecky at the Comenius University. 
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) is a software that helps blind people to read and write math using a braille display and/or a speech synthesizer.
 LAMBDA is the result of an EU-Project. For more information about LAMBDA please visit [http://www.lambdaproject.org/](http://www.lambdaproject.org/).  
-The current version of the addon has braille tables for the Italian language only but its interface is available both in Italian and Spanish right now.
+The current version of the addon has braille tables for Italian and Spanish languages only but its interface is available in Italian, Galician and Spanish right now.
 If you are a non-italian user of LAMBDA and you would like to contribute with translations in your language, feel free to contact the author (see below) or fork this project.
 
 **Please note:** This addon has been developed by Alberto Zanella as a voluntary activity. Nor the author or the contributors are involved in selling and / or development of the software Lambda. If you need more information about Lambda, or you need support on how to use it, please contact your local distributor. If you are encountering any difficulties when using or installing this addon, please contact the author or use the "Issues" link on the Github project page.
@@ -76,7 +76,7 @@ filename : userData\profiles\lambda.ini :
 
 Where :
 * path-to-the-addon-brailleTable-dir : is the absolute path of the addon directory + "\brailleTables"
-* tableName : depends on the active NVDA language. Currently only the italian braille table, "lambda-ita.utb" , is present.
+* tableName : depends on the active NVDA language. Currently only the italian and Spanish braille tables, "lambda-ita.utb" and "lambda-esp.utb" respectively, is present.
 
 
 ## Addon Keyboard Shortcuts:

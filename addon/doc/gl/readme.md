@@ -3,8 +3,8 @@
 Este proxecto é un módulo de aplicación para a aplicación Lambda. foi inspirado polo traballo de Peter Lecky na Comenius University.
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis, acceso lineal ás matemáticas mediante pantallas braille e síntesis de fala) é un programa que axuda ás persoas cegas a eer e escribir matemáticas utilizando unha pantalla braile e/ou un sintetizador de audio.
 LAMBDA é o resultado dun proxecto EU. Para máis información acerca de LAMBDA por favor visite [http://www.lambdaproject.org/](http://www.lambdaproject.org/).  
-A versión actual deste complemento ten táboas braille só para a lingua italiana pero a súa interface está dispoñible tanto na lingua italiana coma en castelán, inglés e galego agora mesmo.
-Si é vostede un usuario non italiano de LAMBDA e gostaríalle contribuír con traducións na súa lingua, síntase libre de contactar ao autor (consulte embaixo) ou bifurcar este proxecto.
+A versión actual deste complemento ten táboas braille só para as linguas italiana e española pero a súa interface está dispoñible tanto na lingua italiana coma en castelán, inglés e galego agora mesmo.
+Se é vostede un usuario non italiano de LAMBDA e gostaríalle contribuír con traducións na súa lingua, síntase libre de contactar ao autor (consulte embaixo) ou bifurcar este proxecto.
 
 **Nota:** Este complemento foi desenvolvido por Alberto Zanella como unha actividade voluntaria. Nin o autor nin os contribuíntes están relacionados coa venda ou co desenvolvemento do programa LAMBDA. Se quixese obter máis información sobre LAMBDA, reportar problemas ou obter soporte, por favor contacte co seu distribuidor local (en España, ONCE-CIDAT). Se está atopando dificultades usando ou instalando este complemento, por favor contacte co autor ou utilice a liga "Issues" (erros) dispoñible na páxina do proxecto en Github.
 
@@ -66,7 +66,7 @@ Nombre del fichero: userData\profiles\lambda.ini :
 
 Onde :
 * path-to-the-addon-brailleTable-dir : É a ruta absoluta do directorio do complemento + "\brailleTables"
-* tableName : Depende do idioma seleccionado. Actualmente a tabla braille italiana, "lambda-ita.utb" , está presente.
+* tableName : Depende do idioma seleccionado. Actualmente as táboas braille italiana e española, "lambda-ita.utb" e "lambda-esp.utb" respectivamente, está presente.
 
 ## Atallos de Teclado do Complemento
 
