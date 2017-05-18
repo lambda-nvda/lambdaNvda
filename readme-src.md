@@ -72,5 +72,6 @@ Where :
 * **NVDA+alt+r**: Open the "Revert LAMBDA Profile Wizard".
 
 ## Addon mailing list:
-For suggestions, contribution or more technical information you can subscribe the Addon Google Group (in English).
+To report bugs, suggestions or if you want to contribute you can subscribe the Addon Google Group (in English).
 You can subscribe writing to lambda-nvda+subscribe@[plural of google group] dot com .
+
