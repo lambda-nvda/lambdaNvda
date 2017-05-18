@@ -90,6 +90,7 @@ Where :
 * Author: Alberto Zanella <lapostadi[myfirstname]@gmail.com>
 * Iván Novegil
 * Noelia Ruiz Martínez
+* Salva Doménech Miguel
 * Alessandro Albano
 * Christian Leo
 * Simone Dal Maso
