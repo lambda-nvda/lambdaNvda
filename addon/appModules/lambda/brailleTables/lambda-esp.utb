@@ -66,8 +66,8 @@ uplow \x00dd\x00fd 1567,2348     ye con acento agudo
 uplow \x009F\x00FF 367,67     ye con diéresis
 
 uplow \X00c6\X00e6 38,1348     ae
-uplow \X0152 1468    148 oe/superescrito
-uplow \X0153 46  oe/barra superior
+sign \X0152 1468   oe/superescrito
+sign \X0153 46  oe/barra superior
 uplow \x008C\x009C 1468,1238     oe
 uplow \x00C3\x00E3 3567,168     a con tilde
 uplow \x00D5\x00F5 12458,4567     o con tilde
@@ -315,11 +315,12 @@ math \x0093 14568
 math \x0094 12348
 math \x009b 34568
 math \X201a 37   por(punto)
-math \X02c6\x003d 458,2356  Distinto
-math \X005f\X00bc 3578   Arco
+math \X02c6 458  Distinto
+math \x003d 2356   Distinto
+math \X00bc 3578   Arco
 math \X005c 123456  No paralela
 math \X00af 24568  No perpendicular
-math \X005f\X00c5 35   Producto escalar
-math \X005f\X0020 378   Producto vectorial
+math \X00c5 35   Producto escalar
+math \X0020 378   Producto vectorial
 math \X20ac 12358   Euro
 math \X00a8 268   No existe
