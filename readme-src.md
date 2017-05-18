@@ -39,7 +39,7 @@ This addon creates an NVDA profile named "lambda" which is associated with the "
 
 If a previous profile with the same name is present in your system, the addon will not override it and you have to manually adjust your configuration profile. 
 
-To stave off this situation, if you have specific settings you'd like to preserve, you can use the "Revert LAMBDA Profile Wizard". The shortcut to start this tool is NVDA+alt+r.
+To stave off this situation, if you have specific settings you'd like to preserve, you can use the "Revert LAMBDA Profile Wizard". The shortcut to start this tool is NVDA+alt+r (when focused in LAMBDA).
 
 An easy option is also to delete old versions of the "lambda" profile after the installation of the addon. To do so, open the NVDA menu, select the "Configuration profiles" menu Item and press ENTER.
 
