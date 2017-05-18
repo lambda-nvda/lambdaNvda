@@ -1,4 +1,4 @@
-# liblouis: Computer Spanish 8 dots Braille table adapted to use with the LAMBDA NVDA addon
+# liblouis: Computer Spanish 8 dots Braille table adapted to use with the LAMBDA NVDA addon
 #
 #  Copyright (C) original 2012 by José Enrique Fernández del Campo and Juan Carlos Buño Suárez <quetzatl@eresmas.net>
 # Copyright (C) adaptation 2017 - Iván Novegil Cancelas <info@inovegil.site40.net>, Salva Doménech Miguel <sdomenechmiguel@gmail.com> and José M. Delicado Alcolea, and collaborators Alberto Zanella and José E. Fernández del Campo
@@ -66,7 +66,8 @@ uplow \x00dd\x00fd 1567,2348     ye con acento agudo
 uplow \x009F\x00FF 367,67     ye con diéresis
 
 uplow \X00c6\X00e6 38,1348     ae
-uplow \X0152\X0153 1468,1238     oe
+uplow \X0152 1468    148 oe/superescrito
+uplow \X0153 46  oe/barra superior
 uplow \x008C\x009C 1468,1238     oe
 uplow \x00C3\x00E3 3567,168     a con tilde
 uplow \x00D5\x00F5 12458,4567     o con tilde
@@ -79,7 +80,7 @@ punctuation - 36		guión
 punctuation . 3		punto
 punctuation ? 26		cerrar interrogación
 punctuation ! 2357		cerrar admiración
-punctuation \X0022 56 	comillas
+punctuation \X0022 458 	comillas/negación
 punctuation \X201c 14568 	abrir comillas
 punctuation \X201d 12348 	cerrar comillas
 punctuation ( 1268		abre paréntesis
@@ -173,7 +174,7 @@ sign \X2020 28		sin nombre
 sign \X0087 23458		sin nombre
 sign \X2021 23458		sin nombre
 sign \X0088 458		sin nombre
-sign \X02c6 23458		sin nombre
+sign \X02c6 458		sin nombre
 sign \X0089 45678		sin nombre
 sign \X2030 45678		sin nombre
 sign \X008a 1234568		sh mayúscula
@@ -182,10 +183,10 @@ sign \X008b 1258
 sign \X2039 1258		
 sign \X008d 357		sin nombre
 sign \X008e 148		sin nombre
-sign \X017d 148		sin nombre
-sign \X008f 127		
+sign \X017d 14		Zeta con carón/complementario)
+math \X008f 27		Período decimal
 sign \X0090 68		sin 	nombre
-sign \X2018 4		apóstrofo
+sign \X2018 138		apóstrofo/subíndice izquierdo
 sign \X2019 4		apóstrofo
 sign \X0095 1458		signo
 sign \X2022 1458		signo
@@ -282,7 +283,7 @@ math \x005a 13567
 math \x005f 6
 math \x0061 1
 math \x0062 12
-math \x0063 14
+math \x0063 147
 math \x0064 145
 math \x0065 15
 math \x0066 124
@@ -293,11 +294,11 @@ math \x006a 245
 math \x006b 13
 math \x006c 123
 math \x006d 134
-math \x006e 1345
+math \x006e 13457
 math \x006f 135
 math \x0070 1234
-math \x0071 12345
-math \x0072 1235
+math \x0071 123457
+math \x0072 12357
 math \x0073 234
 math \x0074 2345
 math \x0075 136
@@ -305,7 +306,7 @@ math \x0076 1236
 math \x0077 2456
 math \x0078 1346
 math \x0079 13456
-math \x007a 1356
+math \x007a 13567
 math \x0082 37
 math \x008b 1258
 math \x0091 138
@@ -313,3 +314,12 @@ math \x0092 378
 math \x0093 14568
 math \x0094 12348
 math \x009b 34568
+math \X201a 37   por(punto)
+math \X02c6\x003d 458,2356  Distinto
+math \X005f\X00bc 3578   Arco
+math \X005c 123456  No paralela
+math \X00af 24568  No perpendicular
+math \X005f\X00c5 35   Producto escalar
+math \X005f\X0020 378   Producto vectorial
+math \X20ac 12358   Euro
+math \X00a8 268   No existe
