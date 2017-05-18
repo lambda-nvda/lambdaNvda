@@ -173,7 +173,7 @@ class LambdaEditField(edit.Edit):
 			if (len(s) > 0) :
 				self.say(self._getSChunk(s,self.s) + ' ' + shMsg.GLB_UNSELECTED)
 				self.shouldAnnounceUnselection = self._shouldAnnounceUnselection()
-			if self.shouldAnnounceUnselection :
+			elif self.shouldAnnounceUnselection :
 				self.say(self._getSChunk(s,self.s) + ' ' + shMsg.GLB_UNSELECTED)
 		self.s = s
 	
