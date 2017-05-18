@@ -16,6 +16,7 @@ import config
 import textInfos
 import ui
 
+
 addonHandler.initTranslation()
 
 #We've used EditableTextDisplayModelTextInfo when user want white spaces to be rendered in braille.
@@ -153,6 +154,7 @@ class LambdaEditField(edit.Edit):
 	#Selection detection
 	def initAutoSelectDetection(self):
 		self.s = ''
+		self.shouldAnnounceUnselection = False
 		s = self.getLambdaObj().getselected(self.windowHandle)
 		if s:
 			self.s = s.strip().rstrip()
@@ -166,9 +168,24 @@ class LambdaEditField(edit.Edit):
 			s = s.strip().rstrip()
 		if len(s) > len(self.s):
 			self.say(self._getSChunk(self.s,s) + ' ' + shMsg.GLB_SELECTED)
-		elif len(s) < len(self.s) and len(s) > 0:
-			self.say(self._getSChunk(s,self.s) + ' ' + shMsg.GLB_UNSELECTED)
+			self.shouldAnnounceUnselection = self._shouldAnnounceUnselection()
+		elif len(s) < len(self.s):
+			if (len(s) > 0) :
+				self.say(self._getSChunk(s,self.s) + ' ' + shMsg.GLB_UNSELECTED)
+				self.shouldAnnounceUnselection = self._shouldAnnounceUnselection()
+			if self.shouldAnnounceUnselection :
+				self.say(self._getSChunk(s,self.s) + ' ' + shMsg.GLB_UNSELECTED)
 		self.s = s
+	
+	def _shouldAnnounceUnselection(self) :
+		try :
+			info=self.makeTextInfo(textInfos.POSITION_SELECTION)
+		except (RuntimeError, NotImplementedError):
+			return False
+		if not info or info.isCollapsed:
+			return False
+		return len(info.text) <= 2
+		
 	
 	def _getSChunk(self, oldmessage, newmessage) :
 		if oldmessage in newmessage :
@@ -206,7 +223,27 @@ This class extends the LambdaEditField for matrix dialog.
 '''
 class LambdaMatrixEdit(LambdaEditField):
 	TextInfo = LambdaEditorFlatTextInfo
+	name = None
+	
+	#Needed because selection doesn't fire any standard event.
+	def script_reportSelection(self,gesture) :
+		gesture.send()
+		s = self.getLambdaObj().getselected(self.windowHandle).replace("@@@",'')
+		self.say(s+ ' ' + shMsg.GLB_SELECTED)
+		
+	
+	def detectPossibleSelectionChange(self):
+		pass
+	
+	selGestures = ("kb:shift+leftArrow","kb:shift+rightArrow","kb:shift+upArrow","kb:shift+downArrow")
+	def initOverlayClass(self):
+		for g in self.selGestures:
+			self.bindGesture(g,"reportSelection")
 
+	def script_caret_moveByLine(self, gesture):
+		gesture.send()
+		braille.handler.mainBuffer.clear()
+		braille.handler.handleGainFocus(self)
 		
 '''
 This class extends the LambdaEditField for the main editor. It adds scripts that can be used only in the main editor of Lambda.
