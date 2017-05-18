@@ -50,7 +50,9 @@ Este complemento crea un perfil de NVDA nombrado como "lambda" que está asociad
 
 Si un perfil previamente existente con el mismo nombre está presente en su sistema, no será sobreescrito y deberá ajustar manualmente el perfil de configuración.
 
-Para salir de esta situación, después de la instalación del complemento sugerimos el borrado de viejas versión del perfil "lambda". Para hacer esto, abra el menú de NVDA, seleccione el elemento de menú "Perfiles de configuración" y pulse ENTER.
+Para salir de esta situación, si tiene configuraciones espcíficas que le gustaría preservar, puede usar el "Asistente de Reversión del perfil LAMBDA". La tecla rápida para abrir esta herramienta es NVDA+alt+r (cuando se está dentro de LAMBDA).
+
+Una opción fácil es también borrar viejas versiones del perfil "lambda" después de la instalación del complemento. Para hacer esto, abra el menú de NVDA, seleccione el elemento de menú "Perfiles de configuración" y pulse ENTER.
 
 En el diálogo de Perfiles de configuración, podrá localizar y borrar el perfil "lambda". El perfil será creado nuevamente la próxima vez que se inicie Lambda.
 
@@ -74,6 +76,11 @@ Nombre del fichero: userData\profiles\lambda.ini :
 Where :
 * path-to-the-addon-brailleTable-dir : Es la ruta absoluta del directorio del complemento + "\brailleTables"
 * tableName : Depende del idioma seleccionado. Actualmente la tabla braille italiana, "lambda-ita.utb" , está presente.
+
+## Teclas Rápidas del Complemento
+
+* **NVDA+Shift+f**: Alterna el modo plano de braille entre activado y desactivado;
+* **NVDA+alt+r**: Abre el "Asistente de Reversión del Perfil LAMBDA".
 
 
 
