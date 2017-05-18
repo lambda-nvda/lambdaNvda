@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'Lambda' '1.1.4'\n"
 "POT-Creation-Date: 2017-05-17 12:15+0200\n"
-"PO-Revision-Date: 2017-05-17 12:19+0200\n"
+"PO-Revision-Date: 2017-05-17 12:34+0200\n"
 "Last-Translator: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
 "Language-Team: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
 "Language: es\n"
@@ -43,7 +43,7 @@ msgstr "Conmuta el modo plano de braille entre activado y desactivado."
 
 #: addon/appModules/lambda/lambdaProfileSetup.py:22
 msgid "lambda-ita.utb"
-msgstr ""
+msgstr "lambda-esp.utb"
 
 #: addon/appModules/lambda/lambdaProfileSetup.py:103
 msgid "Revert LAMBDA Profile Wizard"
