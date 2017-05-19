@@ -1,19 +1,10 @@
-﻿<!---
-This is not the source for the readme file of NVDA Addon. This is just for the Github repository. The source for the NVDA Addon build is readme-src.md. Thanks!
--->
-
-# Lambda Add-On for NVDA
-
-* [Download latest stable release](https://github.com/nvdaaddons/lambda/releases/download/latest/lambda.nvda-addon)
-* [Download latest development release](https://github.com/nvdaaddons/lambda/releases/download/dev/lambda-dev.nvda-addon)
-
-Se sei un utente italiano vista [questa pagina](https://github.com/nvdaaddons/lambda/wiki/Benvenuto)
+﻿# Lambda Add-On for NVDA
 
 This project is an appModule for the LAMBDA Software. It has been inspired by the work of Peter Lecky at the Comenius University. 
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) is a software that helps blind people to read and write math using a braille display and/or a speech synthesizer.
 LAMBDA is the result of an EU-Project. For more information about LAMBDA please visit [http://www.lambdaproject.org/](http://www.lambdaproject.org/).  
-The current version of the addon has braille tables for Italian and Spanish languages and its interface is available in Italian, Galician and Spanish right now.
-If you are a non-italian user of LAMBDA and you would like to contribute with translations in your language, feel free to contact the author (see below) or fork this project.
+The current version of the addon has braille tables for Italian and Spanish languages and its interface is available in Italian, Galician and Spanish right now. 
+If you are a non-italian user of LAMBDA and you would like to contribute with the porting of the braille table in your language, feel free to contact the author (see below) or subscribe the project mailing list.
 
 **Please note:** This addon has been developed by Alberto Zanella as a voluntary activity. Nor the author or the contributors are involved in selling and / or development of the software Lambda. If you need more information about Lambda, or you need support on how to use it, please contact your local distributor. If you are encountering any difficulties when using or installing this addon, please contact the author or use the "Issues" link on the Github project page.
 
@@ -43,15 +34,12 @@ We strongly recommend to disable the Flat Mode if you are using custom DPI in Wi
 * The structure of dialog boxes is easier, repeated information has been removed;
 * The selection will be marked properly using dots 7 and 8, and marking is properly refreshed while standard Windows commands (SHIFT+ARROWS) or Lambda specific commands (CTRL+B, CTRL+SHIFT+B) are pressed.
 
-## Setup
-You can get the addon by navigating to the "Releases" link in the Github repository page and activating it, then jump to the Downloads heading. Open the first link you'll locate, which is named "lambda.nvda-addon". Download it and run it using your NVDA Screen Reader. The setup will be automatically performed.
-
 ## Before starting to use this addon.
 This addon creates an NVDA profile named "lambda" which is associated with the "lambda.exe" application. The profile automatically sets all braille options: the custom braille table, the focus tethering and flat mode settings.
 
 If a previous profile with the same name is present in your system, the addon will not override it and you have to manually adjust your configuration profile. 
 
-To stave off this situation, if you have specific settings you'd like to preserve, you can use the "Revert LAMBDA Profile Wizard". The shortcut to start this tool is NVDA+alt+r.
+To stave off this situation, if you have specific settings you'd like to preserve, you can use the "Revert LAMBDA Profile Wizard". The shortcut to start this tool is NVDA+alt+r (when focused in LAMBDA).
 
 An easy option is also to delete old versions of the "lambda" profile after the installation of the addon. To do so, open the NVDA menu, select the "Configuration profiles" menu Item and press ENTER.
 
@@ -78,19 +66,12 @@ Where :
 * path-to-the-addon-brailleTable-dir : is the absolute path of the addon directory + "\brailleTables"
 * tableName : depends on the active NVDA language. Currently only the italian and Spanish braille tables, "lambda-ita.utb" and "lambda-esp.utb" respectively, is present.
 
-
 ## Addon Keyboard Shortcuts:
 
 * **NVDA+Shift+f**: Toggle braille flat mode on or off;
 * **NVDA+alt+r**: Open the "Revert LAMBDA Profile Wizard".
 
+## Addon mailing list:
+To report bugs, suggestions or if you want to contribute you can subscribe the Addon Google Group (in English).
+You can subscribe writing to lambda-nvda+subscribe@[plural of google group] dot com .
 
-
-# Authors and Contributors:
-* Author: Alberto Zanella <lapostadi[myfirstname]@gmail.com>
-* Iván Novegil
-* Noelia Ruiz Martínez
-* Salva Doménech Miguel
-* Alessandro Albano
-* Christian Leo
-* Simone Dal Maso
