@@ -1,5 +1,5 @@
-addon/locale/
-addon/doc/
+addon/doc/*.css
+addon/doc/en/
 *_docHandler.py
 *.html
 *.ini
