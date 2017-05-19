@@ -1,4 +1,4 @@
-# Lambda Add-On for NVDA
+[[!meta title="Lambda Add-On for NVDA"]]
 * Author: Alberto Zanella.
 * Download [stable version][1]
 * Download [development version][2]
@@ -82,6 +82,8 @@ Where :
 
 To report bugs, suggestions or if you want to contribute you can subscribe the Addon Google Group (in English).
 You can subscribe writing to lambda-nvda+subscribe@[plural of google group] dot com .
+
+[[!tag dev]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=lambda
 
