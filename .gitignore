@@ -1,5 +1,5 @@
-addon/doc/*.css
-addon/doc/en/
+addon/locale
+addon/doc
 *_docHandler.py
 *.html
 *.ini
@@ -8,5 +8,3 @@ addon/doc/en/
 *.pyc
 *.nvda-addon
 .sconsign.dblite
-locale/*
-doc/*
