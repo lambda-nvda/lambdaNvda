@@ -34,7 +34,7 @@ If you are a non-italian user of LAMBDA and you would like to contribute with tr
 * The addon installs (inside the user profile directory) and activates a custom braille table. This table may be different for different languages. Custom braille tables were made from ones in the Lamba plugin for JAWS (jbt file). Then symbols and markers are represented using the same dots patterns;
 * The addon creates an NVDA profile for a standard braille configuration. By this, the output is set to the custom braille table only when the Lambda application is active;
 * Dialogs and menus are properly reported in braille;
-* The content of the editor is correctly redered in braille and the user is able to move using braille scrolling keys or cursor routing keys;
+* The content of the editor is correctly rendered in braille and the user is able to move using braille scrolling keys or cursor routing keys;
 * Starting from the addon version 1.1.0, there are two ways in which the text in the Lambda editor is rendered: "Flat mode" and "non-Flat Mode". When the "Flat mode" is on, NVDA will use the Display Model to retrieve information from the editor and to determine the caret position. This is especially beneficial when the user needs to move around on the screen, even in white spaces. When the  "Flat Mode" is set to "off", text rendering on the braille display is more stable, since NVDA uses Windows API to retrieve it. However when the the caret is moved in white spaces next to the end of the line of text, the braille display does not follow the real cursor as long as a non-white space is added by the user. 
 
 The "flat mode" is active by default. You can toggle "flat mode" on or off by pressing NVDA+SHIFT+F.
