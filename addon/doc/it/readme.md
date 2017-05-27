@@ -10,7 +10,7 @@ Per richieste in merito al prodotto si invita pertanto a contattare il servizio 
 
 Per ulteriori informazioni sull'addon, richieste o altro è possibile contattare l'autore tramite email o su GitHub.
 
-L'attuale versione del componente aggiuntivo dispone di tabelle braille adattate per l'uso con Lambda sia per l'Italiano che per lo Spagnolo and its interface is availablein most of the NVDA's official languages, because it is translated by the NVDA translations community. 
+L'attuale versione del componente aggiuntivo dispone di tabelle braille adattate per l'uso con Lambda sia per l'Italiano che per lo Spagnolo. I messaggi e l'interfaccia sono disponibili nella maggior parte delle lingue ufficiali di NVDA, poiché la traduzione dell'addon è mantenuta dal gruppo di traduzione internazionale. 
 
 ## Audio presentazione
 Se volete scoprire nel dettaglio alcune delle caratteristiche di questo addon potete ascoltare la audio presentazione disponibile a 
