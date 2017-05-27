@@ -119,7 +119,7 @@ msgid ""
 msgstr ""
 "Un altro profilo chiamato \"lambda\" è già presente nell'attuale configurazione di NVDA. \n"
 "Ciò comporta che l'addon non creerà e configurerà correttamente un profilo per Lambda.\n"
-"E' possibile impostare le configurazioni di predefinite al prossimo avvio dell'applicazione Lambda utilizzando il Ripristino guidato impostazioni di LAMBDA per NVDA (comando nvda+alt+r).\n"
+"E' possibile impostare le configurazioni predefinite al prossimo avvio dell'applicazione Lambda utilizzando il Ripristino guidato impostazioni di LAMBDA per NVDA (comando nvda+alt+r).\n"
 "Premere OK per continuare l'installazione.\n"
 
 #. Add-on summary, usually the user visible name of the addon.
