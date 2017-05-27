@@ -1,4 +1,4 @@
-# Add-On di NVDA per LAMBDA
+﻿# Add-On di NVDA per LAMBDA
 Questo add-on permette di utilizzare il software LAMBDA con NVDA. Deriva da un lavoro precedente di Peter Lecky della  Comenius University ed è stato studiato e realizzato per rendere l'accesso all'ambiente LAMBDA il più semplice e simile a ciò che già avviene con altri screen reader.
 
 Per maggiori informazioni sul software LAMBDA si invita a consultare:
@@ -10,7 +10,7 @@ Per richieste in merito al prodotto si invita pertanto a contattare il servizio 
 
 Per ulteriori informazioni sull'addon, richieste o altro è possibile contattare l'autore tramite email o su GitHub.
 
-L'attuale versione del componente aggiuntivo dispone di tabelle braille adattate per l'uso con Lambda sia per l'Italiano che per lo Spagnolo. La traduzione delll'addon è disponibile in lingua inglese, Italiana, spagnola e galiziana.
+L'attuale versione del componente aggiuntivo dispone di tabelle braille adattate per l'uso con Lambda sia per l'Italiano che per lo Spagnolo and its interface is availablein most of the NVDA's official languages, because it is translated by the NVDA translations community. 
 
 ## Audio presentazione
 Se volete scoprire nel dettaglio alcune delle caratteristiche di questo addon potete ascoltare la audio presentazione disponibile a 
