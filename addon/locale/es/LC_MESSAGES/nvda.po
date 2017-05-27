@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: 'Lambda' '1.1.4'\n"
-"POT-Creation-Date: 2017-05-17 12:15+0200\n"
-"PO-Revision-Date: 2017-05-17 12:34+0200\n"
-"Last-Translator: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
-"Language-Team: Iván Novegil Cancelas <info@inovegil.site40.net>\n"
+"Project-Id-Version: 'Lambda' '1.1.6-dev'\n"
+"POT-Creation-Date: 2017-05-27 13:12+0200\n"
+"PO-Revision-Date: 2017-05-27 13:18+0200\n"
+"Last-Translator: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
+"Language-Team: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,29 +15,29 @@ msgstr ""
 "X-Poedit-SearchPath-0: addon\n"
 "X-Poedit-SearchPath-1: buildVars.py\n"
 
-#: addon/appModules/lambda/__init__.py:91
+#: addon/appModules/lambda/__init__.py:95
 msgid "Shows a dialog to revert lambda profile options to the default."
 msgstr ""
 "Muestra un diálogo para revertir las opciones del perfil LAMBDA a las de "
 "fábrica."
 
-#: addon/appModules/lambda/lambdaEdit.py:80
+#: addon/appModules/lambda/lambdaEdit.py:81
 msgid "Reports the current line under the application cursor."
 msgstr "Informa de la línea actual bajo el cursor de la aplicación."
 
-#: addon/appModules/lambda/lambdaEdit.py:86
+#: addon/appModules/lambda/lambdaEdit.py:87
 msgid "reads from the beginning of the document up to the end of the text."
 msgstr "lee desde el comienzo del documento hasta el final del texto."
 
-#: addon/appModules/lambda/lambdaEdit.py:92
+#: addon/appModules/lambda/lambdaEdit.py:93
 msgid "Announces the current selection in edit controls and documents."
 msgstr "Anuncia la selección actual en controles de edición y documentos."
 
-#: addon/appModules/lambda/lambdaEdit.py:248
+#: addon/appModules/lambda/lambdaEdit.py:278
 msgid "flat mode "
 msgstr "modo plano "
 
-#: addon/appModules/lambda/lambdaEdit.py:254
+#: addon/appModules/lambda/lambdaEdit.py:284
 msgid "Toggle the braille flat mode on or off."
 msgstr "Conmuta el modo plano de braille entre activado y desactivado."
 
@@ -122,23 +122,20 @@ msgstr "Perfil lambda ya existe"
 msgid ""
 "Another profile named \"lambda\" is already present in your NVDA "
 "configuration. \n"
-"This prevents the addon on create and configure the lambda profile "
+"This may prevents the addon on create and configure the lambda profile "
 "correctly.\n"
-"If you want the addon to configure a lambda profile for you, please delete "
-"the old one named \"lambda\" using the NVDA \"Configuration Profiles\" "
-"dialog.\n"
-"The new profile will be created the next time you'll start the Lambda app.\n"
-"Otherwise please edit your profile configuration file manually.\n"
+"Please review default options for this addon using the Revert LAMBDA Profile "
+"Wizard (pressing nvda+alt+r) while the Lambda Application is active.\n"
+"Press OK to complete the addon Setup.\n"
 msgstr ""
-"Otro perfil llamado \"lambda\" está presente en la configuración de su "
+"Otro perfil con nombre \"lambda\" está presente en su configuración de "
 "NVDA.\n"
-"Esto impide al complemento el crear y configurar el perfil \"lambda\" "
+"Esto puede impedir al complemento crear y configurar el perfil de LAMBDA "
 "correctamente.\n"
-"Si desea que el complemento configure un nuevo pefil \"lambda\" para usted, "
-"por favor elimine el viejo perfil \"lambda\" desde el dia´logo \"Perfiles ce "
-"configuración\".\n"
-"El nuevo perfil será creado la próxima vez que reinicie la app Lambda.\n"
-"De otra forma edite el archivo del Perfil de configuración de forma manual.\n"
+"Por favor revise las opciones por defecto de este complemento usando el "
+"Asistente de reversión del perfil lambda (pulsando NVDA+alt+r) mientras la "
+"aplicación LAMBDA esté activa.\n"
+"Pulse Aceptar para completar la instalación del complemento.\n"
 
 #: buildVars.py:17
 msgid "Lambda math editor addon"
@@ -151,6 +148,29 @@ msgid ""
 msgstr ""
 "Este complemento proporciona el acceso al editor Lambda con soporte para "
 "braille y habla."
+
+#~ msgid ""
+#~ "Another profile named \"lambda\" is already present in your NVDA "
+#~ "configuration. \n"
+#~ "This prevents the addon on create and configure the lambda profile "
+#~ "correctly.\n"
+#~ "If you want the addon to configure a lambda profile for you, please "
+#~ "delete the old one named \"lambda\" using the NVDA \"Configuration "
+#~ "Profiles\" dialog.\n"
+#~ "The new profile will be created the next time you'll start the Lambda "
+#~ "app.\n"
+#~ "Otherwise please edit your profile configuration file manually.\n"
+#~ msgstr ""
+#~ "Otro perfil llamado \"lambda\" está presente en la configuración de su "
+#~ "NVDA.\n"
+#~ "Esto impide al complemento el crear y configurar el perfil \"lambda\" "
+#~ "correctamente.\n"
+#~ "Si desea que el complemento configure un nuevo pefil \"lambda\" para "
+#~ "usted, por favor elimine el viejo perfil \"lambda\" desde el dia´logo "
+#~ "\"Perfiles ce configuración\".\n"
+#~ "El nuevo perfil será creado la próxima vez que reinicie la app Lambda.\n"
+#~ "De otra forma edite el archivo del Perfil de configuración de forma "
+#~ "manual.\n"
 
 #~ msgid ""
 #~ "Extends the selection to the surrounding block and reads it. If used with "
