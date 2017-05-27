@@ -1,4 +1,4 @@
-# Lambda Add-On for NVDA
+﻿# Lambda Add-On for NVDA
 * Author: Alberto Zanella.
 * Download [stable version][1]
 * Download [development version][2]
@@ -6,7 +6,7 @@
 This project is an appModule for the LAMBDA Software. It has been inspired by the work of Peter Lecky at the Comenius University. 
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) is a software that helps blind people to read and write math using a braille display and/or a speech synthesizer.
 LAMBDA is the result of an EU-Project. For more information about LAMBDA please visit [http://www.lambdaproject.org/](http://www.lambdaproject.org/).  
-The current version of the addon has braille tables for Italian and Spanish languages and its interface is available in Italian, Galician and Spanish right now. 
+The current version of the addon has braille tables for Italian and Spanish languages and its interface is availablein most of the NVDA's official languages, because it is translated by the NVDA translations community. 
 If you are a non-italian user of LAMBDA and you would like to contribute with the porting of the braille table in your language, feel free to contact the author (see below) or subscribe the project mailing list.
 
 **Please note:** This addon has been developed by Alberto Zanella as a voluntary activity. Nor the author or the contributors are involved in selling and / or development of the software Lambda. If you need more information about Lambda, or you need support on how to use it, please contact your local distributor. If you are encountering any difficulties when using or installing this addon, please contact the author or use the "Issues" link on the Github project page.
