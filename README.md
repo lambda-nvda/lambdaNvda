@@ -31,6 +31,7 @@ If you are a non-italian user of LAMBDA and you would like to contribute with tr
 * Typing echo uses the Lambda text processor, so symbols and markers will be correctly reported.
 
 ### Braille support:
+
 * The addon installs (inside the user profile directory) and activates a custom braille table. This table may be different for different languages. Custom braille tables were made from ones in the Lamba plugin for JAWS (jbt file). Then symbols and markers are represented using the same dots patterns;
 * The addon creates an NVDA profile for a standard braille configuration. By this, the output is set to the custom braille table only when the Lambda application is active;
 * Dialogs and menus are properly reported in braille;
@@ -44,9 +45,11 @@ We strongly recommend to disable the Flat Mode if you are using custom DPI in Wi
 * The selection will be marked properly using dots 7 and 8, and marking is properly refreshed while standard Windows commands (SHIFT+ARROWS) or Lambda specific commands (CTRL+B, CTRL+SHIFT+B) are pressed.
 
 ## Setup
+
 You can get the addon by navigating to the "Releases" link in the Github repository page and activating it, then jump to the Downloads heading. Open the first link you'll locate, which is named "lambda.nvda-addon". Download it and run it using your NVDA Screen Reader. The setup will be automatically performed.
 
 ## Before starting to use this addon.
+
 This addon creates an NVDA profile named "lambda" which is associated with the "lambda.exe" application. The profile automatically sets all braille options: the custom braille table, the focus tethering and flat mode settings.
 
 If a previous profile with the same name is present in your system, the addon will not override it and you have to manually adjust your configuration profile. 
@@ -75,6 +78,7 @@ filename : userData\profiles\lambda.ini :
 ```
 
 Where :
+
 * path-to-the-addon-brailleTable-dir : is the absolute path of the addon directory + "\brailleTables"
 * tableName : depends on the active NVDA language. Currently only the italian and Spanish braille tables, "lambda-ita.utb" and "lambda-esp.utb" respectively, is present.
 
@@ -87,6 +91,7 @@ Where :
 
 
 # Authors and Contributors:
+
 * Author: Alberto Zanella <lapostadi[myfirstname]@gmail.com>
 * Iván Novegil
 * Noelia Ruiz Martínez
