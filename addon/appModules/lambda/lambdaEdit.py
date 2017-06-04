@@ -15,7 +15,7 @@ import braille
 import config
 import textInfos
 import ui
-
+import api
 
 addonHandler.initTranslation()
 
@@ -185,7 +185,9 @@ class LambdaEditField(edit.Edit):
 			return newmessage.replace(oldmessage,'',1)
 		return newmessage
 	
-
+	def script_saySpace(self,gesture) :
+		self.say(shMsg.GLB_SPACE)
+		gesture.send()
 	
 	#Gestures binding:
 	__gestures = {
@@ -201,6 +203,8 @@ class LambdaEditField(edit.Edit):
 	#Say Line
 	'kb(desktop):NVDA+upArrow': 'reportCurrentLine',
 	'kb(laptop):NVDA+l': 'reportCurrentLine',
+	#spacebar
+	'kb:space':'saySpace'
 	}
 
 '''
@@ -267,9 +271,9 @@ class LambdaMainEditor(LambdaEditField):
 	def script_sayDuplicate(self,gesture) :
 		#Retrieves the line before sending gesture, duplicate line is the same as the current one.
 		line = self.getLambdaObj().getline(self.windowHandle, -1, -1)
-		gesture.send()
-		braille.handler.handleUpdate(self)
 		self.say(line)
+		gesture.send()
+		del self
 
 	
 	def script_switch_flatMode(self,gesture) :

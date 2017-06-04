@@ -30,6 +30,10 @@ class AppModule(appModuleHandler.AppModule):
 	"TFrm_Calculator_Viewer", #CTRL+F9
 	)
 	
+	#Translators: The string used by Lambda to announce spaces (see LambdaDir\Lang\YourLanguage\Messages.dat with the key space=)
+	#lambdaSpace = _("space")
+	lambdaSpace = "spazio"
+	
 	def __init__(self, *args, **kwargs):
 		super(AppModule, self).__init__(*args, **kwargs)
 		if  (lambdaProfileSetup.profileExists()) :
@@ -70,6 +74,7 @@ class AppModule(appModuleHandler.AppModule):
 		#obj.redraw()
 		s = obj.getLambdaObj().getlastinsertedel(obj.windowHandle, 1)
 		if s == None or len(s) == 0 : return
+		if self.lambdaSpace in s : return
 		self.shouldValueChangeSpeak = False
 		if config.conf['keyboard']['speakTypedCharacters']:
 			speech.speakText(s)
