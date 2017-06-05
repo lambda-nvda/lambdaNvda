@@ -10,9 +10,10 @@ import addonHandler
 import appModuleHandler
 import controlTypes
 from . import lambdaProfileSetup
-from lambdaEdit import LambdaDialogEdit,LambdaMainEditor,LambdaMatrixEdit
+from lambdaEdit import LambdaDialogEdit,LambdaMainEditor,LambdaMatrixEdit,LambdaBufferEdit
 from NVDAObjects.window import DisplayModelEditableText
 import wx
+from comtypes import COMError
 
 addonHandler.initTranslation()
 
@@ -53,6 +54,10 @@ class AppModule(appModuleHandler.AppModule):
 					clsList.insert(0, LambdaDialogEdit)
 					clsList.remove(DisplayModelEditableText)
 			except : pass
+		if obj.windowClassName == u'TMemo' :
+			dialogW = obj.parent.parent
+			if dialogW and dialogW.windowClassName == "TFrm_BufferW" :
+				clsList.insert(0, LambdaBufferEdit)
 		if obj.windowClassName == u'TLambdaEdit' :
 		#Matrix dialog
 			try :
@@ -69,9 +74,9 @@ class AppModule(appModuleHandler.AppModule):
 		cfg = config.conf['lambda']['brailleFlatMode']
 		if not cfg :
 			braille.handler.handleGainFocus(obj)
-		#obj.invalidateCache()
-		#obj.redraw()
-		s = obj.getLambdaObj().getlastinsertedel(obj.windowHandle, 1)
+		try :
+			s = obj.getLambdaObj().getlastinsertedel(obj.windowHandle, 1)
+		except COMError : s = None
 		if s == None or len(s) == 0 : return
 		if self.lambdaSpace in s : return
 		self.shouldValueChangeSpeak = False

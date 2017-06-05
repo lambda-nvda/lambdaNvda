@@ -17,6 +17,7 @@ import textInfos
 import ui
 import wx
 from keyboardHandler import KeyboardInputGesture
+from comtypes import COMError
 
 addonHandler.initTranslation()
 
@@ -77,8 +78,10 @@ class LambdaEditField(edit.Edit):
 	
 	#Convinent scripts to reports text and selection
 	def script_reportCurrentLine(self,gesture) :
-		s = self.getLambdaObj().getline(self.windowHandle, -1, -1)
-		self.say(s)
+		try :
+			s = self.getLambdaObj().getline(self.windowHandle, -1, -1)
+			self.say(s)
+		except COMError : pass
 	#Translators: this is a custom implementation of the globalCommands gesture, it doesn't support spelling.
 	script_reportCurrentLine.__doc__=_("Reports the current line under the application cursor.")
 	
@@ -104,8 +107,10 @@ class LambdaEditField(edit.Edit):
 		self.appModule.reportLastInsertedText(self,"typed")
 		
 	def event_gainFocus(self):
-		s = self.getLambdaObj().getline(self.windowHandle, -1, -1)
-		self.say(s)
+		try :
+			s = self.getLambdaObj().getline(self.windowHandle, -1, -1)
+			self.say(s)
+		except COMError : pass
 		self.initAutoSelectDetection()
 		braille.handler.handleGainFocus(self)
 
@@ -191,7 +196,7 @@ class LambdaEditField(edit.Edit):
 		return newmessage
 	
 	def script_saySpace(self,gesture) :
-		self.say(shMsg.GLB_SPACE)
+		speech.speakText(shMsg.GLB_SPACE)
 		gesture.send()
 	
 	#Gestures binding:
@@ -219,6 +224,25 @@ class LambdaDialogEdit(LambdaEditField):
 	def script_caret_newLine(self,gesture) :
 		#Prevents NVDA speaks the calculator result twice
 		gesture.send()
+
+'''
+This class extends the LambdaEditField for buffers dialog.
+'''
+class LambdaBufferEdit(LambdaEditField):
+	def script_announceBufferChange(self,gesture):
+		gesture.send()
+		speech.speakText(self.parent.parent.name)
+		try :
+			s = self.getLambdaObj().getline(self.windowHandle, -1, -1)
+			self.say(s)
+		except COMError : pass
+		
+	
+	__gestures = {
+	'kb:pageUp':'announceBufferChange',
+	'kb:pageDown':'announceBufferChange',
+	}
+		
 
 '''
 This class extends the LambdaEditField for matrix dialog.
