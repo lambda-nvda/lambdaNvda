@@ -15,7 +15,8 @@ import braille
 import config
 import textInfos
 import ui
-import api
+import wx
+from keyboardHandler import KeyboardInputGesture
 
 addonHandler.initTranslation()
 
@@ -58,6 +59,7 @@ class LambdaEditField(edit.Edit):
 	editAPIVersion = 0
 	_LambdaObjName = 'lambda.lambdaobj' #OLE Object name
 	_oLambda = None #global object (use getLambdaObj to retrieve it)
+	skipSelectionReport = 0
 	
 	def getLambdaObj(self) :
 		if not self._oLambda : 
@@ -153,6 +155,9 @@ class LambdaEditField(edit.Edit):
 			self.s = s.strip().rstrip()
 
 	def detectPossibleSelectionChange(self):
+		if self.skipSelectionReport > 0 : 
+			self.skipSelectionReport = self.skipSelectionReport-1
+			return
 		if self.s is None : return
 		s = self.getLambdaObj().gethighlightedtext(self.windowHandle)
 		if not s:
@@ -270,11 +275,24 @@ class LambdaMainEditor(LambdaEditField):
 	
 	def script_sayDuplicate(self,gesture) :
 		#Retrieves the line before sending gesture, duplicate line is the same as the current one.
-		line = self.getLambdaObj().getline(self.windowHandle, -1, -1)
-		self.say(line)
 		gesture.send()
-		del self
+		wx.CallAfter(self._showDuplicateWarning)
 
+	
+	def script_nvdaDuplicateLine(self,gesture) :
+		#Retrieves the line before sending gesture, duplicate line is the same as the current one.
+		line = self.getLambdaObj().getline(self.windowHandle, -1, -1)
+		#duplicate line using keyboard shortcuts
+		KeyboardInputGesture.fromName("home").send()
+		self.skipSelectionReport = 2 #JWEdit bug: fires selection multiple times.
+		KeyboardInputGesture.fromName("shift+end").send()
+		KeyboardInputGesture.fromName("control+c").send()
+		KeyboardInputGesture.fromName("end").send()
+		KeyboardInputGesture.fromName("enter").send()
+		KeyboardInputGesture.fromName("control+v").send()
+		self.say(line)
+	#This script duplicates the current line and announce it 
+	script_nvdaDuplicateLine.__doc__=_("Duplicate the current line and sets the cursor to the new line.")
 	
 	def script_switch_flatMode(self,gesture) :
 		val = config.conf['lambda']['brailleFlatMode'] = not config.conf['lambda']['brailleFlatMode']
@@ -286,7 +304,13 @@ class LambdaMainEditor(LambdaEditField):
 		braille.handler.handleGainFocus(self)
 	#This script set the desired textInfo for braille, when flat mode is on, the LambdaEditorFlatTextInfo is used, otherwise the LambdaEditorTextInfo is set.
 	script_switch_flatMode.__doc__=_("Toggle the braille flat mode on or off.")
-
+	
+	def _showDuplicateWarning(self):
+		import gui
+		duplicateBugMsg = _("""Duplicate lines using control+d shortcut may causes error or stability issues while using Lambda with NVDA.
+Please consider using the NVDA+D shortcut instead.""")
+		gui.messageBox(duplicateBugMsg)
+	
 	__gestures = {
 	#Braille flat mode
 	'kb:nvda+shift+f': 'switch_flatMode',
@@ -294,4 +318,5 @@ class LambdaMainEditor(LambdaEditField):
 	'kb:control+shift+b': 'selectBlocks',
 	'kb:control+b': 'selectBlocks',
 	'kb:control+d':'sayDuplicate',
+	'kb:nvda+d':'nvdaDuplicateLine',
 	}

@@ -31,8 +31,7 @@ class AppModule(appModuleHandler.AppModule):
 	)
 	
 	#Translators: The string used by Lambda to announce spaces (see LambdaDir\Lang\YourLanguage\Messages.dat with the key space=)
-	#lambdaSpace = _("space")
-	lambdaSpace = "spazio"
+	lambdaSpace = _("space")
 	
 	def __init__(self, *args, **kwargs):
 		super(AppModule, self).__init__(*args, **kwargs)
