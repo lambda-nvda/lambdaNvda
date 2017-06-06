@@ -79,6 +79,7 @@ class AppModule(appModuleHandler.AppModule):
 		except COMError : s = None
 		if s == None or len(s) == 0 : return
 		if self.lambdaSpace in s : return
+		if s == u" ": return
 		self.shouldValueChangeSpeak = False
 		if config.conf['keyboard']['speakTypedCharacters']:
 			speech.speakText(s)
