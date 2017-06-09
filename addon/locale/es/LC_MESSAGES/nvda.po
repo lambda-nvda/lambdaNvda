@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 'Lambda' '1.1.6-dev'\n"
-"POT-Creation-Date: 2017-05-27 13:12+0200\n"
-"PO-Revision-Date: 2017-05-27 13:18+0200\n"
+"POT-Creation-Date: 2017-06-09 20:48+0200\n"
+"PO-Revision-Date: 2017-06-09 20:50+0200\n"
 "Last-Translator: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
 "Language-Team: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
 "Language: es\n"
@@ -15,31 +15,49 @@ msgstr ""
 "X-Poedit-SearchPath-0: addon\n"
 "X-Poedit-SearchPath-1: buildVars.py\n"
 
-#: addon/appModules/lambda/__init__.py:95
+#: addon/appModules/lambda/__init__.py:35
+msgid "space"
+msgstr "espacio"
+
+#: addon/appModules/lambda/__init__.py:105
 msgid "Shows a dialog to revert lambda profile options to the default."
 msgstr ""
 "Muestra un diálogo para revertir las opciones del perfil LAMBDA a las de "
 "fábrica."
 
-#: addon/appModules/lambda/lambdaEdit.py:81
+#: addon/appModules/lambda/lambdaEdit.py:89
 msgid "Reports the current line under the application cursor."
 msgstr "Informa de la línea actual bajo el cursor de la aplicación."
 
-#: addon/appModules/lambda/lambdaEdit.py:87
+#: addon/appModules/lambda/lambdaEdit.py:95
 msgid "reads from the beginning of the document up to the end of the text."
 msgstr "lee desde el comienzo del documento hasta el final del texto."
 
-#: addon/appModules/lambda/lambdaEdit.py:93
+#: addon/appModules/lambda/lambdaEdit.py:101
 msgid "Announces the current selection in edit controls and documents."
 msgstr "Anuncia la selección actual en controles de edición y documentos."
 
-#: addon/appModules/lambda/lambdaEdit.py:278
+#: addon/appModules/lambda/lambdaEdit.py:323
+msgid "Duplicate the current line and sets the cursor to the new line."
+msgstr "duplicar la línea actual y mueve el cursor a la nueva línea"
+
+#: addon/appModules/lambda/lambdaEdit.py:328
 msgid "flat mode "
 msgstr "modo plano "
 
-#: addon/appModules/lambda/lambdaEdit.py:284
+#: addon/appModules/lambda/lambdaEdit.py:334
 msgid "Toggle the braille flat mode on or off."
 msgstr "Conmuta el modo plano de braille entre activado y desactivado."
+
+#: addon/appModules/lambda/lambdaEdit.py:338
+msgid ""
+"Duplicate lines using control+d shortcut may causes error or stability "
+"issues while using Lambda with NVDA.\n"
+"Please consider using the NVDA+D shortcut instead."
+msgstr ""
+"duplicar líneas usando control+d podría causar errores e inestabilidad "
+"usando LAMBDA con NVDA.\n"
+"Por favor considere el uso de la tecla rápida NVDA+D."
 
 #: addon/appModules/lambda/lambdaProfileSetup.py:22
 msgid "lambda-ita.utb"
