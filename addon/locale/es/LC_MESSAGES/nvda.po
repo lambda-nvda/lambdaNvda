@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'Lambda' '1.1.6-dev'\n"
 "POT-Creation-Date: 2017-06-09 20:48+0200\n"
-"PO-Revision-Date: 2017-06-09 20:50+0200\n"
+"PO-Revision-Date: 2017-06-10 20:19+0200\n"
 "Last-Translator: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
 "Language-Team: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: addon/appModules/lambda/__init__.py:35
 msgid "space"
-msgstr "espacio"
+msgstr "Espacio"
 
 #: addon/appModules/lambda/__init__.py:105
 msgid "Shows a dialog to revert lambda profile options to the default."
