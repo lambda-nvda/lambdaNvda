@@ -75,8 +75,6 @@ class LambdaEditField(edit.Edit):
 	def say(self, msg):
 		if msg == self.empty:
 			return
-		if msg == " " : 
-			msg = self.appModule.lambdaSpace
 		speech.speakText(msg)
 	
 	#Convinent scripts to reports text and selection
