@@ -3,7 +3,6 @@
 #See the file COPYING for more details.
 #Copyright (C) 2016-2017 Alberto Zanella <lapostadialberto@gmail.com>
 
-from logHandler import log
 import eventHandler
 import addonHandler
 import speech
@@ -76,7 +75,7 @@ class LambdaEditField(edit.Edit):
 		if (msg == None) or (msg == self.empty):
 			return
 		for space in self.appModule.LAMBDA_SPACE :
-			if space in msg :
+			if u' '+space+u' ' in msg :
 				msg = msg.replace(space,shMsg.GLB_SPACE)
 		if msg == " " :
 			msg = shMsg.GLB_SPACE
