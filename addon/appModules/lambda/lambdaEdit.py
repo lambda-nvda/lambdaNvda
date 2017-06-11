@@ -73,8 +73,13 @@ class LambdaEditField(edit.Edit):
 		return self._oLambda
 			
 	def say(self, msg):
-		if msg == self.empty:
+		if (msg == None) or (msg == self.empty):
 			return
+		for space in self.appModule.LAMBDA_SPACE :
+			if space in msg :
+				msg = msg.replace(space,shMsg.GLB_SPACE)
+		if msg == " " :
+			msg = shMsg.GLB_SPACE
 		speech.speakText(msg)
 	
 	#Convinent scripts to reports text and selection

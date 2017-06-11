@@ -33,14 +33,15 @@ class AppModule(appModuleHandler.AppModule):
 	)
 	
 	LAMBDA_SPACE = (
-		"mezera",
-		"Leerzeichen",
-		"space",
-		"Espacio",
-		"espace",
-		"spazio",
-		"Espaço",
-		"medzera",
+		u" mezera ",
+		u" Leerzeichen ",
+		u" space ",
+		u" Espacio ",
+		u" espace ",
+		u" spazio ",
+		u" spazio di test ", #should be removed
+		u" Espaço ",
+		u" medzera ",
 	)
 	
 	def __init__(self, *args, **kwargs):
