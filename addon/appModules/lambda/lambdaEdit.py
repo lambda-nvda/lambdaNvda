@@ -201,7 +201,7 @@ class LambdaEditField(edit.Edit):
 	def script_saySpace(self,gesture) :
 		gesture.send()
 		if config.conf["keyboard"]["speakTypedCharacters"]:
-			speech.speakMessage(self.appModule.lambdaSpace)
+			speech.speakMessage(gesture.displayName)
 	
 	#Gestures binding:
 	__gestures = {
