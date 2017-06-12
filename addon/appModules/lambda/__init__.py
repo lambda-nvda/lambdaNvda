@@ -39,7 +39,7 @@ class AppModule(appModuleHandler.AppModule):
 		u"Espacio",
 		u"espace",
 		u"spazio",
-		u"spazio di test", #should be removed
+		u"spazio di test",
 		u"Espaço",
 		u"medzera",
 	)
