@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 #Addon for Lambda Math Editor
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
@@ -31,8 +32,17 @@ class AppModule(appModuleHandler.AppModule):
 	"TFrm_Calculator_Viewer", #CTRL+F9
 	)
 	
-	#Translators: The string used by Lambda to announce spaces (see LambdaDir\Lang\YourLanguage\Messages.dat with the key space=)
-	lambdaSpace = _("space")
+	LAMBDA_SPACE = (
+		u"mezera",
+		u"Leerzeichen",
+		u"space",
+		u"Espacio",
+		u"espace",
+		u"spazio",
+		u"spazio di test", #should be removed
+		u"Espaço",
+		u"medzera",
+	)
 	
 	def __init__(self, *args, **kwargs):
 		super(AppModule, self).__init__(*args, **kwargs)
@@ -78,7 +88,7 @@ class AppModule(appModuleHandler.AppModule):
 			s = obj.getLambdaObj().getlastinsertedel(obj.windowHandle, 1)
 		except COMError : s = None
 		if s == None or len(s) == 0 : return
-		if self.lambdaSpace in s : return
+		if s in self.LAMBDA_SPACE: return
 		if s == u" ": return
 		self.shouldValueChangeSpeak = False
 		if config.conf['keyboard']['speakTypedCharacters']:

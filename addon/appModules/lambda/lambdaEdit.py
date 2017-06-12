@@ -3,7 +3,6 @@
 #See the file COPYING for more details.
 #Copyright (C) 2016-2017 Alberto Zanella <lapostadialberto@gmail.com>
 
-from logHandler import log
 import eventHandler
 import addonHandler
 import speech
@@ -73,10 +72,13 @@ class LambdaEditField(edit.Edit):
 		return self._oLambda
 			
 	def say(self, msg):
-		if msg == self.empty:
+		if (msg == None) or (msg == self.empty):
 			return
-		if msg == " " : 
-			msg = self.appModule.lambdaSpace
+		for space in self.appModule.LAMBDA_SPACE :
+			if u' '+space+u' ' in msg :
+				msg = msg.replace(space,shMsg.GLB_SPACE)
+		if msg == " " :
+			msg = shMsg.GLB_SPACE
 		speech.speakText(msg)
 	
 	#Convinent scripts to reports text and selection
@@ -201,7 +203,7 @@ class LambdaEditField(edit.Edit):
 	def script_saySpace(self,gesture) :
 		gesture.send()
 		if config.conf["keyboard"]["speakTypedCharacters"]:
-			speech.speakMessage(self.appModule.lambdaSpace)
+			speech.speakMessage(gesture.displayName)
 	
 	#Gestures binding:
 	__gestures = {
