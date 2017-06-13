@@ -78,6 +78,12 @@ Where :
 * **NVDA+Shift+f**: Toggle braille flat mode on or off;
 * **NVDA+alt+r**: Open the "Revert LAMBDA Profile Wizard".
 
+## Known issues:
+
+Due to a bug present in LAMBDA, the add-on provides an extra-logic that reports white spaces. This logic may fail in the following situations:
+* When words like "space", "spazio" "Espacio" etc. are inserted into the text, they may be reported by NVDA as the local NVDA language translation. 
+* Blank lines are not reported by the LAMBDA speech engine. The user will hear the translation of the word "space" instead. This could be both a blank line or a line containing only the word "space".
+
 ## Addon mailing list:
 
 To report bugs, suggestions or if you want to contribute you can subscribe the Addon Google Group (in English).
