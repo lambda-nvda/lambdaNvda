@@ -150,10 +150,13 @@ class LambdaEditField(edit.Edit):
 		gesture.send()
 		s = self.getLambdaObj().getlastdeleted(self.windowHandle)
 		self.say(s)
+		braille.handler.mainBuffer.clear()
+		braille.handler.handleGainFocus(self)
 
 	def script_caret_delete(self, gesture):
 		self.script_caret_backspaceCharacter(gesture)
 		#It loses focus - set focus on this window
+		braille.handler.mainBuffer.clear()
 		braille.handler.handleGainFocus(self)
 
 	#Selection detection
