@@ -87,7 +87,7 @@ Due to a bug present in LAMBDA, the add-on provides an extra-logic that reports 
 ## Usefull tips
 
 This is a set of tips that will help you on using the addon in a more eficient way.
-* Character-by-character reporting: Normally, when working with maths you would like NVDA to report things you're writing character by character. To do this, there are a couple of simple steps: ensure to have the foc on the LAMBDA's window or one of its variants (the six dots representation, for example); press NVDA+2 (number two) or navigate to NVDA menu>Preferences>Keyboard settings and check the box to Speak typed characters. And done, NVDA will speak written characters, but don't worry, only in LAMBDA or its special windows, the settings for the rest of applications will be left as they were.
+* Character-by-character reporting: Normally, when working with maths you would like NVDA to report things you're writing character by character. To do this, there are a couple of simple steps: ensure to have the foc on the LAMBDA's window or one of its variants (the six dots representation, for example); press NVDA+2 (number two) or navigate to NVDA menu>Preferences>Keyboard settings and check the box to Speak typed characters; go to LAMBDA>Options>Voice paramethers and ensure the checkbox "echo" is ON, otherwhise NVDA won't receive anything from the speech engine while you are typing. And done, NVDA will speak written characters, but don't worry, only in LAMBDA or its special windows, the settings for the rest of applications will be left as they were.
 
 ## Addon mailing list:
 
