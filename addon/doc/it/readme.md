@@ -16,6 +16,7 @@ Per richieste sul prodotto si invita pertanto a contattare il servizio di suppor
 
 Per ulteriori informazioni sull'addon, collaborare o avere maggiorni informazioni, è possibile contattare l'autore tramite email o su GitHub. E' anche possibile iscriversi alla mailing list (in lingua inglese).
 
+### [Repository GitHub del progetto](https://github.com/lambda-nvda/lambdaNvda/)
 
 ## Audio presentazione
 Se volete scoprire nel dettaglio alcune delle caratteristiche di questo addon potete ascoltare la audio presentazione disponibile a 
