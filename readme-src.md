@@ -1,5 +1,5 @@
 ﻿# Lambda Add-On for NVDA
-* Author: Alberto Zanella.
+* Author: Alberto Zanella and the lambda-nvda team.
 * Download [stable version][1]
 * Download [development version][2]
 
