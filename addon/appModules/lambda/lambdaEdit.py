@@ -15,7 +15,9 @@ import braille
 import config
 import textInfos
 import ui
-
+import wx
+from keyboardHandler import KeyboardInputGesture
+from comtypes import COMError
 
 addonHandler.initTranslation()
 
@@ -58,6 +60,7 @@ class LambdaEditField(edit.Edit):
 	editAPIVersion = 0
 	_LambdaObjName = 'lambda.lambdaobj' #OLE Object name
 	_oLambda = None #global object (use getLambdaObj to retrieve it)
+	skipSelectionReport = 0
 	
 	def getLambdaObj(self) :
 		if not self._oLambda : 
@@ -69,14 +72,21 @@ class LambdaEditField(edit.Edit):
 		return self._oLambda
 			
 	def say(self, msg):
-		if msg == self.empty:
+		if (msg == None) or (msg == self.empty):
 			return
+		for space in self.appModule.LAMBDA_SPACE :
+			if u' '+space+u' ' in msg :
+				msg = msg.replace(space,shMsg.GLB_SPACE)
+		if msg == " " :
+			msg = shMsg.GLB_SPACE
 		speech.speakText(msg)
 	
 	#Convinent scripts to reports text and selection
 	def script_reportCurrentLine(self,gesture) :
-		s = self.getLambdaObj().getline(self.windowHandle, -1, -1)
-		self.say(s)
+		try :
+			s = self.getLambdaObj().getline(self.windowHandle, -1, -1)
+			self.say(s)
+		except COMError : pass
 	#Translators: this is a custom implementation of the globalCommands gesture, it doesn't support spelling.
 	script_reportCurrentLine.__doc__=_("Reports the current line under the application cursor.")
 	
@@ -102,8 +112,10 @@ class LambdaEditField(edit.Edit):
 		self.appModule.reportLastInsertedText(self,"typed")
 		
 	def event_gainFocus(self):
-		s = self.getLambdaObj().getline(self.windowHandle, -1, -1)
-		self.say(s)
+		try :
+			s = self.getLambdaObj().getline(self.windowHandle, -1, -1)
+			self.say(s)
+		except COMError : pass
 		self.initAutoSelectDetection()
 		braille.handler.handleGainFocus(self)
 
@@ -138,10 +150,13 @@ class LambdaEditField(edit.Edit):
 		gesture.send()
 		s = self.getLambdaObj().getlastdeleted(self.windowHandle)
 		self.say(s)
+		braille.handler.mainBuffer.clear()
+		braille.handler.handleGainFocus(self)
 
 	def script_caret_delete(self, gesture):
 		self.script_caret_backspaceCharacter(gesture)
 		#It loses focus - set focus on this window
+		braille.handler.mainBuffer.clear()
 		braille.handler.handleGainFocus(self)
 
 	#Selection detection
@@ -153,6 +168,9 @@ class LambdaEditField(edit.Edit):
 			self.s = s.strip().rstrip()
 
 	def detectPossibleSelectionChange(self):
+		if self.skipSelectionReport > 0 : 
+			self.skipSelectionReport = self.skipSelectionReport-1
+			return
 		if self.s is None : return
 		s = self.getLambdaObj().gethighlightedtext(self.windowHandle)
 		if not s:
@@ -185,7 +203,10 @@ class LambdaEditField(edit.Edit):
 			return newmessage.replace(oldmessage,'',1)
 		return newmessage
 	
-
+	def script_saySpace(self,gesture) :
+		gesture.send()
+		if config.conf["keyboard"]["speakTypedCharacters"]:
+			speech.speakMessage(gesture.displayName)
 	
 	#Gestures binding:
 	__gestures = {
@@ -201,6 +222,8 @@ class LambdaEditField(edit.Edit):
 	#Say Line
 	'kb(desktop):NVDA+upArrow': 'reportCurrentLine',
 	'kb(laptop):NVDA+l': 'reportCurrentLine',
+	#spacebar
+	'kb:space':'saySpace'
 	}
 
 '''
@@ -210,6 +233,25 @@ class LambdaDialogEdit(LambdaEditField):
 	def script_caret_newLine(self,gesture) :
 		#Prevents NVDA speaks the calculator result twice
 		gesture.send()
+
+'''
+This class extends the LambdaEditField for buffers dialog.
+'''
+class LambdaBufferEdit(LambdaEditField):
+	def script_announceBufferChange(self,gesture):
+		gesture.send()
+		speech.speakText(self.parent.parent.name)
+		try :
+			s = self.getLambdaObj().getline(self.windowHandle, -1, -1)
+			self.say(s)
+		except COMError : pass
+		
+	
+	__gestures = {
+	'kb:pageUp':'announceBufferChange',
+	'kb:pageDown':'announceBufferChange',
+	}
+		
 
 '''
 This class extends the LambdaEditField for matrix dialog.
@@ -266,11 +308,24 @@ class LambdaMainEditor(LambdaEditField):
 	
 	def script_sayDuplicate(self,gesture) :
 		#Retrieves the line before sending gesture, duplicate line is the same as the current one.
-		line = self.getLambdaObj().getline(self.windowHandle, -1, -1)
 		gesture.send()
-		braille.handler.handleUpdate(self)
-		self.say(line)
+		wx.CallAfter(self._showDuplicateWarning)
 
+	
+	def script_nvdaDuplicateLine(self,gesture) :
+		#Retrieves the line before sending gesture, duplicate line is the same as the current one.
+		line = self.getLambdaObj().getline(self.windowHandle, -1, -1)
+		#duplicate line using keyboard shortcuts
+		KeyboardInputGesture.fromName("home").send()
+		self.skipSelectionReport = 2 #JWEdit bug: fires selection multiple times.
+		KeyboardInputGesture.fromName("shift+end").send()
+		KeyboardInputGesture.fromName("control+c").send()
+		KeyboardInputGesture.fromName("end").send()
+		KeyboardInputGesture.fromName("enter").send()
+		KeyboardInputGesture.fromName("control+v").send()
+		self.say(line)
+	#This script duplicates the current line and announce it 
+	script_nvdaDuplicateLine.__doc__=_("Duplicate the current line and sets the cursor to the new line.")
 	
 	def script_switch_flatMode(self,gesture) :
 		val = config.conf['lambda']['brailleFlatMode'] = not config.conf['lambda']['brailleFlatMode']
@@ -282,7 +337,13 @@ class LambdaMainEditor(LambdaEditField):
 		braille.handler.handleGainFocus(self)
 	#This script set the desired textInfo for braille, when flat mode is on, the LambdaEditorFlatTextInfo is used, otherwise the LambdaEditorTextInfo is set.
 	script_switch_flatMode.__doc__=_("Toggle the braille flat mode on or off.")
-
+	
+	def _showDuplicateWarning(self):
+		import gui
+		duplicateBugMsg = _("""Duplicate lines using control+d shortcut may causes error or stability issues while using Lambda with NVDA.
+Please consider using the NVDA+D shortcut instead.""")
+		gui.messageBox(duplicateBugMsg)
+	
 	__gestures = {
 	#Braille flat mode
 	'kb:nvda+shift+f': 'switch_flatMode',
@@ -290,4 +351,5 @@ class LambdaMainEditor(LambdaEditField):
 	'kb:control+shift+b': 'selectBlocks',
 	'kb:control+b': 'selectBlocks',
 	'kb:control+d':'sayDuplicate',
+	'kb:nvda+d':'nvdaDuplicateLine',
 	}

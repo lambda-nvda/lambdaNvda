@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 #Addon for Lambda Math Editor
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
@@ -10,9 +11,10 @@ import addonHandler
 import appModuleHandler
 import controlTypes
 from . import lambdaProfileSetup
-from lambdaEdit import LambdaDialogEdit,LambdaMainEditor,LambdaMatrixEdit
+from lambdaEdit import LambdaDialogEdit,LambdaMainEditor,LambdaMatrixEdit,LambdaBufferEdit
 from NVDAObjects.window import DisplayModelEditableText
 import wx
+from comtypes import COMError
 
 addonHandler.initTranslation()
 
@@ -28,6 +30,18 @@ class AppModule(appModuleHandler.AppModule):
 	"TFrm_Matrix", #Matrix Window
 	"TFrm_Calculator_Simple", #Calculator 
 	"TFrm_Calculator_Viewer", #CTRL+F9
+	)
+	
+	LAMBDA_SPACE = (
+		u"mezera",
+		u"Leerzeichen",
+		u"space",
+		u"Espacio",
+		u"espace",
+		u"spazio",
+		u"spazio di test",
+		u"Espaço",
+		u"medzera",
 	)
 	
 	def __init__(self, *args, **kwargs):
@@ -50,6 +64,10 @@ class AppModule(appModuleHandler.AppModule):
 					clsList.insert(0, LambdaDialogEdit)
 					clsList.remove(DisplayModelEditableText)
 			except : pass
+		if obj.windowClassName == u'TMemo' :
+			dialogW = obj.parent.parent
+			if dialogW and dialogW.windowClassName == "TFrm_BufferW" :
+				clsList.insert(0, LambdaBufferEdit)
 		if obj.windowClassName == u'TLambdaEdit' :
 		#Matrix dialog
 			try :
@@ -66,10 +84,12 @@ class AppModule(appModuleHandler.AppModule):
 		cfg = config.conf['lambda']['brailleFlatMode']
 		if not cfg :
 			braille.handler.handleGainFocus(obj)
-		#obj.invalidateCache()
-		#obj.redraw()
-		s = obj.getLambdaObj().getlastinsertedel(obj.windowHandle, 1)
+		try :
+			s = obj.getLambdaObj().getlastinsertedel(obj.windowHandle, 1)
+		except COMError : s = None
 		if s == None or len(s) == 0 : return
+		if s in self.LAMBDA_SPACE: return
+		if s == u" ": return
 		self.shouldValueChangeSpeak = False
 		if config.conf['keyboard']['speakTypedCharacters']:
 			speech.speakText(s)

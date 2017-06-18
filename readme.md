@@ -1,12 +1,12 @@
 ﻿# Lambda Add-On for NVDA
-* Author: Alberto Zanella.
+* Author: Alberto Zanella and the lambda-nvda team.
 * Download [stable version][1]
 * Download [development version][2]
 
 This project is an appModule for the LAMBDA Software. It has been inspired by the work of Peter Lecky at the Comenius University. 
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) is a software that helps blind people to read and write math using a braille display and/or a speech synthesizer.
 LAMBDA is the result of an EU-Project. For more information about LAMBDA please visit [http://www.lambdaproject.org/](http://www.lambdaproject.org/).  
-The current version of the addon has braille tables for Italian and Spanish languages and its interface is availablein most of the NVDA's official languages, because it is translated by the NVDA translations community. 
+The current version of the addon has braille tables for Italian and Spanish languages and its interface is available in most of the NVDA's official languages, because it is translated by the NVDA translations community. 
 If you are a non-italian user of LAMBDA and you would like to contribute with the porting of the braille table in your language, feel free to contact the author (see below) or subscribe the project mailing list.
 
 **Please note:** This addon has been developed by Alberto Zanella as a voluntary activity. Nor the author or the contributors are involved in selling and / or development of the software Lambda. If you need more information about Lambda, or you need support on how to use it, please contact your local distributor. If you are encountering any difficulties when using or installing this addon, please contact the author or use the "Issues" link on the Github project page.
@@ -76,12 +76,24 @@ Where :
 ## Addon Keyboard Shortcuts:
 
 * **NVDA+Shift+f**: Toggle braille flat mode on or off;
-* **NVDA+alt+r**: Open the "Revert LAMBDA Profile Wizard".
+* **NVDA+alt+r**: Open the "Revert LAMBDA Profile Wizard";
+* **NVDA+d**: Duplicate lines (use this instad of control+d).
+
+## Known issues:
+
+Due to a bug present in LAMBDA, the add-on provides an extra-logic that reports white spaces. This logic may fail in the following situations:
+* When words like "space", "spazio" "Espacio" etc. are inserted into the text, they may be reported by NVDA as the local NVDA language translation. 
+* Blank lines are not reported by the LAMBDA speech engine. The user will hear the translation of the word "space" instead. This could be both a blank line or a line containing only the word "space".
+
+## Useful tips
+
+This is a set of tips that will help you on using the addon in a more eficient way.
+* Character-by-character reporting: Normally, when working with maths you would like NVDA to report things you're writing character by character. To do this, there are a couple of simple steps: ensure to have the focus on the LAMBDA's window or one of its variants (the six dots representation, for example); press NVDA+2 (number two) or navigate to NVDA menu>Preferences>Keyboard settings and check the box to Speak typed characters; go to LAMBDA>Options>Voice paramethers and ensure the checkbox "echo" is ON, otherwhise NVDA won't receive anything from the speech engine while you are typing. And done, NVDA will speak written characters, but don't worry, only in LAMBDA or its special windows, the settings for the rest of applications will be left as they were.
 
 ## Addon mailing list:
 
-To report bugs, suggestions or if you want to contribute you can subscribe the Addon Google Group (in English).
-You can subscribe writing to lambda-nvda+subscribe@[plural of google group] dot com .
+To report bugs, suggestions or if you want to contribute you can subscribe the Addon Group (in English).
+You can subscribe from the website: https://groups.io/g/lambda-nvda .
 
 [1]: http://addons.nvda-project.org/files/get.php?file=lambda
 
