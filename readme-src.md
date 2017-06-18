@@ -11,6 +11,8 @@ If you are a non-italian user of LAMBDA and you would like to contribute with th
 
 **Please note:** This addon has been developed by Alberto Zanella as a voluntary activity. Nor the author or the contributors are involved in selling and / or development of the software Lambda. If you need more information about Lambda, or you need support on how to use it, please contact your local distributor. If you are encountering any difficulties when using or installing this addon, please contact the author or use the "Issues" link on the Github project page.
 
+### * [Official Github Repository](https://github.com/lambda-nvda/lambdaNvda/)
+
 ## Addon Features:
 
 ### Speech support:
