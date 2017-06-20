@@ -1,4 +1,4 @@
-<!---
+﻿<!---
 This is not the source for the readme file of NVDA Addon. This is just for the Github repository. The source for the NVDA Addon build is readme-src.md. Thanks!
 -->
 
@@ -91,12 +91,14 @@ Where :
 ## Known issues:
 
 Due to a bug present in LAMBDA, the add-on provides an extra-logic that reports white spaces. This logic may fail in the following situations:
+
 * When words like "space", "spazio" "Espacio" etc. are inserted into the text, they may be reported by NVDA as the local NVDA language translation. 
 * Blank lines are not reported by the LAMBDA speech engine. The user will hear the translation of the word "space" instead. This could be both a blank line or a line containing only the word "space".
 
 ## Useful tips
 
 This is a set of tips that will help you on using the addon in a more eficient way.
+
 * Character-by-character reporting: Normally, when working with maths you would like NVDA to report things you're writing character by character. To do this, there are a couple of simple steps: ensure to have the focus on the LAMBDA's window or one of its variants (the six dots representation, for example); press NVDA+2 (number two) or navigate to NVDA menu>Preferences>Keyboard settings and check the box to Speak typed characters; go to LAMBDA>Options>Voice paramethers and ensure the checkbox "echo" is ON, otherwhise NVDA won't receive anything from the speech engine while you are typing. And done, NVDA will speak written characters, but don't worry, only in LAMBDA or its special windows, the settings for the rest of applications will be left as they were.
 
 ## Addon mailing list:
