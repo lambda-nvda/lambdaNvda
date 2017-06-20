@@ -1,4 +1,4 @@
-﻿<!---
+<!---
 This is not the source for the readme file of NVDA Addon. This is just for the Github repository. The source for the NVDA Addon build is readme-src.md. Thanks!
 -->
 
