@@ -92,7 +92,7 @@ suplimentul nu îl va înlocui, iar dumneavoastră va trebui să ajustați manua
 profilul de configurare.
 
 Pentru a evita această situație, dacă aveți setări specifice pe care doriți
-să le păstrați, puteți utiliza expertul de recuperare a profilului
+să le păstrați, puteți utiliza expertul de restabilire al profilului
 LAMBDA. Comanda rapidă pentru pornirea acestui instrument este NVDA+alt+r
 (când sunteți focalizat pe LAMBDA).
 
