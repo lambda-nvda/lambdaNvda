@@ -100,7 +100,7 @@ Ar mai fi o variantă, să ștergeți versiunile vechi ale profilului „lambda�
 după instalarea suplimentului. Pentru a face astfel, deschideți meniul NVDA,
 selectați opțiunea „Configurarea profilurilor” și apăsați Enter.
 
-În dialogul de configurare a profilurilor, veți putea să localizați și să
+În dialogul de configurare al profilurilor, veți putea să localizați și să
 ștergeți profilul „lambda”. Profilul va fi recreat data viitoare când
 aplicația Lambda este pornită.
 
