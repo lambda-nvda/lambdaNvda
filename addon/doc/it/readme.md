@@ -42,74 +42,75 @@ Per ulteriori informazioni sull'addon, richieste o altro è possibile contattare
 
 ### Supporto Braille:
 
-* The addon installs (inside the user profile directory) and activates a
-  custom braille table. This table may be different for different
-  languages. Custom braille tables were made from ones in the Lambda plugin
-  for JAWS (jbt file). Then symbols and markers are represented using the
-  same dots patterns;
-* The addon creates an NVDA profile for a standard braille configuration. By
-  this, the output is set to the custom braille table only when the Lambda
-  application is active;
+* Il componente aggiuntivo installa (all'interno della cartella profilo
+  utente di NVDA) ed inseguito attiva una tabella braille
+  personalizzata. Tale tabella può essere diversa in base alla lingua. Le
+  tabelle personalizzate sono state adattate da quelle presenti nel plugin
+  Lambda per Jaws, (file jbt). In seguito i simboli e i marcatori sono stati
+  rappresentati servendosi degli stessi punti braille.
+* Crea e configura un profilo applicativo apposito (in questo modo la
+  tabella braille speciale per LAMBDA sarà attivata solo su questo software
+  e non su altri);
 * Le finestre di dialogo e i menu vengono mostrati in braille in maniera
   appropriata;
-* The content of the editor is correctly rendered in braille and the user is
-  able to move using braille scrolling keys or cursor routing keys;
-* Starting from the addon version 1.1.0, there are two ways in which the
-  text in the Lambda editor is rendered: "Flat mode" and "non-Flat
-  Mode". When the "Flat mode" is on, NVDA will use the Display Model to
-  retrieve information from the editor and to determine the caret
-  position. This is specially beneficial when the user needs to move around
-  on the screen, even in white spaces. When the "Flat Mode" is set to "off",
-  text rendering on the braille display is more stable, since NVDA uses
-  Windows API to retrieve it. However when the the caret is moved in white
-  spaces next to the end of the line of text, the braille display does not
-  follow the real cursor as long as a non-white space is added by the user.
+* Permette la navigazione nei menù e nelle finestre di dialogo in braille,
+  servendosi dei tasti di scorrimento o dei cursor routing;
+* A partire dalla versione 1.1.0 presenta una doppia modalità per il
+  braille: "Flat Mode" e non "Flat Mode" (modalità in linea
+  attiva/disattiva). Quando "Flat Mode" è attivata, NVDA userà
+  l'intercettatore grafico per determinare cosa è presente a schermo. Questo
+  è utile per poter spaziare con il braille anche in aree "bianche", dove
+  non è presente testo. Con la modalità "Flat Mode" disattivata, si avrà
+  maggior potenza nell'elaborazione del testo, in quanto NVDA utilizzerà le
+  funzioni messe a disposizione dal sistema operativo Windows per
+  determinare la presenza di testo. Di contro però, non sarà possibile
+  esplorare in braille aree bianche, prive di alcun testo.
 
-The "flat mode" is active by default. You can toggle "flat mode" on or off
-by pressing NVDA+SHIFT+F.
+Di default la modalità "Flat Mode" è attiva. Per attivarla o disattivarla
+usare il comando NVDA+SHIFT+F.
 
-We strongly recommend to disable the Flat Mode if you are using custom DPI
-in Windows (Custom sizing option), especially when you have screen settings
-with more than 96 dpi (larger than 100%).
+Si consiglia caldamente di disattivare la "Flat Mode" qualora si sia
+cambiato il valore dei DPI dello schermo (da 100% ad un ingrandimento
+maggiore).
 
-* The structure of dialog boxes is easier, repeated information has been
-  removed;
-* The selection will be marked properly using dots 7 and 8, and marking is
-  properly refreshed while standard Windows commands (SHIFT+ARROWS) or
-  Lambda specific commands (CTRL+B, CTRL+SHIFT+B) are pressed.
+* La struttura delle finestre di dialogo è più lineare, rimosse informazioni
+  ripetute;
+* Marca in braille in modo corretto quando il testo viene selezionato.
 
 ## Prima di iniziare ad utilizzare questo componente aggiuntivo.
 
-This addon creates an NVDA profile named "lambda" which is associated with
-the "lambda.exe" application. The profile automatically sets all braille
-options: the custom braille table, the focus tethering and flat mode
-settings.
+L'addon provvede alla creazione automatica di un nuovo profilo di NVDA
+chiamato "lambda" associato all'applicazione "lambda.exe". Questa operazione
+viene effettuata automaticamente all'avvio dell'applicativo Lambda. In
+particolare vengono correttamente impostate le preferenze relative alla
+tabella braille, al tracciamento del cursore ed alla modalità flat del
+braille.
 
-If a previous profile with the same name is present in your system, the
-addon will not override it and you have to manually adjust your
-configuration profile.
+Se è già presente un profilo chiamato "lambda", l'addon non lo sovrascriverà
+e si dovrà provvedere manualmente alla configurazione.
 
-To stave off this situation, if you have specific settings you'd like to
-preserve, you can use the "Revert LAMBDA Profile Wizard". The shortcut to
-start this tool is NVDA+alt+r (when focused in LAMBDA).
+Per rendere il compito più facile, se si desidera preservare alcune delle
+impostazioni del precedente profilo, è possibile utilizzare la funzionalità
+di "Ripristino guidato impostazioni di LAMBDA". Il comando rapido per questo
+comando è NVDA+alt+r (quando la finestra di Lambda è attiva).
 
-An easy option is also to delete old versions of the "lambda" profile after
-the installation of the addon. To do so, open the NVDA menu, select the
-"Configuration profiles" menu Item and press ENTER.
+Una soluzione più semplice è quella di cancellare il precedente profilo
+chiamato "lambda" accedendo al menù di NVDA, quindi andando in "Gestione
+profili".
 
-In the Configuration profiles dialog, you'll be able to locate and delete
-the "lambda" profile. The profile will be re-created the next time the
-Lambda application is started.
+Nella finestra Configurazione profili, si potrà individuare ed eliminare il
+profilo di "lambda". Il profilo verrà ricreato la prossima volta
+l'applicazione Lambda verrà riavviata.
 
-Deleting the "lambda" profile should be an easy solution also when the addon
-runs into any problem. For instance, if the braille table is not properly
-set, instead of manually configuring the profile, you can simply delete
-it. The addon will create a new one the next time you'll load the Lambda
-editor.
+La rimozione del profilo può essere utile anche nel caso di problemi legati
+alla configurazione di NVDA con LAMBDA; ad esempio nel caso in cui la
+tabella braille non sembra corrispondere con quella impostata, è più rapido
+eliminare il profilo piuttosto che cercare di risolvere a mano, tanto il
+profilo verrà subito ricreato al riavvio dell'applicazione.
 
-Each time the Lambda editor is started, this addon checks if a profile with
-the name "lambda" exists. If it doesn't, it automatically generates a
-profile with the following form:
+Ad ogni avvio dell'applicazione Lambda, questo componente aggiuntivo
+controlla se un profilo chiamato "lambda" esiste. Se non esiste, procede
+alla sua creazione automatica secondo questo formato:
 
 ``` filename : userData\profiles\lambda.ini :
 
@@ -125,45 +126,50 @@ profile with the following form:
 
 Dove :
 
-* path-to-the-addon-brailleTable-dir : is the absolute path of the addon
-  directory + "\brailleTables"
-* tableName : depends on the active NVDA language. Currently only the
-  italian and Spanish braille tables, "lambda-ita.utb" and "lambda-esp.utb"
-  respectively, is present.
+* * percorso-della-cartella-brailleTable-del-componente-aggiuntivo : è il
+  percorso assoluto della directory dell'addon a cui segue "\brailleTables"
+* * nomeTabella : dipende dalla lingua di NVDA.
 
 ## Comandi rapidi da tastiera per il componente:
 
-* **NVDA+Shift+f**: Toggle braille flat mode on or off;
-* **NVDA+alt+r**: Open the "Revert LAMBDA Profile Wizard";
-* **NVDA+d**: Duplicate lines (use this instad of control+d).
+* * **NVDA+Shift+f**: Abilita o disabilita la modalità braille flat;
+* * **NVDA+alt+r**: Apre la finestra di dialogo "Ripristino guidato
+  impostazioni di LAMBDA".
+* * **NVDA+d**: Duplica la riga su cui è posizionato il cursore (usare
+  questa combinazione di tasti invece di control+d).
 
-## Known issues:
+## Problemi noti
 
-Due to a bug present in LAMBDA, the add-on provides an extra-logic that
-reports white spaces. This logic may fail in the following situations:
+Per risolvere un problema presente in LAMBDA, l'add-on contiene una miglior
+gestione della vocalizzazione degli spazi vuoti. Questa strategia di lettura
+può non funzionare correttamente nei seguenti casi:
 
-* When words like "space", "spazio" "Espacio" etc. are inserted into the
-  text, they may be reported by NVDA as the local NVDA language translation.
-* Blank lines are not reported by the LAMBDA speech engine. The user will
-  hear the translation of the word "space" instead. This could be both a
-  blank line or a line containing only the word "space".
+* Se vengono inserite nel testo parole come "space", "spazio" "Espacio" ecc,
+  queste vengono lette da NVDA come "spazio" (tradotto in Italiano) anche se
+  sono scritti in altre lingue
+* Normalmente le righe vuote non vengono lette da LAMBDA. Ora verrà detto
+  "spazio": ciò può indicare che la riga è vuota, che nella riga è presente
+  uno spazio o che vi sia effettivamente scritto "spazio".
 
 ## Suggerimenti utili
 
 Questo è un insieme di consigli che aiuterà ad utilizzare il componente in
 maniera più efficiente.
 
-* Character-by-character reporting: Normally, when working with maths you
-  would like NVDA to report things you're writing character by character. To
-  do this, there are a couple of simple steps: ensure to have the focus on
-  the LAMBDA's window or one of its variants (the six dots representation,
-  for example); press NVDA+2 (number two) or navigate to NVDA
-  menu>Preferences>Keyboard settings and check the box to Speak typed
-  characters; go to LAMBDA>Options>Voice paramethers and ensure the checkbox
-  "echo" is ON, otherwhise NVDA won't receive anything from the speech
-  engine while you are typing. And done, NVDA will speak written characters,
-  but don't worry, only in LAMBDA or its special windows, the settings for
-  the rest of applications will be left as they were.
+* Lettura carattere per carattere: Quando si manipolano formule matematiche,
+  è desiderabile fare in modo che NVDA pronunci i caratteri quando vengono
+  digitati. Per fare questo è possibile procedere in diversi modi: anzitutto
+  assicurarsi che la finestra di Lambda (o una finestra del programma come
+  la visualizzazione a 6 punti) sia attiva; premere NVDA+2 (non del
+  tastierino) oppure attivare il menù di NVDA>Preferenze>Impostazioni
+  tastiera, attivare la casella di controllo "Leggi i caratteri
+  digitati". Infine assicurarsi di avere abilitato il pulsante radio
+  "Jaws/virgo" e la casella di controllo  "Echo"  di LAMBDA aprendo il menù
+  del programma Opzioni>Impostazioni Voce. In questo modo LAMBDA processerà
+  correttamente i caratteri inseriti. Niente paura: queste impostazioni
+  rimarranno attive soltanto quando viene usato il programma Lambda. Se un
+  altro programma viene attivato le impostazioni di lettura ritorneranno
+  quelle precedenti.
 
 ## Addon mailing list:
 

@@ -1,22 +1,23 @@
-# Lambda Add-On for NVDA #
+# Module complémentaire Lambda pour NVDA #
 
-* Author: Alberto Zanella and the lambda-nvda team.
+* Auteur : Alberto Zanella et l'équipe de lambda-nvda.
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
 
 Ce projet est un module complémentaire pour le logiciel LAMBDA. Il s'inspire du travail de Peter Lecky de l'Université Comenius. 
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) est un logiciel qui aide les personnes aveugles à lire et écrire les mathématiques en utilisant un afficheur braille et/ou un synthétiseur vocal.
 LAMBDA est le résultat d'un EU-Project. Pour plus d'informations sur LAMBDA veuillez visiter [http://www.lambdaproject.org/](http://www.lambdaproject.org/).  
-The current version of the addon has braille tables for Italian and Spanish
-languages and its interface is available in most of the NVDA's official
-languages, because it is translated by the NVDA translations community.  If
-you are a non-italian user of LAMBDA and you would like to contribute with
-the porting of the braille table in your language, feel free to contact the
-author (see below) or subscribe the project mailing list.
+Cette version du module contient des tables braille pour l'Italien et
+l'Espagnol Et son interface est disponible dans la plupart des langues
+officielles de NVDA, car il est traduit par les traducteurs de la
+communauté. Si vous n'êtes pas un utilisateur Italien de LAMBDA et que vous
+voulez contribuer au portage des tables braille dans votre langue, n'hésitez
+pas à contacter l'auteur (voir ci-dessous) ou inscrivez-vous à la liste de
+discussion du projet.
 
 **Veuillez noter :** Ce module a été développé par Alberto Zanella en tant qu'activité bénévole. Ni l'auteur ni les contributeurs ne sont impliqués dans la vente ou le développement du logiciel Lambda. Si vous voulez plus d'informations sur Lambda, ou avez besoin de support pour l'utiliser, veuillez contacter votre distributeur local. Si vous rencontrez des difficultés d'utilisation ou d'installation de ce module, veuillez contacter l'auteur ou utiliser le lien "Issues" sur la page Github du projet.
 
-### [Official Github Repository](https://github.com/lambda-nvda/lambdaNvda/)
+### [Dépôt officiel sur Github](https://github.com/lambda-nvda/lambdaNvda/)
 
 ## Fonctions du Module :
 
@@ -137,45 +138,50 @@ Où :
 ## Raccourcis clavier du module :
 
 * **NVDA+Maj+f** : Active/désactive le mode braille plat;
-* **NVDA+alt+r**: Open the "Revert LAMBDA Profile Wizard";
-* **NVDA+d**: Duplicate lines (use this instad of control+d).
+* **NVDA+alt+r** : Ouvre l'"assistant de restauration profil de Lambda".
+* **NVDA+d**: Dupliquer les lignes (utilisez ceci au lieu de contrôle+d).
 
-## Known issues:
+## Problèmes connus :
 
-Due to a bug present in LAMBDA, the add-on provides an extra-logic that
-reports white spaces. This logic may fail in the following situations:
+En raison d'un bogue affectant LAMBDA, ce module complémentaire fournit une
+logique supplémentaire qui rapporte des espaces blancs. Cette logique peut
+échouer dans les situations suivantes :
 
-* When words like "space", "spazio" "Espacio" etc. are inserted into the
-  text, they may be reported by NVDA as the local NVDA language translation.
-* Blank lines are not reported by the LAMBDA speech engine. The user will
-  hear the translation of the word "space" instead. This could be both a
-  blank line or a line containing only the word "space".
+* Quand des mots tels que "space", "spazio" "Espacio" etc. sont insérés dans
+  le texte, Ils peuvent être signalés par NVDA dans la langue de NVDA.
+* Les lignes vides ne sont pas annoncées par la synthèse vocale de LAMBDA. À
+  la place, l'utilisateur entendra la traduction du mot "space". Cela peut
+  être soit une ligne vierge, soit une ligne contenant uniquement le mot
+  "space".
 
-## Useful tips
+## Conseils utiles
 
-This is a set of tips that will help you on using the addon in a more
-eficient way.
+Ceci est un ensemble de conseils qui vous aideront à utiliser le module
+complémentaire plus efficacement.
 
-* Character-by-character reporting: Normally, when working with maths you
-  would like NVDA to report things you're writing character by character. To
-  do this, there are a couple of simple steps: ensure to have the focus on
-  the LAMBDA's window or one of its variants (the six dots representation,
-  for example); press NVDA+2 (number two) or navigate to NVDA
-  menu>Preferences>Keyboard settings and check the box to Speak typed
-  characters; go to LAMBDA>Options>Voice paramethers and ensure the checkbox
-  "echo" is ON, otherwhise NVDA won't receive anything from the speech
-  engine while you are typing. And done, NVDA will speak written characters,
-  but don't worry, only in LAMBDA or its special windows, the settings for
-  the rest of applications will be left as they were.
+* Annonce caractère par caractère : Normalement, lorsque vous travaillez sur
+  des maths, vous souhaitez que NVDA sonorise ce que vous écrivez caractère
+  par caractère. Pour ce faire, il existe quelques étapes faciles :
+  Assurez-vous que le focus est sur la fenêtre de LAMBDA ou sur une de ces
+  variantes. (La représentation par les six points, par exemple) ; appuyez
+  sur NVDA+2 (chiffre 2) ou naviguez jusqu'au menu NVDA > Préférences >
+  Paramètres du clavier. Cochez la case Écho clavier par caractère ; allez
+  vers LAMBDA > Options > Paramètres vocaux puis veillez à ce que la case
+  "écho" est cochée, sinon NVDA ne recevra rien de la synthèse vocale
+  lorsque vous écrirez. Ceci fait, Une fois que cela est fait, NVDA dira les
+  caractères écrits, mais ne vous inquiétez pas, ce sera seulement dans
+  LAMBDA ou ses fenêtres spéciales, les paramètres du reste des applications
+  resteront tels quels.
 
 ## Liste de discussion du module :
 
-To report bugs, suggestions or if you want to contribute you can subscribe
-the Addon Group (in English).  You can subscribe from the website:
-https://groups.io/g/lambda-nvda .
+Pour signaler des bogues, faire des suggestions ou contribuer vous pouvez
+souscrire au groupe traitant de ce module (en Anglais).  Vous pouvez
+souscrire en écrivant à lambda-nvda+subscribe@[plural of google group] dot
+com.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=lambda
+[1]: https://addons.nvda-project.org/files/get.php?file=lambda
 
-[2]: http://addons.nvda-project.org/files/get.php?file=lambda-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=lambda-dev
