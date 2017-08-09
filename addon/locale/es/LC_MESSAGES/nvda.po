@@ -1,55 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the lambda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: 'Lambda' '1.1.6-dev'\n"
-"POT-Creation-Date: 2017-06-09 20:48+0200\n"
-"PO-Revision-Date: 2017-06-10 20:19+0200\n"
-"Last-Translator: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
-"Language-Team: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
+"Project-Id-Version: lambda 1.1.8\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2017-06-20 06:07+1000\n"
+"PO-Revision-Date: 2017-06-22 21:27+0200\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
+"Language-Team: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
 "X-Generator: Poedit 1.8.8\n"
-"X-Poedit-Basepath: ../../../..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SearchPath-0: addon\n"
-"X-Poedit-SearchPath-1: buildVars.py\n"
 
-#: addon/appModules/lambda/__init__.py:35
-msgid "space"
-msgstr "Espacio"
-
-#: addon/appModules/lambda/__init__.py:105
+#. Translators: Message presented in input help mode.
 msgid "Shows a dialog to revert lambda profile options to the default."
 msgstr ""
 "Muestra un diálogo para revertir las opciones del perfil LAMBDA a las de "
 "fábrica."
 
-#: addon/appModules/lambda/lambdaEdit.py:89
+#. Translators: this is a custom implementation of the globalCommands gesture, it doesn't support spelling.
 msgid "Reports the current line under the application cursor."
 msgstr "Informa de la línea actual bajo el cursor de la aplicación."
 
-#: addon/appModules/lambda/lambdaEdit.py:95
+#. Translators: Lambda can't read from the current caret position, the implementation of sayAll provided starts reading from the top of the document.
 msgid "reads from the beginning of the document up to the end of the text."
 msgstr "lee desde el comienzo del documento hasta el final del texto."
 
-#: addon/appModules/lambda/lambdaEdit.py:101
+#. Translators: this is a custom implementation of the globalCommands gesture.
 msgid "Announces the current selection in edit controls and documents."
 msgstr "Anuncia la selección actual en controles de edición y documentos."
 
-#: addon/appModules/lambda/lambdaEdit.py:323
+#. This script duplicates the current line and announce it
 msgid "Duplicate the current line and sets the cursor to the new line."
-msgstr "duplicar la línea actual y mueve el cursor a la nueva línea"
+msgstr "Duplicar la línea actual y mueve el cursor a la nueva línea"
 
-#: addon/appModules/lambda/lambdaEdit.py:328
+#. Translators: This determines whether to use API or DisplayMode to render the editor window on a braille display. It is a toggle (on/off)
 msgid "flat mode "
 msgstr "modo plano "
 
-#: addon/appModules/lambda/lambdaEdit.py:334
+#. This script set the desired textInfo for braille, when flat mode is on, the LambdaEditorFlatTextInfo is used, otherwise the LambdaEditorTextInfo is set.
 msgid "Toggle the braille flat mode on or off."
 msgstr "Conmuta el modo plano de braille entre activado y desactivado."
 
-#: addon/appModules/lambda/lambdaEdit.py:338
 msgid ""
 "Duplicate lines using control+d shortcut may causes error or stability "
 "issues while using Lambda with NVDA.\n"
@@ -59,68 +56,47 @@ msgstr ""
 "usando LAMBDA con NVDA.\n"
 "Por favor considere el uso de la tecla rápida NVDA+D."
 
-#: addon/appModules/lambda/lambdaProfileSetup.py:22
+#. Translators: This string is the file name of the Lambda braille table for the translated language. The file should be present in the "brailleTables" directory in this addon. The default is the italian braille translation table.
 msgid "lambda-ita.utb"
 msgstr "lambda-esp.utb"
 
-#: addon/appModules/lambda/lambdaProfileSetup.py:103
+#. Translators: This is the label for the Quick Profile Wizard dialog.
+#. This dialog helps the user to reset relevant profile options without deleting his custom settings.
 msgid "Revert LAMBDA Profile Wizard"
 msgstr "Asistente de Reversión del Perfil LAMBDA"
 
-#: addon/appModules/lambda/lambdaProfileSetup.py:107
+#. Translators: This is the static text of the Quick Profile Wizard dialog.
 msgid ""
 "Choose which options you want to reset to the default value for the Lambdas "
 "profile"
 msgstr "Elija cuáles de las opciones del perfil LAMBDA desea restablecer"
 
-#: addon/appModules/lambda/lambdaProfileSetup.py:112
+#. Translators: This is the label for a checkbox in the
+#. Quick Profile Wizard dialog.
 #, python-format
 msgid "Keep the LAMBDA braille table for the current language (%s)"
 msgstr "Mantener la tabla braille para el idioma actual (%s)"
 
-#: addon/appModules/lambda/lambdaProfileSetup.py:117
+#. Translators: This is the label for a checkbox in the
+#. Quick Profile Wizard dialog.
 msgid "Set the braille cursor to tether the focus"
 msgstr "Configurar el cursor braille para seguir al foco"
 
-#: addon/appModules/lambda/lambdaProfileSetup.py:122
+#. Translators: This is the label for a checkbox in the
+#. Quick Profile Wizard dialog.
 msgid "Disable the Braille reading by paragraph"
 msgstr "Deshabilitar la lectura braille por párrafo"
 
-#: addon/appModules/lambda/lambdaProfileSetup.py:127
+#. Translators: This is the label for a checkbox in the
+#. Quick Profile Wizard dialog.
 msgid "Disable word wrappping of the braille line"
 msgstr "Deshabilitar la no separación de palabras braille de una línea"
 
-#: addon/appModules/lambda/sharedMessages/__init__.py:8
-msgid "selected"
-msgstr "seleccionado"
-
-#: addon/appModules/lambda/sharedMessages/__init__.py:9
-msgid "not selected"
-msgstr "no seleccionado"
-
-#: addon/appModules/lambda/sharedMessages/__init__.py:10
-msgid "on"
-msgstr "activado"
-
-#: addon/appModules/lambda/sharedMessages/__init__.py:11
-msgid "off"
-msgstr "desactivado"
-
-#: addon/appModules/lambda/sharedMessages/__init__.py:12
-msgid "An NVDA settings dialog is already open. Please close it first."
-msgstr ""
-"Un diálogo de configuración de NVDA ya está abierto. Por favor ciérrelo "
-"primero."
-
-#: addon/appModules/lambda/sharedMessages/__init__.py:13
-msgid "Error"
-msgstr "Error"
-
-#: addon/installTasks.py:17
+#. Translators: title of the message box that appears when the user is installing the addon and an older version prevents the update to be completed.
 msgid "Incompatible version of the addon detected"
 msgstr "Versión del complemento incompatible detectada"
 
-#: addon/installTasks.py:20
+#. Translators: text of the message box that appears when the user is installing the addon and an older version prevents the update to be completed.
 msgid ""
 "An old, incompatible version of this addon has been detected.\n"
 "This prevents the installation to be completed.\n"
@@ -132,11 +108,11 @@ msgstr ""
 "Por favor desinstale la antigua versión antes de proceder con la instalación "
 "del complemento Lambda.\n"
 
-#: addon/installTasks.py:26
+#. Translators: title of the message box that appears when user is installing the addon in NVDA and a "lambda" profile is already present.
 msgid "lambda profile already exists"
 msgstr "Perfil lambda ya existe"
 
-#: addon/installTasks.py:29
+#. Translators: text of the message box that appears when user is installing the addon in NVDA and a "lambda" profile is already present.
 msgid ""
 "Another profile named \"lambda\" is already present in your NVDA "
 "configuration. \n"
@@ -155,65 +131,16 @@ msgstr ""
 "aplicación LAMBDA esté activa.\n"
 "Pulse Aceptar para completar la instalación del complemento.\n"
 
-#: buildVars.py:17
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Lambda math editor addon"
 msgstr "Lambda (editor matemático) como complemento"
 
-#: buildVars.py:20
+#. Add-on description: can span multiple lines with """ syntax """
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 "This addon provides access to the Lambda math editor with both braille and "
 "speech support."
 msgstr ""
 "Este complemento proporciona el acceso al editor Lambda con soporte para "
 "braille y habla."
-
-#~ msgid ""
-#~ "Another profile named \"lambda\" is already present in your NVDA "
-#~ "configuration. \n"
-#~ "This prevents the addon on create and configure the lambda profile "
-#~ "correctly.\n"
-#~ "If you want the addon to configure a lambda profile for you, please "
-#~ "delete the old one named \"lambda\" using the NVDA \"Configuration "
-#~ "Profiles\" dialog.\n"
-#~ "The new profile will be created the next time you'll start the Lambda "
-#~ "app.\n"
-#~ "Otherwise please edit your profile configuration file manually.\n"
-#~ msgstr ""
-#~ "Otro perfil llamado \"lambda\" está presente en la configuración de su "
-#~ "NVDA.\n"
-#~ "Esto impide al complemento el crear y configurar el perfil \"lambda\" "
-#~ "correctamente.\n"
-#~ "Si desea que el complemento configure un nuevo pefil \"lambda\" para "
-#~ "usted, por favor elimine el viejo perfil \"lambda\" desde el dia´logo "
-#~ "\"Perfiles ce configuración\".\n"
-#~ "El nuevo perfil será creado la próxima vez que reinicie la app Lambda.\n"
-#~ "De otra forma edite el archivo del Perfil de configuración de forma "
-#~ "manual.\n"
-
-#~ msgid ""
-#~ "Extends the selection to the surrounding block and reads it. If used with "
-#~ "shift key, reduce the block and read it."
-#~ msgstr ""
-#~ "Extiende la selección al bloque de alrededor y lo lee. Si es usado con la "
-#~ "tecla shift, reduce el bloque y lo dice."
-
-#~ msgid "Duplicates the current line and reads it"
-#~ msgstr "Duplica la línea actual y la lee"
-
-#~ msgid ""
-#~ "An older version of this addon has been detected.\n"
-#~ "This prevents the installation to be completed.\n"
-#~ "Please uninstall the previous version before proceeding with the Lambda "
-#~ "addon setup.\n"
-#~ msgstr ""
-#~ "Una versión antigua de este complemento ha sido detectada.\n"
-#~ "Esto impide que la instalación sea completada.\n"
-#~ "Por favor desinstale la vieja versión antes de proceder con la "
-#~ "instalación del complemento Lambda.\n"
-
-#~ msgid ""
-#~ "Announces the current selection in edit controls and documents. If there "
-#~ "is no selection it says so."
-#~ msgstr ""
-#~ "Anuncia la selección actual en controles de edición y documentos. Si no "
-#~ "hay selección lo habla."
