@@ -3,6 +3,8 @@
 #See the file COPYING for more details.
 #Copyright (C) 2016-2017 Alberto Zanella <lapostadialberto@gmail.com>
 
+import winUser
+import windowUtils
 import eventHandler
 import addonHandler
 import speech
@@ -18,15 +20,21 @@ import ui
 import wx
 from keyboardHandler import KeyboardInputGesture
 from comtypes import COMError
-
 addonHandler.initTranslation()
 
 #We've used EditableTextDisplayModelTextInfo when user want white spaces to be rendered in braille.
 class LambdaEditorFlatTextInfo(EditableTextDisplayModelTextInfo) :
-	def updateCaret(self):
-		self.obj.invalidateCache()
-		self.obj.redraw()
-		self._setCaretOffset(self._startOffset)
+	def _setCaretOffset(self,offset):
+		rects=self._storyFieldsAndRects[1]
+		if offset>=len(rects):
+			raise RuntimeError("offset %d out of range")
+		left,top,right,bottom=rects[offset]
+		x=left #+(right-left)/2
+		y=top+(bottom-top)/2
+		x,y=windowUtils.logicalToPhysicalPoint(self.obj.windowHandle,x,y)
+		winUser.setCursorPos(x,y)
+		winUser.mouse_event(winUser.MOUSEEVENTF_LEFTDOWN,0,0,None,None)
+		winUser.mouse_event(winUser.MOUSEEVENTF_LEFTUP,0,0,None,None)
 
 #Custom implementation of EditTextInfo because the Lambda editor seems to use different messages to set caret position.
 class LambdaEditorTextInfo(edit.EditTextInfo) :
@@ -42,7 +50,7 @@ class LambdaEditorTextInfo(edit.EditTextInfo) :
 	
 	def updateCaret(self):
 		self._setSelectionOffsets(self._startOffset,0)
-		braille.handler.handleUpdate(self.obj)
+		braille.handler.handleGainFocus(self.obj)
 		
 		
 
