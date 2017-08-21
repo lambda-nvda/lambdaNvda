@@ -35,6 +35,12 @@ class LambdaEditorFlatTextInfo(EditableTextDisplayModelTextInfo) :
 		winUser.setCursorPos(x,y)
 		winUser.mouse_event(winUser.MOUSEEVENTF_LEFTDOWN,0,0,None,None)
 		winUser.mouse_event(winUser.MOUSEEVENTF_LEFTUP,0,0,None,None)
+	
+	def updateCaret(self):
+		self.obj.invalidateCache()
+		self.obj.redraw()
+		self._setCaretOffset(self._startOffset)
+
 
 #Custom implementation of EditTextInfo because the Lambda editor seems to use different messages to set caret position.
 class LambdaEditorTextInfo(edit.EditTextInfo) :
@@ -143,7 +149,8 @@ class LambdaEditField(edit.Edit):
 	def script_caret_moveByLine(self, gesture):
 		gesture.send()
 		self.script_reportCurrentLine(gesture)
-		braille.handler.mainBuffer.clear()
+		self.invalidateCache()
+		self.redraw()
 		braille.handler.handleGainFocus(self)
 
 	def script_caret_moveByWord(self, gesture):
