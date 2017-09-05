@@ -103,6 +103,11 @@ You can subscribe from the website: <https://groups.io/g/lambda-nvda>.
 
 Below is a list of changes between the different add-on versions. Next to the version number, between parentheses, is the development status. The current development release isn't included as it could have changes until it is flagged as stable or discarded as candidate.
 
+### Version 1.2.1 (stable)
+
+* Added compatibility with the way that NVDA 2017.3 uses to manage braille. Backwards compatibility kept.
+* fixed many braille issues.
+
 ### Version 1.2.0 (development)
 
 This version was not published as stable because the version 1.2.1 included major fixes.
