@@ -180,7 +180,32 @@ una manera más eficiente:
 
 Para reportar errores, sugerencias o si quiere contribuir puede subscribirse
 al grupo del complemento (en inglés). Puede subscribirse desde el sitio web:
-https://groups.io/g/lambda-nvda .
+<https://groups.io/g/lambda-nvda>.
+
+## Registro de cambios
+
+Abajo se encuentra una lista de cambios entre las diferentes versiones del
+complemento. Al lado del numero de versión, entre paréntesis, está el estado
+de desarrollo. La versión actualmente en desarrollo no se incluye ya que
+podría haber cambios hasta que sea marcada como estable o descartada como
+candidata.
+
+### Versión 1.2.1 (estable)
+
+* Añadida compatibilidad con la manera que NVDA 2017.3 usa para administrar
+  el Braille. Compatibilidad con versiones antiguas mantenida.
+* Arregladas varias incidencias relacionadas con el braille.
+
+### Versión 1.2.0 (desarrollo)
+
+Esta versión no fue publicada como estable porque la 1.2.1 incluía arreglos
+importantes.
+
+* Nuevos idiomas. Traducciones actualizadas.
+
+### Versión 1.1.8 (estable)
+
+* Primera versión estable.
 
 [[!tag dev stable]]
 

@@ -173,9 +173,33 @@ Acesta este un set de sfaturi care vă vor ajuta să utilizați suplimentul
 
 ## Lista de mailing a suplimentului:
 
-Pentru a raporta erori, sugestii sau dacă doriți să contribuiți, vă puteți
-abona la grupul suplimentului (în engleză).  Puteți să vă abonați accesând
-următoarea pagină web: https://groups.io/g/lambda-nvda .
+To report bugs, suggestions or if you want to contribute you can subscribe
+the Addon Group (in English).  You can subscribe from the website:
+<https://groups.io/g/lambda-nvda>.
+
+## Change log
+
+Below is a list of changes between the different add-on versions. Next to
+the version number, between parentheses, is the development status. The
+current development release isn't included as it could have changes until it
+is flagged as stable or discarded as candidate.
+
+### Version 1.2.1 (stable)
+
+* Added compatibility with the way that NVDA 2017.3 uses to manage
+  braille. Backwards compatibility kept.
+* fixed many braille issues.
+
+### Version 1.2.0 (development)
+
+This version was not published as stable because the version 1.2.1 included
+major fixes.
+
+* New locales. Updated localizations.
+
+### Version 1.1.8 (stable)
+
+* Initial stable release.
 
 [[!tag dev stable]]
 

@@ -175,10 +175,33 @@ complémentaire plus efficacement.
 
 ## Liste de discussion du module :
 
-Pour signaler des bogues, faire des suggestions ou contribuer vous pouvez
-souscrire au groupe traitant de ce module (en Anglais).  Vous pouvez
-souscrire en écrivant à lambda-nvda+subscribe@[plural of google group] dot
-com.
+To report bugs, suggestions or if you want to contribute you can subscribe
+the Addon Group (in English).  You can subscribe from the website:
+<https://groups.io/g/lambda-nvda>.
+
+## Change log
+
+Below is a list of changes between the different add-on versions. Next to
+the version number, between parentheses, is the development status. The
+current development release isn't included as it could have changes until it
+is flagged as stable or discarded as candidate.
+
+### Version 1.2.1 (stable)
+
+* Added compatibility with the way that NVDA 2017.3 uses to manage
+  braille. Backwards compatibility kept.
+* fixed many braille issues.
+
+### Version 1.2.0 (development)
+
+This version was not published as stable because the version 1.2.1 included
+major fixes.
+
+* New locales. Updated localizations.
+
+### Version 1.1.8 (stable)
+
+* Initial stable release.
 
 [[!tag dev stable]]
 
