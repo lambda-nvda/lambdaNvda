@@ -21,7 +21,7 @@ discussion du projet.
 
 ## Fonctions du Module :
 
-### Support de la parole :
+### Support vocal :
 
 * Les dialogues et les menus sont correctement annoncés;
 * Support naturel de la parole pour les formules mathématiques utilisant le
@@ -175,33 +175,35 @@ complémentaire plus efficacement.
 
 ## Liste de discussion du module :
 
-To report bugs, suggestions or if you want to contribute you can subscribe
-the Addon Group (in English).  You can subscribe from the website:
-<https://groups.io/g/lambda-nvda>.
+Pour signaler des bogues, faire des suggestions ou contribuer vous pouvez
+souscrire au groupe traitant de ce module (en Anglais).  Vous pouvez
+souscrire en écrivant à lambda-nvda+subscribe@[plural of google group] dot
+com.
 
-## Change log
+## Journal des changements
 
-Below is a list of changes between the different add-on versions. Next to
-the version number, between parentheses, is the development status. The
-current development release isn't included as it could have changes until it
-is flagged as stable or discarded as candidate.
+Voici une liste des changements au fil des différentes versions de ce module
+complémentaire. À côté du numéro de version, entre parenthèses, se trouve le
+statut du développement. La version en cours de développement n'est pas
+incluse car elle peut subir des modifications jusqu'à ce qu'elle soit
+marquée comme stable ou rejetée en tant que candidate.
 
 ### Version 1.2.1 (stable)
 
-* Added compatibility with the way that NVDA 2017.3 uses to manage
-  braille. Backwards compatibility kept.
-* fixed many braille issues.
+* Ajouté la compatibilité avec la façon dont NVDA 2017.3 gère le braille. La
+  rétrocompatibilité est conservée.
+* Correction de nombreux problèmes de braille.
 
-### Version 1.2.0 (development)
+### Version 1.2.0 (de dévelopment)
 
-This version was not published as stable because the version 1.2.1 included
-major fixes.
+Cette version n'a pas été publiée comme stable car la version 1.2.1
+contenait des correctifs majeurs.
 
-* New locales. Updated localizations.
+* Nouvelles régions. Traductions mises à jour.
 
 ### Version 1.1.8 (stable)
 
-* Initial stable release.
+* Version initiale stable.
 
 [[!tag dev stable]]
 
