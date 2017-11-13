@@ -21,7 +21,7 @@ addon_info = {
 	# version
 	"addon_version" : "1.2.1a",
 	# Author(s)
-	"addon_author" : "Alberto Zanella <lapostadialberto@gmail.com>",
+	"addon_author" : "Alberto Zanella, Iván Novegil",
 	# URL for the add-on documentation support
 	
 	"addon_url" : "https://github.com/albzan/lambda-nvda",
