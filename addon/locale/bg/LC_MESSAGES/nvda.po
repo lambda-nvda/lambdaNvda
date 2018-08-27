@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lambda 1.1.8\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 06:07+1000\n"
-"PO-Revision-Date: 2017-06-22 11:16+0200\n"
+"PO-Revision-Date: 2018-06-29 23:23+0200\n"
 "Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: bg\n"
@@ -58,7 +58,7 @@ msgstr ""
 
 #. Translators: This string is the file name of the Lambda braille table for the translated language. The file should be present in the "brailleTables" directory in this addon. The default is the italian braille translation table.
 msgid "lambda-ita.utb"
-msgstr ""
+msgstr "lambda-ita.utb"
 
 #. Translators: This is the label for the Quick Profile Wizard dialog.
 #. This dialog helps the user to reset relevant profile options without deleting his custom settings.

@@ -2,7 +2,7 @@
 
 * Автори: Alberto Zanella и екипът на LAMBDA-NVDA.
 * Изтегляне на [стабилна версия][1]
-* Изтегляне на [работна версия][2]
+* Изтегляне на [тестова версия][2]
 
 Този проект е модул за приложение за софтуера LAMBDA. Беше вдъхновен от работата на Peter Lecky в Comenius University. 
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis (Линеен Достъп до Математика за Брайлови Устройства и Аудио-синтез)) е софтуер, който помага на незрящите да четат и пишат математика като използват брайлов дисплей и/или речев синтезатор.
@@ -175,33 +175,43 @@ NVDA+Alt+R (когато LAMBDA е на фокус).
 
 ## Пощенски списък за добавката:
 
-To report bugs, suggestions or if you want to contribute you can subscribe
-the Addon Group (in English).  You can subscribe from the website:
+Ако желаете да докладвате бъгове, да давате предложения или да допринесете с
+нещо, можете да се абонирате за пощенския списък на добавката (на
+английски). Можете да се абонирате посредством следната страница:
 <https://groups.io/g/lambda-nvda>.
 
-## Change log
+## Списък с промените
 
-Below is a list of changes between the different add-on versions. Next to
-the version number, between parentheses, is the development status. The
-current development release isn't included as it could have changes until it
-is flagged as stable or discarded as candidate.
+По-долу е даден списък на промените между различните версии на добавката. До
+номера на версията, в скоби, е състоянието на разработката. Текущата тестова
+версия не е включена, тъй като тя може да съдържа промени преди
+отбелязването й като стабилна или отхвърлена като кандидат-издание.
 
-### Version 1.2.1 (stable)
+### Версия 1.2.1a (стабилна)
 
-* Added compatibility with the way that NVDA 2017.3 uses to manage
-  braille. Backwards compatibility kept.
-* fixed many braille issues.
+Това обновление е предназначено като издание с дългосрочна поддръжка. Това
+означава, че поне до юни 2018 г. няма да бъде издавана друга по-стабилна
+версия. Правим го, за да осигурим на учащите се максимална стабилност и да
+сведем до минимум промените през академичната година.
 
-### Version 1.2.0 (development)
+* Нови езици. Обновени преводи.
 
-This version was not published as stable because the version 1.2.1 included
-major fixes.
+### Версия 1.2.1 (стабилна)
 
-* New locales. Updated localizations.
+* Добавена е съвместимост с начина по който NVDA 2017.3 управлява
+  брайла. Обратната съвместимост е запазена.
+* Отстранени са множество проблеми, свързани с брайла.
 
-### Version 1.1.8 (stable)
+### Версия 1.2.0 (тестова)
 
-* Initial stable release.
+Тази версия не бе публикувана като стабилна, тъй като версия 1.2.1 включва
+множество отстранени грешки.
+
+* Нови и обновени преводи.
+
+### Версия 1.1.8 (стабилна)
+
+* Първа стабилна версия.
 
 [[!tag dev stable]]
 
