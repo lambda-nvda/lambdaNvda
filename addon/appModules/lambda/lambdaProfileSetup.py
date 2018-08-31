@@ -137,22 +137,22 @@ class QuickProfileWizardDialog(SettingsDialog):
 		settingsSizer.Add(self.introStxt,flag=wx.BOTTOM)
 		# Translators: This is the label for a checkbox in the
 		# Quick Profile Wizard dialog.
-		self.defaultTranslationTableCheckBox=wx.CheckBox(self,wx.NewId(),label=_("Keep the LAMBDA braille table for the current language (%s)") % TABLE_NAME)
+		self.defaultTranslationTableCheckBox=wx.CheckBox(self,wx.ID_ANY,label=_("Keep the LAMBDA braille table for the current language (%s)") % TABLE_NAME)
 		self.defaultTranslationTableCheckBox.SetValue(True)
 		settingsSizer.Add(self.defaultTranslationTableCheckBox,border=10,flag=wx.BOTTOM)
 		# Translators: This is the label for a checkbox in the
 		# Quick Profile Wizard dialog.
-		self.brailleTetherToFocusCheckBox=wx.CheckBox(self,wx.NewId(),label=_("Set the braille cursor to tether the focus"))
+		self.brailleTetherToFocusCheckBox=wx.CheckBox(self,wx.ID_ANY,label=_("Set the braille cursor to tether the focus"))
 		self.brailleTetherToFocusCheckBox.SetValue(True)
 		settingsSizer.Add(self.brailleTetherToFocusCheckBox,border=10,flag=wx.BOTTOM)
 		# Translators: This is the label for a checkbox in the
 		# Quick Profile Wizard dialog.
-		self.disableReadByParagraphCheckBox=wx.CheckBox(self,wx.NewId(),label=_("Disable the Braille reading by paragraph"))
+		self.disableReadByParagraphCheckBox=wx.CheckBox(self,wx.ID_ANY,label=_("Disable the Braille reading by paragraph"))
 		self.disableReadByParagraphCheckBox.SetValue(True)
 		settingsSizer.Add(self.disableReadByParagraphCheckBox,border=10,flag=wx.BOTTOM)
 		# Translators: This is the label for a checkbox in the
 		# Quick Profile Wizard dialog.
-		self.disableBrailleWordWrapCheckBox=wx.CheckBox(self,wx.NewId(),label=_("Disable word wrappping of the braille line"))
+		self.disableBrailleWordWrapCheckBox=wx.CheckBox(self,wx.ID_ANY,label=_("Disable word wrappping of the braille line"))
 		self.disableBrailleWordWrapCheckBox.SetValue(True)
 		settingsSizer.Add(self.disableBrailleWordWrapCheckBox,border=10,flag=wx.BOTTOM)
 
