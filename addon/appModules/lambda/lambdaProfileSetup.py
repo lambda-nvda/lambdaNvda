@@ -11,6 +11,7 @@ import braille
 import addonHandler
 import sharedMessages as shMsg
 import gui
+from gui import guiHelper
 from gui.settingsDialogs import SettingsDialog
 import wx
 try :
@@ -131,30 +132,26 @@ class QuickProfileWizardDialog(SettingsDialog):
 	title = _("Revert LAMBDA Profile Wizard")
 
 	def makeSettings(self, settingsSizer):
+		sHelper=guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 		# Translators: This is the static text of the Quick Profile Wizard dialog.
 		msgIntro=_("Choose which options you want to reset to the default value for the Lambdas profile")
-		self.introStxt=wx.StaticText(self,-1,label=msgIntro)
-		settingsSizer.Add(self.introStxt,flag=wx.BOTTOM)
+		self.introStxt=sHelper.addItem(wx.StaticText(self,label=msgIntro))
 		# Translators: This is the label for a checkbox in the
 		# Quick Profile Wizard dialog.
-		self.defaultTranslationTableCheckBox=wx.CheckBox(self,wx.NewId(),label=_("Keep the LAMBDA braille table for the current language (%s)") % TABLE_NAME)
+		self.defaultTranslationTableCheckBox=sHelper.addItem(wx.CheckBox(self,label=_("Keep the LAMBDA braille table for the current language (%s)") % TABLE_NAME))
 		self.defaultTranslationTableCheckBox.SetValue(True)
-		settingsSizer.Add(self.defaultTranslationTableCheckBox,border=10,flag=wx.BOTTOM)
 		# Translators: This is the label for a checkbox in the
 		# Quick Profile Wizard dialog.
-		self.brailleTetherToFocusCheckBox=wx.CheckBox(self,wx.NewId(),label=_("Set the braille cursor to tether the focus"))
+		self.brailleTetherToFocusCheckBox=sHelper.addItem(wx.CheckBox(self,label=_("Set the braille cursor to tether the focus")))
 		self.brailleTetherToFocusCheckBox.SetValue(True)
-		settingsSizer.Add(self.brailleTetherToFocusCheckBox,border=10,flag=wx.BOTTOM)
 		# Translators: This is the label for a checkbox in the
 		# Quick Profile Wizard dialog.
-		self.disableReadByParagraphCheckBox=wx.CheckBox(self,wx.NewId(),label=_("Disable the Braille reading by paragraph"))
+		self.disableReadByParagraphCheckBox=sHelper.addItem(wx.CheckBox(self,label=_("Disable the Braille reading by paragraph")))
 		self.disableReadByParagraphCheckBox.SetValue(True)
-		settingsSizer.Add(self.disableReadByParagraphCheckBox,border=10,flag=wx.BOTTOM)
 		# Translators: This is the label for a checkbox in the
 		# Quick Profile Wizard dialog.
-		self.disableBrailleWordWrapCheckBox=wx.CheckBox(self,wx.NewId(),label=_("Disable word wrappping of the braille line"))
+		self.disableBrailleWordWrapCheckBox=sHelper.addItem(wx.CheckBox(self,label=_("Disable word wrappping of the braille line")))
 		self.disableBrailleWordWrapCheckBox.SetValue(True)
-		settingsSizer.Add(self.disableBrailleWordWrapCheckBox,border=10,flag=wx.BOTTOM)
 
 	def postInit(self):
 		self.defaultTranslationTableCheckBox.SetFocus()
