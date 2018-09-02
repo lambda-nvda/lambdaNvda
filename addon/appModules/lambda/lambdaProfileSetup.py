@@ -132,25 +132,25 @@ class QuickProfileWizardDialog(SettingsDialog):
 	title = _("Revert LAMBDA Profile Wizard")
 
 	def makeSettings(self, settingsSizer):
-		helper=guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+		sHelper=guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 		# Translators: This is the static text of the Quick Profile Wizard dialog.
 		msgIntro=_("Choose which options you want to reset to the default value for the Lambdas profile")
-		self.introStxt=helper.addItem(wx.StaticText(self,-1,label=msgIntro))
+		self.introStxt=sHelper.addItem(wx.StaticText(self,label=msgIntro))
 		# Translators: This is the label for a checkbox in the
 		# Quick Profile Wizard dialog.
-		self.defaultTranslationTableCheckBox=helper.addItem(wx.CheckBox(self,wx.ID_ANY,label=_("Keep the LAMBDA braille table for the current language (%s)") % TABLE_NAME))
+		self.defaultTranslationTableCheckBox=sHelper.addItem(wx.CheckBox(self,label=_("Keep the LAMBDA braille table for the current language (%s)") % TABLE_NAME))
 		self.defaultTranslationTableCheckBox.SetValue(True)
 		# Translators: This is the label for a checkbox in the
 		# Quick Profile Wizard dialog.
-		self.brailleTetherToFocusCheckBox=helper.addItem(wx.CheckBox(self,wx.ID_ANY,label=_("Set the braille cursor to tether the focus")))
+		self.brailleTetherToFocusCheckBox=sHelper.addItem(wx.CheckBox(self,label=_("Set the braille cursor to tether the focus")))
 		self.brailleTetherToFocusCheckBox.SetValue(True)
 		# Translators: This is the label for a checkbox in the
 		# Quick Profile Wizard dialog.
-		self.disableReadByParagraphCheckBox=helper.addItem(wx.CheckBox(self,wx.ID_ANY,label=_("Disable the Braille reading by paragraph")))
+		self.disableReadByParagraphCheckBox=sHelper.addItem(wx.CheckBox(self,label=_("Disable the Braille reading by paragraph")))
 		self.disableReadByParagraphCheckBox.SetValue(True)
 		# Translators: This is the label for a checkbox in the
 		# Quick Profile Wizard dialog.
-		self.disableBrailleWordWrapCheckBox=helper.addItem(wx.CheckBox(self,wx.ID_ANY,label=_("Disable word wrappping of the braille line")))
+		self.disableBrailleWordWrapCheckBox=sHelper.addItem(wx.CheckBox(self,label=_("Disable word wrappping of the braille line")))
 		self.disableBrailleWordWrapCheckBox.SetValue(True)
 
 	def postInit(self):
