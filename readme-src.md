@@ -103,6 +103,12 @@ You can subscribe from the website: <https://groups.io/g/lambda-nvda>.
 
 Below is a list of changes between the different add-on versions. Next to the version number, between parentheses, is the development status. The current development release isn't included as it could have changes until it is flagged as stable or discarded as candidate.
 
+### Version 1.2.2 (stable)
+
+* Improved compatibility with WX Python version 4 (introduced with NVDA 2018.3). Warning related with wx.NewId() is no longer displayed in debug log.
+* Implemented guiHelper to enhance dialogs's appearance.
+* New languages. Updated translations.
+
 ### Version 1.2.1a (stable)
 
 This update is intended to be a long-term support release. It means that until, at least, june 2018, it won't be released a version as stable as this. We do it to provide students maximum stability and to minimize the changes during the academical year.
