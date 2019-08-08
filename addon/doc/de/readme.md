@@ -1,11 +1,11 @@
 # Lambda-Erweiterung für NVDA #
 
 * Authoren: Alberto Zanella und das Lambda-NVDA-Team.
-* [stabile Version herunterladen][1]
-* [Testversion herunterladen][2]
+* [Stabile Version herunterladen][1]
+* [Entwicklerversion herunterladen][2]
 
 Dieses Projekt ist ein AppModul für die LAMBDA-Software. Es wurde durch die Arbeit von Peter Lecky an der Comenius Universität inspiriert.
-LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) ist eine Software, die blinden Menschen das Lesen und Schreiben mathematischer Inhalte mit Hilfe einer Braillezeile und/oder eines Bildschirmlesers ermöglicht. LAMBDA ist das Ergebnis eines durch Fördermittel der EU durchgeführten Projektes. Weitere Informationen über LAMBDA finden Sie unter [http://www.lambdaproject.org/](http://www.lambdaproject.org/).  
+LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) ist eine Software, die blinden Menschen das Lesen und Schreiben mathematischer Inhalte mit Hilfe einer Braillezeile und/oder eines Bildschirmlesers ermöglicht. LAMBDA ist das Ergebnis eines durch Fördermittel der EU durchgeführten Projektes. Weitere Informationen über LAMBDA finden Sie unter [https://www.lambdaproject.org/](https://www.lambdaproject.org/).  
 Die aktuelle Version der Erweiterung verfügt über Braille-Tabellen für
 italienische und spanische Sprachen und seine Benutzeroberfläche ist in den
 meisten Sprachen der NVDA-Oberfläche verfügbar, da sie von der
@@ -192,6 +192,15 @@ Entwicklungsstand. Die aktuelle Entwicklerversion ist nicht enthalten, da
 sie weitere Änderungen haben könnte, bevor sie als stabil gekennzeichnet
 oder als Kandidat verworfen wird.
 
+### Version 1.2.2 (stable)
+
+* Verbesserte Kompatibilität mit wxPython 4 (eingeführt mit NVDA
+  2018.3). Warnung bezüglich mit wx.NewId() wird nicht länger mehr angezeigt
+  im Debug-Protokoll.
+* guiHelper wurde implementiert, um das Erscheinungsbild der Dialoge zu
+  verbessern.
+* Neue Sprachen. Aktualisierte Übersetzungen.
+
 ### Version 1.2.1a (stabil)
 
 Diese Aktualisierung ist als langfristiges Support-Release gedacht. Das
@@ -222,6 +231,6 @@ viele signifikante Verbesserungen beinhaltete.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=lambda
+[1]: https://addons.nvda-project.org/files/get.php?file=lambda
 
-[2]: http://addons.nvda-project.org/files/get.php?file=lambda-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=lambda-dev

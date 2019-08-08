@@ -5,7 +5,7 @@
 * Preuzmi [development version][2]
 
 Ovaj projekt je appModul za Lambda Softver. Inspiriran je radom Petera Leckya sa sveučilišta Comenius. 
-Lambda (Linearni Pristup Matematici za Brajeve Zaslone i Zvučne sinteze) je softver koji pomaže slijepim osobama da čitaju i pišu matematiku koristeći brajev zaslon i/ili govornu sintezu.\LAMBDA je rezultat EU-Projekta. Za više informacija posjetite [http://www.lambdaproject.org/](http://www.lambdaproject.org/).  
+Lambda (Linearni Pristup Matematici za Brajeve Zaslone i Zvučne sinteze) je softver koji pomaže slijepim osobama da čitaju i pišu matematiku koristeći brajev zaslon i/ili govornu sintezu.\LAMBDA je rezultat EU-Projekta. Za više informacija posjetite [https://www.lambdaproject.org/](https://www.lambdaproject.org/).  
 Trenutačna inačica dodatka sadrži brajeve tablice za talijanski i španjolski
 jezik, a sučelje je dostupno na većini službenih jezika NVDA jer ga prevodi
 zajednica prevoditelja NVDA. Ako ste ne talijanski korisnik LAMBDA i želite
@@ -172,6 +172,14 @@ inačice, između zagrada, nalaze se informacije o statusu razvoja. Trenutno
 razvojno izdanje nije uključeno jer može imati izmjene dok se ne označi kao
 stabilno ili izbaci kao kandidat.
 
+### Version 1.2.2 (stable)
+
+* Improved compatibility with WX Python version 4 (introduced with NVDA
+  2018.3). Warning related with wx.NewId() is no longer displayed in debug
+  log.
+* Implemented guiHelper to enhance dialogs's appearance.
+* Novi jezici. Ažurirani prijevodi.
+
 ### Inačica 1.2.1a (stabilna) 
 
 Ovo ažuriranje namijenjeno je za dugoročnu podršku. To znači da barem do
@@ -200,6 +208,6 @@ uključuje značajnije ispravke.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=lambda
+[1]: https://addons.nvda-project.org/files/get.php?file=lambda
 
-[2]: http://addons.nvda-project.org/files/get.php?file=lambda-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=lambda-dev

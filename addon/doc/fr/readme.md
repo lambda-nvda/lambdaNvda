@@ -1,25 +1,25 @@
-# Module complémentaire Lambda pour NVDA #
+# Extension Lambda pour NVDA #
 
 * Auteur : Alberto Zanella et l'équipe de lambda-nvda.
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
 
-Ce projet est un module complémentaire pour le logiciel LAMBDA. Il s'inspire du travail de Peter Lecky de l'Université Comenius. 
+Ce projet est une extension applicative pour le logiciel LAMBDA. Il s'inspire du travail de Peter Lecky de l'Université Comenius. 
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) est un logiciel qui aide les personnes aveugles à lire et écrire les mathématiques en utilisant un afficheur braille et/ou un synthétiseur vocal.
-LAMBDA est le résultat d'un EU-Project. Pour plus d'informations sur LAMBDA veuillez visiter [http://www.lambdaproject.org/](http://www.lambdaproject.org/).  
-Cette version du module contient des tables braille pour l'Italien et
+LAMBDA est le résultat d'un EU-Project. Pour plus d'informations sur LAMBDA veuillez visiter [https://www.lambdaproject.org/](https://www.lambdaproject.org/).  
+Cette version de l'extension contient des tables braille pour l'Italien et
 l'Espagnol Et son interface est disponible dans la plupart des langues
-officielles de NVDA, car il est traduit par les traducteurs de la
+officielles de NVDA, car elle est traduite par les traducteurs de la
 communauté. Si vous n'êtes pas un utilisateur Italien de LAMBDA et que vous
 voulez contribuer au portage des tables braille dans votre langue, n'hésitez
 pas à contacter l'auteur (voir ci-dessous) ou inscrivez-vous à la liste de
 discussion du projet.
 
-**Veuillez noter :** Ce module a été développé par Alberto Zanella en tant qu'activité bénévole. Ni l'auteur ni les contributeurs ne sont impliqués dans la vente ou le développement du logiciel Lambda. Si vous voulez plus d'informations sur Lambda, ou avez besoin de support pour l'utiliser, veuillez contacter votre distributeur local. Si vous rencontrez des difficultés d'utilisation ou d'installation de ce module, veuillez contacter l'auteur ou utiliser le lien "Issues" sur la page Github du projet.
+**Veuillez noter :** Cette extension a été développé par Alberto Zanella en tant qu'activité bénévole. Ni l'auteur ni les contributeurs ne sont impliqués dans la vente ou le développement du logiciel Lambda. Si vous voulez plus d'informations sur Lambda, ou avez besoin de support pour l'utiliser, veuillez contacter votre distributeur local. Si vous rencontrez des difficultés d'utilisation ou d'installation de cette extension, veuillez contacter l'auteur ou utiliser le lien "Issues" sur la page Github du projet.
 
 ### [Dépôt officiel sur Github](https://github.com/lambda-nvda/lambdaNvda/)
 
-## Fonctions du Module :
+## Fonctions de l'extension :
 
 ### Support vocal :
 
@@ -42,29 +42,29 @@ discussion du projet.
 
 ### Support du braille :
 
-* Le module s'installe (dans le répertoire de paramètres de l'utilisateur)
+* L'extension s'installe (dans le répertoire de paramètres de l'utilisateur)
   et active une table braille spécifique. Cette table peut être différente
   selon la langue. Les tables braille ont été créées à partir de celles du
   script Jaws pour Lambda (fichier jbt). Ainsi les symboles et marqueurs
   sont représentés en utilisant les mêmes combinaisons de points;
-* Le module crée un profil NVDA pour une configuration braille
+* L'extension crée un profil NVDA pour une configuration braille
   standard. Ainsi, l'affichage n'utilise la table spécifique que lorsque
   l'application Lambda est active;
 * Les dialogues et les menus sont correctement affichés en braille;
 * Le contenu de l'éditeur est correctement reproduit en braille et
   l'utilisateur peut se déplacer en utilisant les touches de défilement ou
   les curseur routines;
-* A partir de la version 1.1.0 du module, le texte peut être présenté de
-  deux façons dans l'éditeur Lambda : "Mode Plat" et "Mode non-Plat". Quand
-  le "Mode Plat" est activé, NVDA utilise le modèle d'affichage pour obtenir
-  l'information de l'éciteur et pour déterminer la position du curseur. Ceci
-  est particulièrement quand l'utilisateur veut se déplacer dans l'écran,
-  même dans les espaces blancs. Quand le "mode Plat" est désactivé, la
-  présentation du texte sur l'afficheur braille est plus stable, puisque
-  NVDA utilise les API de Windows pour l'obtenir. Cependant quand le curseur
-  est amené dans l'espace blanc en fin de ligne de texte, l'afficheur
-  braille ne suit pas le vrai curseur tant qu'un espace non blanc n'est pas
-  ajouté par l'utilisateur.
+* A partir de la version 1.1.0 de l'extension, le texte peut être présenté
+  de deux façons dans l'éditeur Lambda : "Mode Plat" et "Mode
+  non-Plat". Quand le "Mode Plat" est activé, NVDA utilise le modèle
+  d'affichage pour obtenir l'information de l'éditeur et pour déterminer la
+  position du curseur. Ceci est particulièrement utile quand l'utilisateur
+  veut se déplacer dans l'écran, même dans les espaces blancs. Quand le
+  "mode Plat" est désactivé, la présentation du texte sur l'afficheur
+  braille est plus stable, puisque NVDA utilise les API de Windows pour
+  l'obtenir. Cependant quand le curseur est amené dans l'espace blanc en fin
+  de ligne de texte, l'afficheur braille ne suit pas le vrai curseur tant
+  qu'un espace non blanc n'est pas ajouté par l'utilisateur.
 
 Le "mode plat" est activé par défaut. Vous pouvez le désactiver ou l'activer
 en pressant NVDA+MAJ+F.
@@ -81,16 +81,16 @@ dpi (plus de 100%).
   standard de Windows (MAJ+Flèches) ou les commandes spécifiques de Lambda
   (CTRL+B, CTRL+MAJ+B).
 
-## Avant de commencer à utiliser ce module.
+## Avant de commencer à utiliser cette extension.
 
-Ce module crée un profil NVDA nommé "lambda" associé à
+Cette extension crée un profil NVDA nommé "lambda" associé à
 l'application"lambda.exe". Le profil règle automatiquement toutes les
 options braille : La table braille spécifique, le suivi du focus et les
 paramètres du mode plat.
 
-Si un profil avec le même nom est déjà présent dans votre système, le module
-ne le remplacera pas et vous devrez ajuster manuellement votre profil de
-configuration.
+Si un profil avec le même nom est déjà présent dans votre système,
+l'extension ne le remplacera pas et vous devrez ajuster manuellement votre
+profil de configuration.
 
 Pour vous sortir de cette situation, si vous avez des paramètres
 particuliers que vous désirez conserver, vous pouvez utiliser l'"Inverseur
@@ -98,22 +98,22 @@ Magique de Profil LAMBDA". Le raccourci pour démarrer cet outil est
 NVDA+alt+r (quand LAMBDA est en avant-plan).
 
 Une solution simple est d'effacer les anciennes versions du profil "lambda"
-après l'installation du module. Pour ce faire, ouvrez le menu NVDA,
+après l'installation de l'extension. Pour ce faire, ouvrez le menu NVDA,
 sélectionnez "Profils de configuration" et pressez entrer.
 
 Dans le dialogue de configuration des profils, vous pourrez trouver et
 effacer le profil "lambda". Le profil sera recréé au prochain démarrage de
 l'application Lambda.
 
-Effacer le profil "lambda" est aussi une solution simple quand le module
+Effacer le profil "lambda" est aussi une solution simple quand l'extension
 rencontre un problème. Par exemple, si la table braille est mal configurée,
 au lieu de configurer manuellement le profil, vous pouvez simplement
-l'effacer. Le module en créera un nouveau la prochaine fois que vous
+l'effacer. L'extension en créera un nouveau la prochaine fois que vous
 chargerez l'éditeur Lambda.
 
-Chaque fois qu'on lance l'éditeur Lambda, ce module vérifie si un profil
-nommé "lambda" existe. Si ce n'est pas le cas, il génère automatiquement un
-profil de la forme suivante :
+Chaque fois qu'on lance l'éditeur Lambda, cette extension vérifie si un
+profil nommé "lambda" existe. Si ce n'est pas le cas, elle génère
+automatiquement un profil de la forme suivante :
 
 ``` nom de fichier : userData\profiles\lambda.ini :
 
@@ -135,7 +135,7 @@ Où :
   tables braille italiennes et espagnoles, respectivement "lambda-ita.utb"
   et "lambda-esp.utb", sont présentes.
 
-## Raccourcis clavier du module :
+## Raccourcis clavier de l'extension :
 
 * **NVDA+Maj+f** : Active/désactive le mode braille plat;
 * **NVDA+alt+r** : Ouvre l'"assistant de restauration profil de Lambda".
@@ -143,9 +143,9 @@ Où :
 
 ## Problèmes connus :
 
-En raison d'un bogue affectant LAMBDA, ce module complémentaire fournit une
-logique supplémentaire qui rapporte des espaces blancs. Cette logique peut
-échouer dans les situations suivantes :
+En raison d'un bogue affectant LAMBDA, cette extension fournit une logique
+supplémentaire qui rapporte des espaces blancs. Cette logique peut échouer
+dans les situations suivantes :
 
 * Quand des mots tels que "space", "spazio" "Espacio" etc. sont insérés dans
   le texte, Ils peuvent être signalés par NVDA dans la langue de NVDA.
@@ -156,8 +156,8 @@ logique supplémentaire qui rapporte des espaces blancs. Cette logique peut
 
 ## Conseils utiles
 
-Ceci est un ensemble de conseils qui vous aideront à utiliser le module
-complémentaire plus efficacement.
+Ceci est un ensemble de conseils qui vous aideront à utiliser l'extension
+plus efficacement.
 
 * Annonce caractère par caractère : Normalement, lorsque vous travaillez sur
   des maths, vous souhaitez que NVDA sonorise ce que vous écrivez caractère
@@ -173,20 +173,34 @@ complémentaire plus efficacement.
   LAMBDA ou ses fenêtres spéciales, les paramètres du reste des applications
   resteront tels quels.
 
-## Liste de discussion du module :
+## Liste de discussion de l'extension:
 
 Pour signaler des bogues, faire des suggestions ou contribuer vous pouvez
-souscrire au groupe traitant de ce module (en Anglais).  Vous pouvez
+souscrire au groupe traitant de cette extension (en Anglais).  Vous pouvez
 souscrire en écrivant à lambda-nvda+subscribe@[plural of google group] dot
 com.
 
 ## Journal des changements
 
-Voici une liste des changements au fil des différentes versions de ce module
-complémentaire. À côté du numéro de version, entre parenthèses, se trouve le
+Voici une liste des changements au fil des différentes versions de cette
+extension. À côté du numéro de version, entre parenthèses, se trouve le
 statut du développement. La version en cours de développement n'est pas
 incluse car elle peut subir des modifications jusqu'à ce qu'elle soit
 marquée comme stable ou rejetée en tant que candidate.
+
+### Version 1.2.2 (stable)
+
+* Amélioration de la compatibilité avec WX Python version 4 (introduit avec
+  NVDA 2018.3). Avertissement lié à wx.NewId() n'est plus affiché dans le
+  niveau de journalisation débogage.
+* Support de guiHelper pour améliorer l'apparence des dialogues.
+* Nouvelles régions. Traductions mises à jour.
+
+### Version 1.2.1a (stable)
+
+Cette mise à jour est destinée à être une version de support à long terme.
+
+* Nouvelles régions. Traductions mises à jour.
 
 ### Version 1.2.1 (stable)
 

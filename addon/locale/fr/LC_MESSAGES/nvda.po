@@ -98,7 +98,7 @@ msgstr "Désactiver la non coupure des mots sur la ligne braille"
 
 #. Translators: title of the message box that appears when the user is installing the addon and an older version prevents the update to be completed.
 msgid "Incompatible version of the addon detected"
-msgstr "Version incompatible du module détectée"
+msgstr "Version incompatible de l'extension détectée"
 
 #. Translators: text of the message box that appears when the user is installing the addon and an older version prevents the update to be completed.
 msgid ""
@@ -107,7 +107,7 @@ msgid ""
 "Please uninstall the previous version before proceeding with the Lambda "
 "addon setup.\n"
 msgstr ""
-"Une ancienne version incompatible du module a été détectée. Ceci empêche "
+"Une ancienne version incompatible de l'extension a été détectée. Ceci empêche "
 "l'installation de se terminer. Veuillez désinstaller l'ancienne version "
 "avant de procéder à l'installation.\n"
 
@@ -127,17 +127,17 @@ msgid ""
 msgstr ""
 "Un autre profil nommé \"lambda\" est déjà présent dans votre configuration "
 "NVDA. \n"
-"Ceci peut empêcher le module de créer et configurer correctement le profil "
+"Ceci peut empêcher l'extension de créer et configurer correctement le profil "
 "lambda.\n"
-"Veuillez vérifier les options pardéfaut de ce module en utilisant l'Outil de "
+"Veuillez vérifier les options par défaut de cette extension en utilisant l'Outil de "
 "Réinitialisation du profil LAMBDA (raccourci nvda+alt+r) quand l'application "
 "LAMBDA est en cours d'exécution.\n"
-"Pressez OK pour terminer le paramétrage du module.\n"
+"Pressez OK pour terminer le paramétrage de l'extension.\n"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Lambda math editor addon"
-msgstr "Module complémentaire pour l'éditeur mathématique Lambda"
+msgstr "Extension pour l'éditeur mathématique Lambda"
 
 #. Add-on description: can span multiple lines with """ syntax """
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -145,5 +145,5 @@ msgid ""
 "This addon provides access to the Lambda math editor with both braille and "
 "speech support."
 msgstr ""
-"Ce module complémentaire permet d'accéder à l'éditeur mathématique Lambda à "
+"Cette extension permet d'accéder à l'éditeur mathématique Lambda à "
 "la fois en Braille et en vocal."
