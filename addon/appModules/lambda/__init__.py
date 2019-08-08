@@ -11,7 +11,7 @@ import addonHandler
 import appModuleHandler
 import controlTypes
 from . import lambdaProfileSetup
-from lambdaEdit import LambdaDialogEdit,LambdaMainEditor,LambdaMatrixEdit,LambdaBufferEdit
+from .lambdaEdit import LambdaDialogEdit,LambdaMainEditor,LambdaMatrixEdit,LambdaBufferEdit
 from NVDAObjects.window import DisplayModelEditableText
 import wx
 from comtypes import COMError
