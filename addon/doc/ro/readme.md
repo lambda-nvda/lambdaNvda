@@ -6,7 +6,7 @@
 
 Acest proiect este un modul de aplicație pentru programul LAMBDA. A fost inspirat de munca lui Peter Lecky la universitatea Comenius. 
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) este un soft care ajută persoanele nevăzătoare să citească și să scrie matematică utilizând un afișaj braille și/sau o sinteză vocală.
-LAMBDA este rezultatul unui proiect european. Pentru mai multe informații despre el vă rugăm să vizitați [http://www.lambdaproject.org/](http://www.lambdaproject.org/).  
+LAMBDA este rezultatul unui proiect european. Pentru mai multe informații despre el vă rugăm să vizitați [https://www.lambdaproject.org/](https://www.lambdaproject.org/).  
 Versiunea actuală a suplimentului are tabele braille pentru limbile italiană
 și spaniolă, iar interfața sa este disponibilă în majoritatea limbilor
 oficiale ale NVDA-ului, deoarece este tradusă de comunitatea de traduceri a
@@ -173,36 +173,54 @@ Acesta este un set de sfaturi care vă vor ajuta să utilizați suplimentul
 
 ## Lista de mailing a suplimentului:
 
-To report bugs, suggestions or if you want to contribute you can subscribe
-the Addon Group (in English).  You can subscribe from the website:
-<https://groups.io/g/lambda-nvda>.
+Pentru a raporta erori, sugestii sau dacă doriți să contribuiți, vă puteți
+abona la grupul suplimentului (în engleză).  Puteți să vă abonați accesând
+următoarea pagină web: <https://groups.io/g/lambda-nvda>.
 
-## Change log
+## Jurnal de modificări
 
-Below is a list of changes between the different add-on versions. Next to
-the version number, between parentheses, is the development status. The
-current development release isn't included as it could have changes until it
-is flagged as stable or discarded as candidate.
+Mai jos se află o listă de modificări făcute în diferite versiuni ale
+acestui supliment. Lângă numărul versiunii, între paranteze, se află starea
+de dezvoltare. Actuala versiune în dezvoltare nu este inclusă, întrucât ar
+putea să aibă modificări până când va fi marcată ca stabilă sau revocată,
+urmând ca mai apoi să primească statutul d versiune candidată.
 
-### Version 1.2.1 (stable)
+### Versiunea 1.2.2 (stabilă)
 
-* Added compatibility with the way that NVDA 2017.3 uses to manage
-  braille. Backwards compatibility kept.
-* fixed many braille issues.
+* S-a îmbunătățit compatibilitatea cu WX Python versiunea 4 (introdusă în
+  NVDA 2018.3). Avertizare privind wx.NewId() nu mai este afișat în jurnalul
+  diagnosticării.
+* S-a implementat guiHelper pentru a îmbunătăți aspectul dialogurilor.
+* Limbi noi. Traduceri actualizate.
 
-### Version 1.2.0 (development)
+### Versiunea 1.2.1a (stabilă)
 
-This version was not published as stable because the version 1.2.1 included
-major fixes.
+Această actualizare se dorește afi una cu suport pe termen lung. Asta
+înseamnă că până cel puțin în iunie 2018, nu va mai fi lansată o versiune
+stabilă. Facem asta pentru a le oferi elevilor și studenților o stabilitate
+maximă și pentru a minimiza modificările pe durata anului academic.
 
-* New locales. Updated localizations.
+* Limbi noi. Traduceri actualizate.
 
-### Version 1.1.8 (stable)
+### Versiunea 1.2.1 (stabilă)
 
-* Initial stable release.
+* A fost adăugată compatibilitatea cu modul în care NVDA 2017.3 obișnuiește
+  să gestioneze Braille-ul. S-a păstrat compatibilitatea Înapoi.
+* Multe erori braille au fost reparate.
+
+### Versiunea 1.2.0 (dezvoltare)
+
+Această versiune n-a fost publicată ca stabilă, deoarece versiunea 1.2.1 a
+inclus reparări majore.
+
+* Au fost adăugate traduceri noi, dar și cele existente au fost actualizate.
+
+### Versiunea 1.1.8 (stabilă)
+
+* Versiunea stabilă inițială.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=lambda
+[1]: https://addons.nvda-project.org/files/get.php?file=lambda
 
-[2]: http://addons.nvda-project.org/files/get.php?file=lambda-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=lambda-dev

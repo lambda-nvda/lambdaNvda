@@ -6,7 +6,7 @@
 
 Dette projekt er et appModule for LAMBDA-Software. Det er inspireret af arbejdet af Peter Lecky på Comenius University. 
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) er software, der hjælper blinde mennesker med at læse og skrive matematik ved hjælp af et punktdisplay- og eller en talesyntese.
-LAMBDA er resultatet af et EU-projekt. For mere information om LAMBDA besøg [http://www.lambdaproject.org/] (http://www.lambdaproject.org/).
+LAMBDA er resultatet af et EU-projekt. For mere information om LAMBDA besøg [https://www.lambdaproject.org/] (https://www.lambdaproject.org/).
 Den aktuelle version af tilføjelsespakken har punkttabeller for det
 italienske og spanske sprog og dens grænseflade er tilgængelig i de fleste
 af NVDAS officielle sprog, fordi den er oversat af Fællesskabets
@@ -177,6 +177,13 @@ udvikling. Den aktuelle udgave af udviklingsversionen er ikke inkluderet
 eftersom den kunne have ændringer, indtil den er markeret som stabil eller
 kasseres som kandidat.
 
+### Version 1.2.2 (stabil)
+
+* Forbedret kompatibilitet med WX Python version 4 (introduceret i NVDA
+  2018.3). Advarsel relateret til wx.NewId() vises ikke længere i debug log.
+* Implementerede guiHelper for at forbedre dialogenes udseende.
+* Nye sprog. Opdaterede oversættelser.
+
 ### Version 1.2.1a (stabil)
 
 Denne opdatering er beregnet til at være en langsigtet udgave i henblik på
@@ -206,6 +213,6 @@ inkluderet store rettelser.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=lambda
+[1]: https://addons.nvda-project.org/files/get.php?file=lambda
 
-[2]: http://addons.nvda-project.org/files/get.php?file=lambda-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=lambda-dev

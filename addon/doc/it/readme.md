@@ -1,13 +1,12 @@
-# Componente aggiuntivo Lambda per NVDA #
-[[!meta title="Lambda Add-On for NVDA"]]
+# Lambda componente aggiuntivo per NVDA #
 
 * Autori: Alberto Zanella e il team Lambda-NVDA
-* Download [stable version][1]
-* Download [development version][2]
+* Scarica la [versione stabile][1]
+* Scarica la [versione in sviluppo][2]
 
-Questo add-on permette di utilizzare il software LAMBDA con NVDA. Deriva da un lavoro precedente di Peter Lecky della Comenius University ed è stato studiato e realizzato per rendere l'accesso all'ambiente LAMBDA il più semplice e simile a ciò che già avviene con altri screen reader.
-LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) è un programma che aiuta i non vedenti a leggere  e scrivere matematica utilizzando o un display braille, o la sintesi vocale, o entrambi contemporaneamente.
-Per maggiori informazioni sul software LAMBDA si invita a consultare: http://www.lambdaproject.org/it/ e http://veia.it/
+Questo componente aggiuntivo permette di utilizzare il software LAMBDA con NVDA. Deriva da un lavoro precedente di Peter Lecky della Comenius University ed è stato studiato e realizzato per rendere l'accesso all'ambiente LAMBDA il più semplice e simile a ciò che già avviene con altri screen reader.
+LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) è un programma che aiuta i non vedenti a leggere  e scrivere matematica utilizzando  un display braille, o una sintesi vocale, o entrambi contemporaneamente.
+LAMBDA è il risultato EU-Project. Per maggiori informazioni sul software LAMBDA consultare: [https://www.lambdaproject.org/](https://www.lambdaproject.org/). 
 L'attuale versione del componente aggiuntivo dispone di tabelle braille
 adattate per l'uso con Lambda sia per l'Italiano che per lo Spagnolo. La
 traduzione delll'addon è disponibile in svariate lingue grazie al team di
@@ -15,8 +14,7 @@ traduzione internazionale. Se non sei un utente italiano e vorresti
 includere il porting della tua tabella braille nel progetto, contatta
 l'autore (vedi sotto), oppure iscriviti alla mailing list del progetto.-
 
-**Nota**: Si precisa che lo sviluppo di questo add-on è avvenuto in maniera volontaria e del tutto indipendente dall'azienda rivenditore del prodotto LAMBDA, con la quale l'autore non intrattiene alcun rapporto di lavoro e/o di collaborazione. Per richieste in merito al prodotto si invita pertanto a contattare il servizio di supporto tecnico messo a disposizione dal fornitore del prodotto.
-Per ulteriori informazioni sull'addon, richieste o altro è possibile contattare l'autore tramite email o su GitHub.
+**Nota**: Si precisa che lo sviluppo di questo componente aggiuntivo è avvenuto in maniera volontaria e del tutto indipendente dall'azienda rivenditore del prodotto LAMBDA, con la quale l'autore non intrattiene alcun rapporto di lavoro e/o di collaborazione. Per richieste in merito al prodotto si invita pertanto a contattare il servizio di supporto tecnico messo a disposizione dal fornitore del prodotto.Per ulteriori informazioni sull'addon, richieste o altro è possibile contattare l'autore tramite email o inviando una "issue" su GitHub.
 
 ### [Repository Github ufficiale: ](https://github.com/lambda-nvda/lambdaNvda/)
 
@@ -173,37 +171,58 @@ maniera più efficiente.
 
 ## Addon mailing list:
 
-To report bugs, suggestions or if you want to contribute you can subscribe
-the Addon Group (in English).  You can subscribe from the website:
-<https://groups.io/g/lambda-nvda>.
+Per segnalare bug, suggerimenti o se si desidera contribuire è possibile
+iscriversi al gruppo relativo a questo componente aggiuntivo (in inglese). È
+possibile iscriversi dal sito internet: <https://groups.io/g/lambda-nvda>.
 
-## Change log
+## Log dei cambiamenti
 
-Below is a list of changes between the different add-on versions. Next to
-the version number, between parentheses, is the development status. The
-current development release isn't included as it could have changes until it
-is flagged as stable or discarded as candidate.
+Sotto si trova un'elenco dei cambiamenti apportati in diverse versioni di
+questo componente aggiuntivo. Vicino al numero della versione, tra
+parentesi, è lo stato di sviluppo. L'attuale versione di sviluppo non è
+inclusa, giacché potrebbe avere cambiamenti fino a quando non è segnato come
+stabile o revocata a ricevere lo stato della versione candidata.
 
-### Version 1.2.1 (stable)
+### Version 1.2.2 (stable)
 
-* Added compatibility with the way that NVDA 2017.3 uses to manage
-  braille. Backwards compatibility kept.
-* fixed many braille issues.
+* Aggiunta la compatibilità con WX Python versione 4 (introdotta in NVDA
+  2018.3). gli avvisi  riguardo wx.NewId() non verranno più  visualizzati
+  nel debug log.
+* Introdotto il modulo guiHelper per una migliore visualizzazione delle
+  finestre di dialogo.
+* Nuove lingue. Traduzioni aggiornate.
 
-### Version 1.2.0 (development)
+### Versione 1.2.1a (stabile)
 
-This version was not published as stable because the version 1.2.1 included
-major fixes.
+Questo aggiornamento è da considerarsi a tutti gli effetti una versione con
+supporto a lungo termine. Significa che, almeno fino a giugno 2018, non
+saranno più rilasciate versioni stabili come questa. Facciamo questo per
+fornire agli studenti il massimo della stabilità e per evitare il maggior
+numero di problemi durante l'anno accademico.
 
-* New locales. Updated localizations.
+* Nuove lingue. Traduzioni aggiornate.
 
-### Version 1.1.8 (stable)
+### Versione 1.2.1 (stabile)
 
-* Initial stable release.
+* Aggiunta la compatibilità con la modalità in cui NVDA gestisce il braille
+  a partire dalla versione 2017.3. Viene comunque mantenuta la
+  retrocompatibilità con le versioni precedenti.
+* Risolti molti problemi sul braille.
+
+### Versione 1.2.0 (sviluppo)
+
+Questa versione non è stata pubblicata come stabile, giacché la versione
+1.2.1 risolve numerosi problemi.
+
+* Aggiunte nuove traduzioni ed aggiornate quelle esistenti.
+
+### Versione 1.1.8 (stabile)
+
+* Versione stabile iniziale.
 
 [[!tag dev stable]]
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=lambda
+[1]: https://addons.nvda-project.org/files/get.php?file=lambda
 
-[2]: http://addons.nvda-project.org/files/get.php?file=lambda-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=lambda-dev
