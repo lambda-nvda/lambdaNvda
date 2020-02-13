@@ -9,7 +9,7 @@ import os
 import globalVars
 import braille
 import addonHandler
-import sharedMessages as shMsg
+from . import sharedMessages as shMsg
 import gui
 from gui import guiHelper
 from gui.settingsDialogs import SettingsDialog

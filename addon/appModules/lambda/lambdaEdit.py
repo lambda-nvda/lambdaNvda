@@ -3,6 +3,7 @@
 #See the file COPYING for more details.
 #Copyright (C) 2016-2017 Alberto Zanella <lapostadialberto@gmail.com>
 
+import gui
 import winUser
 import windowUtils
 import eventHandler
@@ -29,8 +30,8 @@ class LambdaEditorFlatTextInfo(EditableTextDisplayModelTextInfo) :
 		if offset>=len(rects):
 			raise RuntimeError("offset %d out of range")
 		left,top,right,bottom=rects[offset]
-		x=left #+(right-left)/2
-		y=top+(bottom-top)/2
+		x=int(left) #+(right-left)/2
+		y=int(top+(bottom-top)/2)
 		x,y=windowUtils.logicalToPhysicalPoint(self.obj.windowHandle,x,y)
 		winUser.setCursorPos(x,y)
 		winUser.mouse_event(winUser.MOUSEEVENTF_LEFTDOWN,0,0,None,None)
@@ -330,6 +331,9 @@ class LambdaMainEditor(LambdaEditField):
 	def script_nvdaDuplicateLine(self,gesture) :
 		#Retrieves the line before sending gesture, duplicate line is the same as the current one.
 		line = self.getLambdaObj().getline(self.windowHandle, -1, -1)
+		#Clean-up clipboard to avoid pasting old text
+		with winUser.openClipboard(gui.mainFrame.Handle):
+			winUser.emptyClipboard()
 		#duplicate line using keyboard shortcuts
 		KeyboardInputGesture.fromName("home").send()
 		self.skipSelectionReport = 2 #JWEdit bug: fires selection multiple times.
@@ -337,6 +341,7 @@ class LambdaMainEditor(LambdaEditField):
 		KeyboardInputGesture.fromName("control+c").send()
 		KeyboardInputGesture.fromName("end").send()
 		KeyboardInputGesture.fromName("enter").send()
+		KeyboardInputGesture.fromName("home").send()
 		KeyboardInputGesture.fromName("control+v").send()
 		self.say(line)
 	#This script duplicates the current line and announce it 
