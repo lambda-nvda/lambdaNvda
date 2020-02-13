@@ -1,208 +1,211 @@
-# Lambda Add-On for NVDA #
+# Lambda dodatak za NVDA #
 
 * Autor: Alberto Zanella i lambda-nvda tim.
-* Preuzmi [stable version][1]
-* Preuzmi [development version][2]
+* Preuzmi [stabilnu verziju][1]
+* Preuzmi [razvojnu verziju][2]
 
-Ovaj projekt je appModul za Lambda Softver. Inspiriran je radom Petera Leckya sa sveučilišta Comenius. 
-Lambda (Linearni Pristup Matematici za Brajeve Zaslone i Zvučne sinteze) je softver koji pomaže slijepim osobama da čitaju i pišu matematiku koristeći brajev zaslon i/ili govornu sintezu.\LAMBDA je rezultat EU-Projekta. Za više informacija posjetite [https://www.lambdaproject.org/](https://www.lambdaproject.org/).  
-Trenutačna inačica dodatka sadrži brajeve tablice za talijanski i španjolski
-jezik, a sučelje je dostupno na većini službenih jezika NVDA jer ga prevodi
-zajednica prevoditelja NVDA. Ako ste ne talijanski korisnik LAMBDA i želite
+Ovaj projekt je aplikacijski modul za Lambda Softver. Inspiriran je radom Petera Leckya sa sveučilišta Comenius. 
+Lambda (Linearni pristup matematici za brajeve uređaje i zvučno sintetiziranje glasa) je softver koji pomaže slijepim osobama čitati i pisati matematiku pomoću brajevog retka i ili govorne jedinice.
+LAMBDA je rezultat jednog EU-Projekta. Za više informacija posjetite [https://www.lambdaproject.org/](https://www.lambdaproject.org/).  
+Trenutačna verzija dodatka sadrži brajeve tablice za talijanski i španjolski
+jezik, a sučelje je dostupno na većini službenih jezika NVDA čitača, jer ga
+prevodi NVDA zajednica prevoditelja. Ako niste talijanski korisnik i želite
 pridonijeti prijenosu brajeve tablice na vaš jezik, slobodno se obratite
 autoru (vidi dolje) ili se prijavite na mailing listu projekta.
 
-Napomena: Ovaj je dodatak dobrovoljno razvio Alberto Zanella. Niti autor niti suradnici nisu uključeni u prodaju i / ili razvoj softvera Lambda. Ako trebate više informacija o Lambda ili vam je potrebna podrška o korištenju, obratite se lokalnom distributeru. Ako naiđete na poteškoće prilikom korištenja ili instaliranja ovog dodatka, kontaktirajte autora ili upotrijebite vezu \ "Problemi " na Github stranici projekta.
+**Napomena:** Alberto Zanella je razvio ovaj dodatak za vrijeme dobrovoljnog rada. Niti autor niti suradnici nisu uključeni u prodaju ili razvoj softvera Lambda. Ako trebate više informacija o Lambda ili ako trebate pomoć, obratite se lokalnom distributeru. Ako naiđete na poteškoće prilikom korištenja ili instaliranja ovog dodatka, kontaktirajte autora ili upotrijebite poveznicu „Issues” (problemi) na Github stranici projekta.
 
-### Službeni repozitorij na Githubu[(https://github.com/lambda-nvda/lambdaNvda/)
+### [Službeni Github repozitorij](https://github.com/lambda-nvda/lambdaNvda/)
 
-## Značajke dodatka:
+## Funkcije dodatka:
 
-### Govorna podrška:
+### Podrška za govor:
 
-* Dijaloški okviri i izbornici se ispravno prikazuju;
-* Podrška za prirodni izgovor matematičkih formula; 
-* Implementirano čitanje znak po znak, riječi, linija i Reci Sve; 
-* Govori kada je blok teksta označen ili proširen (koristeći CTRl+B i
+* Ispravno izvještavanje o dijaloškim okvirima i izbornicima;
+* Podrška za prirodni izgovor matematičkih formula korištenjem Lambda
+  matematičke govorne jedinice, npr. „korijen iz 3 kroz korijen iz 3 x plus
+  24, zatvori korijen, minus 3 jednako 0”;
+* Implementirano je čitanje po znakovima, po riječima, po redcima i Izgovori
+  sve;
+* Govori kad je blok teksta odabran ili proširen (koristeći CTRl+B i
   SHIFT+CTRL+B);
-* Govori dok se krećete u programu za uređivanje teksta korištenjem
-  standardnih Windowsovih naredbi i Lambda-specifičnih naredbi; 
-* Podržan je dulji i kraći način izgovora (možete ih odabrati korištenjem
+* Govori tijekom kretanja u uređivaču teksta, korišteći standardne Windows
+  naredbe i Lambda-specifične naredbe;
+* Podrška za dugi i kratki modus govora (moguće ih je odabrati korištenjem
   izbornika Alati u Lambda);
-* Posebni dijaloški okviri poput strukturnog načina, kalkulatora i matričnog
-  prozora sada se ispravno prikazuju i NVDA ispravno čita dok pomičete
-  kursor uokolo ili dok tipkate novi tekst ;
-* Povratni zvuk tipkanja koristi Lambda tekstualni procesor, tako da će se
-  simboli i oznake ispravno prikazivati.
+* Sada se ispravno izvještava o posebnim dijaloškim okvirima poput modus
+  strukture, kalkulatora i matričnog prozora i NVDA ih ispravno čita tijekom
+  pomicanja kursora ili tipkanja novog teksta;
+* Povratni zvuk pri tipkanju koristi Lambdin procesor za tekst, tako da će
+  se o simbolima i oznakama ispravno izvještavati.
 
 ### Podrška za brajicu:
 
 * Dodatak instalira (unutar mape korisničkog profila) i aktivira prilagođenu
-  brajevu tablicu. Ta tablica može biti različita za različite
-  jezike. Prilagođene brajeve tablice napravljene su od onih u Lambda
-  dodatku za JAWS (jbt datoteka). Tako se simboli i oznake prikazuju istim
-  točkicama.
-* Dodatak kreira NVDA profil za standardnu brajevu konfiguraciju. Time se
-  izlaz postavlja na prilagođenu brajevu tablicu samo kada je aplikacija
-  Lambda aktivna..
-* Dijaloški okviri i izbornici su ispravno prikazani na brajici; 
-* Sadržaj se ispravno prikazuje na brajici i korisnik je u mogućnosti
-  kretati se pomoću brajevih tipki za navigaciju ili tipki za pomicanje
-  kursora;
-* Starting from the addon version 1.1.0, there are two ways in which the
-  text in the Lambda editor is rendered: "Flat mode" and "non-Flat
-  Mode". When the "Flat mode" is on, NVDA will use the Display Model to
-  retrieve information from the editor and to determine the caret
-  position. This is specially beneficial when the user needs to move around
-  on the screen, even in white spaces. When the "Flat Mode" is set to "off",
-  text rendering on the braille display is more stable, since NVDA uses
-  Windows API to retrieve it. However when the the caret is moved in white
-  spaces next to the end of the line of text, the braille display does not
-  follow the real cursor as long as a non-white space is added by the user.
+  brajevu tablicu. Ta tablica se može razlikovati za razne
+  jezike. Prilagođene brajeve tablice su izrađene od onih u Lambda dodatku
+  za JAWS (jbt datoteka). Nakon toga se simboli i oznake prikazuju istim
+  točkicama;
+* Dodatak izrađuje NVDA profil za standardnu brajevu konfiguraciju. Time se
+  izlaz postavlja na prilagođenu brajevu tablicu samo kad je aplikacija
+  Lambda aktivna;
+* O dijaloškim okvirima i izbornicima se ispravno izvještava na brajevom
+  retku;
+* Sadržaj se ispravno iscrtava na brajevom retku i korisnik se može kretati
+  pomoću brajevih tipki za navigaciju ili tipki za pomicanje kursora;
+* Verzijom 1.1.0 ovog dodatka se u Lambda uređivaču uvodi iscrtavanje teksta
+  na dva načina: „Flat modus” i „ne-Flat modus”. Kad je „Flat modus”
+  uključen, NVDA će koristiti model brajevog retka za dohvaćanje podataka iz
+  uređivača i za određivanje položaja kursora. To je posebno korisno kad se
+  korisnik mora kretati po ekranu, čak i u praznim područjima. Kad je „Flat
+  modus” postavljen na „isključeno”, iscrtavanje teksta na brajevom retku je
+  stabilnije, budući da NVDA koristi Windows API za njegovo
+  preuzimanje. Međutim, kad se kursor pomiče u prazna područja pored kraja
+  retka teksta, brajev redak ne slijedi stvarni pokazivač sve dok korisnik
+  nešto ne doda.
 
-Flat mod je aktivan prema zadanim postavkama. Možete ga uključivati i
-isključivati koristeći naredbu NVDA+SHIFT+F. 
+Flat modus je standardno aktivan. Moguće ga je uključiti ili isključiti
+tipkama NVDA+SHIFT+F.
 
-Strogo preporučamo da onemogućite flat mod ako koristite prilagođeni DPI u
-Windowsima (opcija prilagođenih dimenzija), posebno kada imate postavke
-zaslona sa više od 96 dsi (veće od 100%).
+Svakako preporučamo deaktivirati Flat modus, ako koristite prilagođene DPI
+vrijednosti u Windowsima (opcija za prilagođene veličine), posebno kad se u
+postavkama ekrana, DPI vrijednosti postave na više od 96 dpi (veće od 100%).
 
 * Struktura dijaloških okvira je jednostavnija, uklonjene su informacije
-  koje su se ponavljale. 
-* Odabir će biti korektno prikazan točkicama 7 i 8, a označavanje se
-  ispravno učitava standardnim Windows naredbama (SHIFT+STRELICE) ili Lambda
-  specifičnim naredbama (CTRL+B, CTRL+B) su pritisnute.
+  koje su se ponavljale;
+* Odabir će biti ispravno prikazan točkicama 7 i 8, a označavanje se
+  ispravno učitava pritiskanjem standardnih Windows naredbi (SHIFT+STRELICE)
+  ili određenih Lambda naredbi (CTRL+B, CTRL+B).
 
-## Prije početka korištenja ovog dodatka.
+## Prije upotrebe ovog dodatka.
 
-Ovaj dodatak stvara profil pod nazivom "lambda" koji je povezan s datotekom
-"lambda.exe". Dodatak automatski postavlja sve mogućnosti brajice:
-prilagođenu brajevu tablicu, fokus i način rada.
+Ovaj dodatak stvara profil pod nazivom „lambda” koji je povezan s datotekom
+„lambda.exe”. Dodatak automatski postavlja sve mogućnosti brajice:
+prilagođenu brajevu tablicu, povezivanje s fokusom i postavke za flat modus.
 
 Ako je profil s istim imenom prisutan u vašem sustavu, dodatak ga neće
 zamijeniti i morat ćete ručno prilagoditi konfiguracijski profil.
 
 Da biste izbjegli ovu situaciju, ako imate određene postavke koje želite
-sačuvati, možete upotrijebiti LAMBDA Čarobnjak za vraćanje postavki. Prečac
-za pokretanje ovog alata je nvda+alt+r dok ste fokusirani u programu LAMBDA.
+sačuvati, možete upotrijebiti čarobnjaka za vraćanje LAMBDA profila. Prečac
+za pokretanje ovog alata je nvda+alt+r (kad je fokus u aplikaciji LAMBDA).
 
-Također postoji jednostavna opcija za brisanje starih profila "lambda" nakon
-instalacije dodatka. Da biste to učinili, otvorite NVDA izbornik, odaberite
-izbornik Konfiguracijski profili i pritisnite ENTER. 
+Također postoji jednostavna opcija za brisanje starih „lambda” profila nakon
+instaliranja dodatka. Da biste to učinili, otvorite NVDA izbornik, odaberite
+izbornik Konfiguracijski profili i pritisnite ENTER.
 
-U dijaloškom okviru Konfiguracijski profili, moći ćete pronaći i obrisati
-"lambda" profil. Profil će ponovno biti stvoren kada sljedeći put pokrenete
-Lambda aplikaciju.
+U dijaloškom okviru Konfiguracijski profili možete pronaći i obrisati
+„lambda” profil. Profil će ponovo biti stvoren tijekom sljedećeg pokretanja
+Lambda aplikacije.
 
-Brisanje profila "lambda" također bi trebalo biti jednostavno rješenje ako
-postoji bilo koji problem u radu dodatka. Primjerice, ako brajeva tablica
-nije ispravno postavljena, umjesto ručnog konfiguriranja profila jednostavno
-je možete izbrisati. Dodatak će krirati novi profil kada drugi put pokrenete
-Lambda urednik.
+Brisanje „lambda” profila također bi trebalo biti jednostavno rješenje, ako
+dođe do problema u radu dodatka. Na primjer, ako brajeva tablica nije
+ispravno postavljena, umjesto ručnog konfiguriranja profila, možete ga
+jednostavno izbrisati. Dodatak će stvoriti novi profil tijekom sljedećeg
+pokretanja Lambda uređivača.
 
-Svaki put kada pokrenete Lambda uređivač, ovaj dodatak provjerava postoji li
-profil s nazivom "lambda". Ako ne postoji, automatski generira profil sa
-sljedećim obrascem:
+Svaki put kad pokrenete Lambda uređivač, ovaj dodatak provjerava, postoji li
+profil s nazivom „lambda”. Ako ne postoji, automatski izrađuje profil u
+obliku:
 
-``` filename : userData\profiles\lambda.ini :
+``` datoteka : podaciKorisnika\profili\lambda.ini :
 
-[braille]
-	readByParagraph = False
-	tetherTo = focus
-	translationTable = path-to-the-addon-brailleTable-dir\tableName
+[brajev redak]
+	čitajPoOdlomcima = Netočno
+	povežiNa = fokus
+	tablicaPrijevoda = staza-do-mape-brajeveTablice-dodatka\imeTablice
 
 [lambda]
-	brailleFlatMode = True
+	brajevFlatModus = Točno
 
 ```
 
-Gdje : 
+Gdje :
 
-* path-to-the-addon-brailleTable-dir : is the absolute path of the addon
-  directory + "\brailleTables"
-* Ime tablice: ovisi o aktivnom jeziku NVDA. Trenutno se prikazuju samo
-  talijanske i španjolske brajeve tablice, lambda-ita.utb" i
-  "lambda-esp.utb"
+* staza-do-mape-brajeveTablice-dodatka : je absolutna staza mape dodataka +
+  „\brajeveTablice”
+* imeTablice: ovisi o aktivnom jeziku NVDA čitača. Trenutačno postoje samo
+  talijanske i španjolske brajeve tablice „lambda-ita.utb” i
+  „lambda-esp.utb”.
 
-## Tipkovničke kratice za dodatak: 
+## Tipkovnički prečaci za dodatak:
 
-* NVDA+Shift+f**: Uključi i isključi način brajice;
-* NVDA+alt+r: Otvori čarobnjak za vraćanje LAMBDA profila; 
-* NVDA+d: Dupliciraj linije (koristite ovo umjesto control+d).
+* **NVDA+Shift+f**: Uključi ili isključi modus brajevog retka;
+* **NVDA+alt+r**: Otvori čarobnjaka za vraćanje LAMBDA profila;
+* **NVDA+d**: Dupliciraj retke (koristite ovo umjesto control+d).
 
-## Poznate greške:
+## Poznati problemi:
 
-Zbog greške prisutne u LAMBDA-i, dodatak pruža dodatnu logiku koja
-izvještava o bijelim prostorima. Ova logika možda neće uspjeti u sljedećim
-situacijama:
+Zbog greške koja je prisutna u aplikaciji LAMBDA, dodatak pruža dodatnu
+logiku koja izvještava o bjelinama (razmacima). Ova logika možda neće
+uspjeti u sljedećim situacijama:
 
-* Kada su riječi poput "razmak", "spazio" "Espacio" umetnute u tekst, NVDA
-  ih može prikazati kao lokalni NVDA prijevod.
-* Prazne linije nisu prijavljene od strane LAMBDA govornog robota. Korisnik
-  će umjesto toga čuti prijevod riječi razmak. To može biti i prazna linija
-  ili linija koja sadrži riječ "razmak".
+* Kad se riječi poput „razmak”, „spazio”, „Espacio” itd. umetnu u tekst,
+  NVDA će o njima možda izvijestiti lokalnim NVDA prijevodom.
+* LAMBDA govorna jedinica ne izvještava o praznim redcima. Korisnik će
+  umjesto toga čuti prijevod za riječ „razmak”. To može biti prazni redak
+  ili redak koji sadrži riječ „razmak”.
 
-## Korisni trikovi 
+## Korisni savjeti
 
-Ovo je niz savjeta koji će vam pomoći u korištenju dodatka na učinkovitiji
+Ovo je niz savjeta koji će vam pomoći koristiti dodatak na učinkovitiji
 način.
 
-* Izgovaranje znak po znak: Uobičajeno, kada radite s programima za
-  matematiku, NVDA bi trebao izgovarati stvari koje pišete znak po znak. Da
-  biste to učinili, postoji nekoliko jednostavnih koraka: budite sigurni da
-  ste u prozoru programa LAMBDA. Primjerice, pritisnite NVDA + 2 (broj dva)
-  ili prijeđite na izbornik NVDA> Postavke> Postavke tipkovnice i označite
-  okvir za izgovor znakova; idite na LAMBDA> Opcije> Glasovni parametri i
-  provjerite je li potvrdni okvir "odjek" UKLJUČEN, u protivnom NVDA neće
-  ništa primiti od govornog robota dok upisujete. Gotovo, NVDA će govoriti
-  upisane znakove, ali ne brinite, samo u LAMBDA-u ili u posebnim prozorima,
-  postavke za ostale aplikacije bit će netaknute.
+* Izvještavanje o znakovima pojedinačno: Uobičajeno, kad radite s programima
+  za matematiku, NVDA bi trebao izvještavati o stvarima koje pišete znak po
+  znak. Da biste to učinili, postoji nekoliko jednostavnih koraka: budite
+  sigurni da ste u prozoru programa LAMBDA. Primjerice, pritisnite NVDA+2
+  (broj dva) ili prijeđite na izbornik NVDA>Postavke>Postavke tipkovnice i
+  označite okvir za govor utipkanih znakova; idite na LAMBDA>Opcije>Glasovni
+  parametri i provjerite je li potvrdni okvir „odjek” UKLJUČEN, u protivnom
+  NVDA neće ništa primiti od govorne jedinice dok tipkate. I gotovo! NVDA će
+  govoriti upisane znakove, ali samo u LAMBDA aplikaciji ili u njenim
+  posebnim prozorima. Postavke za ostale aplikacije se neće mijenjati.
 
 ## Mailing lista dodatka:
 
 Da biste prijavili greške, iznijeli prijedloge ili ako želite doprinijeti,
 možete se pretplatiti na grupu vezanu za ovaj dodatak (na engleskom
-jeziku). Možete se pretplatiti sa web stranice:
+jeziku). Možete se pretplatiti s web stranice:
 <https://groups.io/g/lambda-nvda>.
 
-## Popis izmjena
+## Popis promjena
 
-U nastavku je popis izmjena između različitih inačica dodatka. Pored broja
-inačice, između zagrada, nalaze se informacije o statusu razvoja. Trenutno
-razvojno izdanje nije uključeno jer može imati izmjene dok se ne označi kao
-stabilno ili izbaci kao kandidat.
+U nastavku se nalazi popis promjena između različitih verzija dodatka. Pored
+broja verzije se u zagradama nalaze informacije o stanju razvoja. Trenutačno
+razvojno izdanje nije uključeno. Ono bi moglo sadržati promjene sve dok se
+ne označi kao stabilno izdanje ili dok se ne odbaci kao kandidat.
 
-### Version 1.2.2 (stable)
+### Verzija 1.2.2 (stabilna)
 
-* Improved compatibility with WX Python version 4 (introduced with NVDA
-  2018.3). Warning related with wx.NewId() is no longer displayed in debug
-  log.
-* Implemented guiHelper to enhance dialogs's appearance.
+* Poboljšana je kompatibilnost s WX Python verzija 4 (uveden u NVDA
+  2018.3). Upozorenje vezano za wx.NewId() se više ne prikazuje u dnevniku
+  ispravljanja grešaka.
+* Implementiran je guiHelper za poboljšavanje prikaza dijaloških okvira.
 * Novi jezici. Ažurirani prijevodi.
 
-### Inačica 1.2.1a (stabilna) 
+### Verzija 1.2.1a (stabilna)
 
-Ovo ažuriranje namijenjeno je za dugoročnu podršku. To znači da barem do
-lipnja 2018. neće biti objavljena nova stabilna inačica. Želimo studentima
-pružiti maksimalnu stabilnost i minimizirati promjene tijekom akademske
-godine.
+Ova nadogradnja je namijenjena je za dugoročnu podršku. To znači, da se
+barem do lipnja 2018. neće objavlti nova stabilna verzija. Želimo studentima
+pružiti maksimalnu stabilnost i minimalne promjene tijekom akademske godine.
 
 * Novi jezici. Ažurirani prijevodi.
 
-### Inačica 1.2.1 (stabilna)
+### Verzija 1.2.1 (stabilna)
 
 * Dodana je kompatibilnost s načinom na koji NVDA 2017.3 upravlja
-  brajicom. Zadržana je kompatibilnost sa starijim inačicama.
-* Ispravljene mnoge greške u brajici.
+  brajicom. Zadržana je kompatibilnost sa starijim verzijama.
+* Ispravljene mnoge greške s brajicom.
 
-### Inačica 1.2.0 (razvojna) 
+### Verzija 1.2.0 (razvojna)
 
-Ova inačica nije objavljena kao stabilna zbog toga što inačica 1.2.1
+Ova verzija nije objavljena kao stabilna zbog toga što verzija 1.2.1
 uključuje značajnije ispravke.
 
-* Nove lokacije. Ažurirane lokalizacije.
+* Novi jezici. Ažurirani jezici.
 
-### Inačica 1.1.8 (stabilna)
+### Verzija 1.1.8 (stabilna)
 
 * Inicijalno stabilno izdanje.
 

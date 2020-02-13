@@ -1,103 +1,100 @@
-# Hrvatska lokalizacija za NVDA.
-# Copyright (C) 2006-2019 NVDA contributors <https://www.nvda-project.org>
-# This file is distributed under the same license as the virtualRevision package.
-# Tea Turković <tturkovi@gmail.com>, 2017.
-# Milo Ivir <mail@milotype.de>, 2019.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the lambda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: lambda 1.1.8\n"
+"Project-Id-Version: lambda 1.2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2017-06-20 06:07+1000\n"
-"PO-Revision-Date: 2019-11-22 23:20+0100\n"
-"Last-Translator: Milo Ivir <mail@milotype.de>\n"
-"Language: hr\n"
+"POT-Creation-Date: 2018-11-23 12:00+1000\n"
+"PO-Revision-Date: 2020-01-13 19:45+0100\n"
+"Last-Translator: Ondrej Rosík <ondrej.rosik@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
-"Language-Team: \n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 1.6.11\n"
 
 #. Translators: Message presented in input help mode.
 msgid "Shows a dialog to revert lambda profile options to the default."
-msgstr ""
-"Prikazuje dijaloški okvir za vraćanje postavki lambda profila na zadane."
+msgstr "Zobrazí dialóg s resetovaním nastavení konfiguračného profilu LAMBDA."
 
 #. Translators: this is a custom implementation of the globalCommands gesture, it doesn't support spelling.
 msgid "Reports the current line under the application cursor."
-msgstr "Izvještava o trenutačnom retku ispod kursora aplikacije."
+msgstr "Oznámi riadok pod kurzorom."
 
 #. Translators: Lambda can't read from the current caret position, the implementation of sayAll provided starts reading from the top of the document.
 msgid "reads from the beginning of the document up to the end of the text."
-msgstr "Čita od početka dokumenta do kraja teksta."
+msgstr "Číta od kurzora do konca textu."
 
 #. Translators: this is a custom implementation of the globalCommands gesture.
 msgid "Announces the current selection in edit controls and documents."
-msgstr "Najavljuje trenutačni odabir u poljima za uređivanje i dokumentima."
+msgstr "Oznamuje vybratý text v editačných poliach a dokumentoch."
 
 #. This script duplicates the current line and announce it
 msgid "Duplicate the current line and sets the cursor to the new line."
-msgstr "Duplicira trenutačni redak i postavlja kursor na novi redak."
+msgstr "Skopíruje aktuálny riadok a presunie kurzor na nový riadok."
 
 #. Translators: This determines whether to use API or DisplayMode to render the editor window on a braille display. It is a toggle (on/off)
 msgid "flat mode "
-msgstr "Flat modus"
+msgstr "Nepoužívať Windows API pre zobrazenie na braillovskom riadku"
 
 #. This script set the desired textInfo for braille, when flat mode is on, the LambdaEditorFlatTextInfo is used, otherwise the LambdaEditorTextInfo is set.
 msgid "Toggle the braille flat mode on or off."
-msgstr "Uključuje ili isključuje flat modus."
+msgstr ""
+"Prepína používanie Windows api pre zobrazenie textu na braillovskom riadku."
 
 msgid ""
 "Duplicate lines using control+d shortcut may causes error or stability "
 "issues while using Lambda with NVDA.\n"
 "Please consider using the NVDA+D shortcut instead."
 msgstr ""
-"Dupliciranje redaka pomoću prečaca CTRL+D može prouzročiti greške ili "
-"nestabilnost tijekom korištenja Lambde s NVDA čitačem.\n"
-"Umjesto toga koristite prečac NVDA+D."
+"Kopírovanie riadkov pomocou skratky ctrl+d môže spôsobovať zamrznutie alebo "
+"pády aplikácie.\n"
+"Použite radšej skratku alt+d."
 
 #. Translators: This string is the file name of the Lambda braille table for the translated language. The file should be present in the "brailleTables" directory in this addon. The default is the italian braille translation table.
 msgid "lambda-ita.utb"
-msgstr "lambda-ita.utb"
+msgstr ""
 
 #. Translators: This is the label for the Quick Profile Wizard dialog.
 #. This dialog helps the user to reset relevant profile options without deleting his custom settings.
 msgid "Revert LAMBDA Profile Wizard"
-msgstr "Čarobnjak za vraćanje Lambda profila"
+msgstr "Sprievodca nastavením konfiguračného profilu LAMBDA"
 
 #. Translators: This is the static text of the Quick Profile Wizard dialog.
 msgid ""
 "Choose which options you want to reset to the default value for the Lambdas "
 "profile"
 msgstr ""
-"Odaberite opcije Lambda profila koje želite vratiti na standardne vrijednosti"
+"Vyberte nastavenia, ktoré si želáte obnoviť v konfiguračnom profile LAMBDA"
 
 #. Translators: This is the label for a checkbox in the
 #. Quick Profile Wizard dialog.
 #, python-format
 msgid "Keep the LAMBDA braille table for the current language (%s)"
-msgstr "Zadrži Lambda brajevu tablicu za trenutačni jezik (%s)"
+msgstr "Ponechať nastavenia braillovskej tabuľky (%s)"
 
 #. Translators: This is the label for a checkbox in the
 #. Quick Profile Wizard dialog.
 msgid "Set the braille cursor to tether the focus"
-msgstr "Poveži brajev kursor s fokusom"
+msgstr "Braillovský kurzor zviazaný so systémovým fokusom"
 
 #. Translators: This is the label for a checkbox in the
 #. Quick Profile Wizard dialog.
 msgid "Disable the Braille reading by paragraph"
-msgstr "Deaktiviraj čitanje brajice po odlomcima"
+msgstr "Nečítať po odsekoch v braillovskom zobrazení"
 
 #. Translators: This is the label for a checkbox in the
 #. Quick Profile Wizard dialog.
 msgid "Disable word wrappping of the braille line"
-msgstr "Deaktiviraj prijelom riječi brajevog retka"
+msgstr "Nerozdeľovať slová na braillovskom riadku"
 
 #. Translators: title of the message box that appears when the user is installing the addon and an older version prevents the update to be completed.
 msgid "Incompatible version of the addon detected"
-msgstr "Nekompatibilna verzija dodatka otkrivena"
+msgstr "Našla sa nekompatibilná verzia doplnku"
 
 #. Translators: text of the message box that appears when the user is installing the addon and an older version prevents the update to be completed.
 msgid ""
@@ -106,13 +103,13 @@ msgid ""
 "Please uninstall the previous version before proceeding with the Lambda "
 "addon setup.\n"
 msgstr ""
-"Otkrivena je stara, nekompatibilna verzija dodatka.\n"
-"Zbog toga nije moguće završiti instaliranje dodatka.\n"
-"Deinstalirajte stariju verziju prije daljnjeg postavljanja Lambda dodatka.\n"
+"Našla sa staršia, nekompatibilná verzia doplnku.\n"
+"Nie je možné nainštalovať novú verziu.\n"
+"Najprv odstráňte staršiu verziu a zopakujte inštaláciu.\n"
 
 #. Translators: title of the message box that appears when user is installing the addon in NVDA and a "lambda" profile is already present.
 msgid "lambda profile already exists"
-msgstr "Lambda profil već postoji"
+msgstr "Našiel sa existujúci konfiguračný profil LAMBDA"
 
 #. Translators: text of the message box that appears when user is installing the addon in NVDA and a "lambda" profile is already present.
 msgid ""
@@ -124,16 +121,16 @@ msgid ""
 "Wizard (pressing nvda+alt+r) while the Lambda Application is active.\n"
 "Press OK to complete the addon Setup.\n"
 msgstr ""
-"Profil s imenom lambda već postoji u NVDA konfiguraciji.\n"
-"To može spriječiti dodatak da kreira i podesi profil kako treba.\n"
-"Pregledajte zadane opcije za ovaj dodatak pomoću čarobnjaka za vraćanje "
-"LAMBDA profila (tipkama nvda+alt+r) dok je aplikacija Lambda aktivna.\n"
-"Pritisnite U redu za dovršavanje postavljanja dodatka.\n"
+"Našiel sa existujúci konfiguračný profil s názvom \"LAMBDA\".\n"
+"Doplnok nemôže vytvoriť profil s nastaveniami vhodnými pre editor LAMBDA.\n"
+"Skontrolujte nastavenia v dialógu s obnovením nastavení. V okne LAMBDA "
+"stlačte NVDA+alt+r.\n"
+"Nastavenie dokončíte stlačením tlačidla OK.\n"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Lambda math editor addon"
-msgstr "Dodatak za Lambda matematički uređivač"
+msgstr "Doplnok pre matematický editor LAMBDA"
 
 #. Add-on description: can span multiple lines with """ syntax """
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -141,5 +138,5 @@ msgid ""
 "This addon provides access to the Lambda math editor with both braille and "
 "speech support."
 msgstr ""
-"Ovaj dodatak omogućava pristup lambda matematičkom uređivaču s podrškom za "
-"brajicu i za govor."
+"Poskytuje podporu pre matematický editor LAMBDA. Dostupná je odozva cez "
+"hlasový výstup aj braillovský riadok."
