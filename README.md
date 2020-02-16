@@ -110,6 +110,11 @@ You can subscribe from the website: <https://groups.io/g/lambda-nvda>.
 
 Below is a list of changes between the different add-on versions. Next to the version number, between parentheses, is the development status. The current development release isn't included as it could have changes until it is flagged as stable or discarded as candidate.
 
+### Version 1.3.0 (stable)
+
+* Support for newer version of NVDA (Support for Python 3
+* Solved an issue while pressing duplicate line command NVDA+d in a blank line caused clipboard content to be pasted. Now when you press NVDA+d and you are in a blank line, a new blank line appears as expected.
+
 ### Version 1.2.2 (stable)
 
 * Improved compatibility with WX Python version 4 (introduced with NVDA 2018.3). Warning related with wx.NewId() is no longer displayed in debug log.
