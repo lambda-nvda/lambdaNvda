@@ -183,7 +183,12 @@ parentesi, è lo stato di sviluppo. L'attuale versione di sviluppo non è
 inclusa, giacché potrebbe avere cambiamenti fino a quando non è segnato come
 stabile o revocata a ricevere lo stato della versione candidata.
 
-### Version 1.2.2 (stable)
+### Versione 1.3.0 (stabile)
+
+* Supporto alle più recenti versioni di NVDA (Supporto a Python 3)
+* Risolto un problema che si verificava premendo il tasto per duplicare una riga (NVDA+d), in presenza di una riga vuota, premendo questo comando veniva incollato il testo presente negli appunti. Ora premendo NVDA+d quando ci si trova in una riga vuota viene inserita una nuova riga vuota.
+
+### Versione 1.2.2 (stabile)
 
 * Aggiunta la compatibilità con WX Python versione 4 (introdotta in NVDA
   2018.3). gli avvisi  riguardo wx.NewId() non verranno più  visualizzati
