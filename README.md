@@ -112,7 +112,7 @@ Below is a list of changes between the different add-on versions. Next to the ve
 
 ### Version 1.3.0 (stable)
 
-* Support for newer version of NVDA (Support for Python 3
+* Support for newer version of NVDA (Support for Python 3)
 * Solved an issue while pressing duplicate line command NVDA+d in a blank line caused clipboard content to be pasted. Now when you press NVDA+d and you are in a blank line, a new blank line appears as expected.
 
 ### Version 1.2.2 (stable)
