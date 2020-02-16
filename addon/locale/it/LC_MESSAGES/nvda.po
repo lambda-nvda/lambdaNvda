@@ -41,7 +41,7 @@ msgstr "Duplica la riga corrente e posiziona il cursore nella nuova riga."
 
 #. Translators: This determines whether to use API or DisplayMode to render the editor window on a braille display. It is a toggle (on/off)
 msgid "flat mode "
-msgstr "Modalità in linea"
+msgstr "Modalità in linea "
 
 #. This script set the desired textInfo for braille, when flat mode is on, the LambdaEditorFlatTextInfo is used, otherwise the LambdaEditorTextInfo is set.
 msgid "Toggle the braille flat mode on or off."
