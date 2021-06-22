@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lambda 1.1.8\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2017-06-20 06:07+1000\n"
 "PO-Revision-Date: 2017-06-22 10:36+0200\n"
 "Language: it\n"
@@ -41,7 +41,7 @@ msgstr "Duplica la riga corrente e posiziona il cursore nella nuova riga."
 
 #. Translators: This determines whether to use API or DisplayMode to render the editor window on a braille display. It is a toggle (on/off)
 msgid "flat mode "
-msgstr "Modalità in linea "
+msgstr "Modalità in linea"
 
 #. This script set the desired textInfo for braille, when flat mode is on, the LambdaEditorFlatTextInfo is used, otherwise the LambdaEditorTextInfo is set.
 msgid "Toggle the braille flat mode on or off."

@@ -114,12 +114,13 @@ De fiecare dată când editorul Lambda este pornit, acest supliment verifică
 dacă există un profil cu numele „lambda”. Dacă nu există un astfel de
 profil, el generează automat un profil cu următoarea formă:
 
-``` filename : userData\profiles\lambda.ini :
+```
+filename : userData\profiles\lambda.ini :
 
 [braille]
 	readByParagraph = False
 	tetherTo = focus
-	translationTable = calea către dosarul suplimentului brailleTable\nume tabel
+	translationTable = path-to-the-addon-brailleTable-dir\tableName
 
 [lambda]
 	brailleFlatMode = True
@@ -184,6 +185,13 @@ acestui supliment. Lângă numărul versiunii, între paranteze, se află starea
 de dezvoltare. Actuala versiune în dezvoltare nu este inclusă, întrucât ar
 putea să aibă modificări până când va fi marcată ca stabilă sau revocată,
 urmând ca mai apoi să primească statutul d versiune candidată.
+
+### Version 1.3.0 (stable)
+
+* Support for newer version of NVDA (Support for Python 3)
+* Solved an issue while pressing duplicate line command NVDA+d in a blank
+  line caused clipboard content to be pasted. Now when you press NVDA+d and
+  you are in a blank line, a new blank line appears as expected.
 
 ### Versiunea 1.2.2 (stabilă)
 

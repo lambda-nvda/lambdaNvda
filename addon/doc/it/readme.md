@@ -1,32 +1,32 @@
 # Lambda componente aggiuntivo per NVDA #
 
-* Autori: Alberto Zanella e il team Lambda-NVDA
+* Autori: Alberto Zanella e il team Lambda-NVDA.
 * Scarica la [versione stabile][1]
 * Scarica la [versione in sviluppo][2]
 
 Questo componente aggiuntivo permette di utilizzare il software LAMBDA con NVDA. Deriva da un lavoro precedente di Peter Lecky della Comenius University ed è stato studiato e realizzato per rendere l'accesso all'ambiente LAMBDA il più semplice e simile a ciò che già avviene con altri screen reader.
 LAMBDA (Linear Access to Mathematic for Braille Device and Audio-synthesis) è un programma che aiuta i non vedenti a leggere  e scrivere matematica utilizzando  un display braille, o una sintesi vocale, o entrambi contemporaneamente.
-LAMBDA è il risultato EU-Project. Per maggiori informazioni sul software LAMBDA consultare: [https://www.lambdaproject.org/](https://www.lambdaproject.org/). 
+LAMBDA è il risultato di un progetto dell'Unione Europea. Per maggiori informazioni sul software LAMBDA consultare: [https://www.lambdaproject.org/](https://www.lambdaproject.org/). 
 L'attuale versione del componente aggiuntivo dispone di tabelle braille
 adattate per l'uso con Lambda sia per l'Italiano che per lo Spagnolo. La
 traduzione delll'addon è disponibile in svariate lingue grazie al team di
 traduzione internazionale. Se non sei un utente italiano e vorresti
 includere il porting della tua tabella braille nel progetto, contatta
-l'autore (vedi sotto), oppure iscriviti alla mailing list del progetto.-
+l'autore (vedi sotto), oppure iscriviti alla mailing list del progetto.
 
-**Nota**: Si precisa che lo sviluppo di questo componente aggiuntivo è avvenuto in maniera volontaria e del tutto indipendente dall'azienda rivenditore del prodotto LAMBDA, con la quale l'autore non intrattiene alcun rapporto di lavoro e/o di collaborazione. Per richieste in merito al prodotto si invita pertanto a contattare il servizio di supporto tecnico messo a disposizione dal fornitore del prodotto.Per ulteriori informazioni sull'addon, richieste o altro è possibile contattare l'autore tramite email o inviando una "issue" su GitHub.
+**Nota**: Si precisa che lo sviluppo di questo componente aggiuntivo è avvenuto in maniera volontaria e del tutto indipendente dall'azienda rivenditore del prodotto LAMBDA, con la quale l'autore non intrattiene alcun rapporto di lavoro e/o di collaborazione. Per richieste in merito al prodotto si invita pertanto a contattare il servizio di supporto tecnico messo a disposizione dal fornitore del prodotto. Per ulteriori informazioni sull'addon, richieste o altro è possibile contattare l'autore tramite email o inviando una "issue" su GitHub.
 
 ### [Repository Github ufficiale: ](https://github.com/lambda-nvda/lambdaNvda/)
 
 ## Caratteristiche principali:
 
-### accesso in sintesi vocale:
+### Accesso tramite sintesi vocale:
 
 * Vocalizza correttamente le finestre di dialogo ed i menù;
 * Vocalizza le formule matematiche utilizzando il sistema di processamento
   di testi di LAMBDA, quindi legge correttamente ed in modo naturale il
   testo matematico (ad esempio "radice 3 di 3x più 24, fine radice");
-* Permette di leggere per carattere, riga, o con il leggi-tutto;
+* permette di leggere per carattere, parola, riga, o con il leggi-tutto;
 * Vocalizza correttamente la selezione dei blocchi, usando ctrl-b o
   shift-ctrl-b;
 * Vocalizza correttamente gli spostamenti all'interno del testo utilizzando
@@ -40,29 +40,30 @@ l'autore (vedi sotto), oppure iscriviti alla mailing list del progetto.-
 
 ### Supporto Braille:
 
-* Il componente aggiuntivo installa (all'interno della cartella profilo
+* Il componente aggiuntivo si installa (all'interno della cartella profilo
   utente di NVDA) ed inseguito attiva una tabella braille
   personalizzata. Tale tabella può essere diversa in base alla lingua. Le
   tabelle personalizzate sono state adattate da quelle presenti nel plugin
-  Lambda per Jaws, (file jbt). In seguito i simboli e i marcatori sono stati
-  rappresentati servendosi degli stessi punti braille.
+  Lambda per Jaws, (file jbt). Quindi i simboli e i marcatori sono stati
+  rappresentati servendosi degli stessi punti braille;
 * Crea e configura un profilo applicativo apposito (in questo modo la
   tabella braille speciale per LAMBDA sarà attivata solo su questo software
   e non su altri);
 * Le finestre di dialogo e i menu vengono mostrati in braille in maniera
   appropriata;
-* Permette la navigazione nei menù e nelle finestre di dialogo in braille,
-  servendosi dei tasti di scorrimento o dei cursor routing;
-* A partire dalla versione 1.1.0 presenta una doppia modalità per il
+* Il contenuto dell'editor è correttamente riportato in braille e l'utente
+  si può muovere  servendosi dei tasti di scorrimento o dei cursor routing;
+* A partire dalla versione 1.1.0, è presente una doppia modalità per il
   braille: "Flat Mode" e non "Flat Mode" (modalità in linea
   attiva/disattiva). Quando "Flat Mode" è attivata, NVDA userà
-  l'intercettatore grafico per determinare cosa è presente a schermo. Questo
-  è utile per poter spaziare con il braille anche in aree "bianche", dove
-  non è presente testo. Con la modalità "Flat Mode" disattivata, si avrà
-  maggior potenza nell'elaborazione del testo, in quanto NVDA utilizzerà le
-  funzioni messe a disposizione dal sistema operativo Windows per
-  determinare la presenza di testo. Di contro però, non sarà possibile
-  esplorare in braille aree bianche, prive di alcun testo.
+  l'intercettatore grafico per determinare cosa è presente a schermo e la
+  posizione del cursore. Questo è utile per poter spaziare con il braille
+  anche in aree "bianche", dove non è presente testo. Con la modalità "Flat
+  Mode" disattivata, si avrà maggior potenza nell'elaborazione del testo, in
+  quanto NVDA utilizzerà le funzioni messe a disposizione dal sistema
+  operativo Windows per determinare la presenza di testo. Di contro però,
+  non sarà possibile esplorare in braille aree bianche, prive di alcun
+  testo.
 
 Di default la modalità "Flat Mode" è attiva. Per attivarla o disattivarla
 usare il comando NVDA+SHIFT+F.
@@ -71,7 +72,7 @@ Si consiglia caldamente di disattivare la "Flat Mode" qualora si sia
 cambiato il valore dei DPI dello schermo (da 100% ad un ingrandimento
 maggiore).
 
-* La struttura delle finestre di dialogo è più lineare, rimosse informazioni
+* La struttura delle finestre di dialogo è più lineare: rimosse informazioni
   ripetute;
 * Marca in braille in modo corretto quando il testo viene selezionato.
 
@@ -110,21 +111,18 @@ Ad ogni avvio dell'applicazione Lambda, questo componente aggiuntivo
 controlla se un profilo chiamato "lambda" esiste. Se non esiste, procede
 alla sua creazione automatica secondo questo formato:
 
-``` filename : userData\profiles\lambda.ini :
+```
+nome file : userData\profiles\lambda.ini :
 
 [braille]
 	readByParagraph = False
 	tetherTo = focus
-	translationTable = path-to-the-addon-brailleTable-dir\tableName
-
-[lambda]
-	brailleFlatMode = True
-
+	translationTable = •percorso-della-cartella-brailleTable-del-componente-aggiuntivo : \Nometabella
 ```
 
 Dove :
 
-* * percorso-della-cartella-brailleTable-del-componente-aggiuntivo : è il
+* percorso-della-cartella-brailleTable-del-componente-aggiuntivo : è il
   percorso assoluto della directory dell'addon a cui segue "\brailleTables"
 * * nomeTabella : dipende dalla lingua di NVDA.
 
@@ -132,11 +130,11 @@ Dove :
 
 * * **NVDA+Shift+f**: Abilita o disabilita la modalità braille flat;
 * * **NVDA+alt+r**: Apre la finestra di dialogo "Ripristino guidato
-  impostazioni di LAMBDA".
+  impostazioni di LAMBDA";
 * * **NVDA+d**: Duplica la riga su cui è posizionato il cursore (usare
   questa combinazione di tasti invece di control+d).
 
-## Problemi noti
+## Problemi noti:
 
 Per risolvere un problema presente in LAMBDA, l'add-on contiene una miglior
 gestione della vocalizzazione degli spazi vuoti. Questa strategia di lettura
@@ -144,7 +142,7 @@ può non funzionare correttamente nei seguenti casi:
 
 * Se vengono inserite nel testo parole come "space", "spazio" "Espacio" ecc,
   queste vengono lette da NVDA come "spazio" (tradotto in Italiano) anche se
-  sono scritti in altre lingue
+  sono scritti in altre lingue.
 * Normalmente le righe vuote non vengono lette da LAMBDA. Ora verrà detto
   "spazio": ciò può indicare che la riga è vuota, che nella riga è presente
   uno spazio o che vi sia effettivamente scritto "spazio".
@@ -175,22 +173,25 @@ Per segnalare bug, suggerimenti o se si desidera contribuire è possibile
 iscriversi al gruppo relativo a questo componente aggiuntivo (in inglese). È
 possibile iscriversi dal sito internet: <https://groups.io/g/lambda-nvda>.
 
-## Log dei cambiamenti
+## Novità
 
 Sotto si trova un'elenco dei cambiamenti apportati in diverse versioni di
 questo componente aggiuntivo. Vicino al numero della versione, tra
-parentesi, è lo stato di sviluppo. L'attuale versione di sviluppo non è
-inclusa, giacché potrebbe avere cambiamenti fino a quando non è segnato come
-stabile o revocata a ricevere lo stato della versione candidata.
+parentesi, si trova lo stato di sviluppo. L'attuale versione di sviluppo non
+è inclusa, giacché potrebbe avere cambiamenti fino a quando non è segnata
+come stabile o revocata a ricevere lo stato della versione candidata.
 
 ### Versione 1.3.0 (stabile)
 
-* Supporto alle più recenti versioni di NVDA (Supporto a Python 3)
-* Risolto un problema che si verificava premendo il tasto per duplicare una riga (NVDA+d), in presenza di una riga vuota, premendo questo comando veniva incollato il testo presente negli appunti. Ora premendo NVDA+d quando ci si trova in una riga vuota viene inserita una nuova riga vuota.
+* Supporto per le versioni nuove di NVDA (Supporto per Python 3)
+* Risolto un problema in virtù del quale la pressione del comando di
+  duplicazione linea NVDA+d su una riga vuota causava l'esecuzione
+  dell'operazione "incolla". Ora, quando si preme NVDA+d e ci si trova su
+  una riga vuota, compare una nuova riga vuota come ci si aspetta.
 
 ### Versione 1.2.2 (stabile)
 
-* Aggiunta la compatibilità con WX Python versione 4 (introdotta in NVDA
+* Migliorata la compatibilità con WX Python versione 4 (introdotta in NVDA
   2018.3). gli avvisi  riguardo wx.NewId() non verranno più  visualizzati
   nel debug log.
 * Introdotto il modulo guiHelper per una migliore visualizzazione delle
@@ -212,7 +213,7 @@ numero di problemi durante l'anno accademico.
 * Aggiunta la compatibilità con la modalità in cui NVDA gestisce il braille
   a partire dalla versione 2017.3. Viene comunque mantenuta la
   retrocompatibilità con le versioni precedenti.
-* Risolti molti problemi sul braille.
+* risolti molti problemi sul braille.
 
 ### Versione 1.2.0 (sviluppo)
 

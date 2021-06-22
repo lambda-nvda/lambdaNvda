@@ -27,8 +27,8 @@ autoru (vidi dolje) ili se prijavite na mailing listu projekta.
   24, zatvori korijen, minus 3 jednako 0”;
 * Implementirano je čitanje po znakovima, po riječima, po redcima i Izgovori
   sve;
-* Govori kad je blok teksta odabran ili proširen (koristeći CTRl+B i
-  SHIFT+CTRL+B);
+* Govori kad je blok teksta odabran ili proširen (koristeći KONTROL+B i
+  ŠIFT+KONTROL+B);
 * Govori tijekom kretanja u uređivaču teksta, korišteći standardne Windows
   naredbe i Lambda-specifične naredbe;
 * Podrška za dugi i kratki modus govora (moguće ih je odabrati korištenjem
@@ -65,7 +65,7 @@ autoru (vidi dolje) ili se prijavite na mailing listu projekta.
   nešto ne doda.
 
 Flat modus je standardno aktivan. Moguće ga je uključiti ili isključiti
-tipkama NVDA+SHIFT+F.
+tipkama NVDA+ŠIFT+F.
 
 Svakako preporučamo deaktivirati Flat modus, ako koristite prilagođene DPI
 vrijednosti u Windowsima (opcija za prilagođene veličine), posebno kad se u
@@ -74,8 +74,8 @@ postavkama ekrana, DPI vrijednosti postave na više od 96 dpi (veće od 100%).
 * Struktura dijaloških okvira je jednostavnija, uklonjene su informacije
   koje su se ponavljale;
 * Odabir će biti ispravno prikazan točkicama 7 i 8, a označavanje se
-  ispravno učitava pritiskanjem standardnih Windows naredbi (SHIFT+STRELICE)
-  ili određenih Lambda naredbi (CTRL+B, CTRL+B).
+  ispravno učitava pritiskanjem standardnih Windows naredbi (ŠIFT+STRELICE)
+  ili određenih Lambda naredbi (KONTROL+B, KONTROL+B).
 
 ## Prije upotrebe ovog dodatka.
 
@@ -108,15 +108,16 @@ Svaki put kad pokrenete Lambda uređivač, ovaj dodatak provjerava, postoji li
 profil s nazivom „lambda”. Ako ne postoji, automatski izrađuje profil u
 obliku:
 
-``` datoteka : podaciKorisnika\profili\lambda.ini :
+```
+filename : userData\profiles\lambda.ini :
 
-[brajev redak]
-	čitajPoOdlomcima = Netočno
-	povežiNa = fokus
-	tablicaPrijevoda = staza-do-mape-brajeveTablice-dodatka\imeTablice
+[braille]
+	readByParagraph = False
+	tetherTo = focus
+	translationTable = path-to-the-addon-brailleTable-dir\tableName
 
 [lambda]
-	brajevFlatModus = Točno
+	brailleFlatMode = True
 
 ```
 
@@ -130,9 +131,9 @@ Gdje :
 
 ## Tipkovnički prečaci za dodatak:
 
-* **NVDA+Shift+f**: Uključi ili isključi modus brajevog retka;
+* **NVDA+šift+f**: Uključi ili isključi modus brajevog retka;
 * **NVDA+alt+r**: Otvori čarobnjaka za vraćanje LAMBDA profila;
-* **NVDA+d**: Dupliciraj retke (koristite ovo umjesto control+d).
+* **NVDA+d**: Dupliciraj retke (koristite ovo umjesto kontrol+d).
 
 ## Poznati problemi:
 
@@ -175,6 +176,14 @@ U nastavku se nalazi popis promjena između različitih verzija dodatka. Pored
 broja verzije se u zagradama nalaze informacije o stanju razvoja. Trenutačno
 razvojno izdanje nije uključeno. Ono bi moglo sadržati promjene sve dok se
 ne označi kao stabilno izdanje ili dok se ne odbaci kao kandidat.
+
+### Verzija 1.3.0 (stabilna)
+
+* Podrška za noviju NVDA verziju (podrška za Python 3).
+* Riješen je problem, pri kojem je pritiskanje tipki NVDA+d u praznom retku
+  prouzročilo umetanje sadržaja međuspremnika. Kad sada pritisnete NVDA+d i
+  nalazite se u praznom retku, pojavljuje se novi prazan redak kao što se i
+  očekuje.
 
 ### Verzija 1.2.2 (stabilna)
 

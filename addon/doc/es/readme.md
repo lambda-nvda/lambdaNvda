@@ -118,7 +118,8 @@ Cada vez que se ejecuta el editor Lambda, el complemento verifica si existe
 un perfil con el nombre "lambda". Si no existe crea automáticamente un
 perfil con la siguiente forma:
 
-``` filename : userData\profiles\lambda.ini :
+```
+archivo : userData\profiles\lambda.ini :
 
 [braille]
 	readByParagraph = False
@@ -189,6 +190,14 @@ complemento. Al lado del numero de versión, entre paréntesis, está el estado
 de desarrollo. La versión actualmente en desarrollo no se incluye ya que
 podría haber cambios hasta que sea marcada como estable o descartada como
 candidata.
+
+### Versión 1.3.0 (estable)
+
+* Soporte para versiones recientes de NVDA (soporte para Python 3)
+* Resuelto un problema por el que al pulsar la orden de línea NVDA+d dos
+  veces en una línea en blanco se pegaba el contenido del
+  portapapeles. Ahora, al pulsar NVDA+d en una línea en blanco, se añade una
+  nueva línea en blanco tal y como se espera.
 
 ### Versión 1.2.2 (estable)
 

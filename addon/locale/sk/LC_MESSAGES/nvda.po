@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lambda 1.2.2\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2018-11-23 12:00+1000\n"
-"PO-Revision-Date: 2020-01-13 19:45+0100\n"
+"PO-Revision-Date: 2020-02-14 18:36+0100\n"
 "Last-Translator: Ondrej Rosík <ondrej.rosik@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sk\n"
@@ -39,7 +39,7 @@ msgstr "Skopíruje aktuálny riadok a presunie kurzor na nový riadok."
 
 #. Translators: This determines whether to use API or DisplayMode to render the editor window on a braille display. It is a toggle (on/off)
 msgid "flat mode "
-msgstr "Nepoužívať Windows API pre zobrazenie na braillovskom riadku"
+msgstr "Použiť display model"
 
 #. This script set the desired textInfo for braille, when flat mode is on, the LambdaEditorFlatTextInfo is used, otherwise the LambdaEditorTextInfo is set.
 msgid "Toggle the braille flat mode on or off."

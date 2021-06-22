@@ -19,7 +19,7 @@ embaixo) ou subscribirse á lista de correo do proxecto.
 
 ### [Repositorio Oficial en GitHub](https://github.com/lambda-nvda/lambdaNvda/)
 
-## Características do complemento
+## Características do complemento:
 
 ### Soporte para fala:
 
@@ -27,7 +27,7 @@ embaixo) ou subscribirse á lista de correo do proxecto.
 * Soporte para fala natural das fórmulas matemáticas utilizando o motor
   interno de LAMBDA (p.ex. "raíz composta 3 de raíz composta 3 x máis 24,
   fin da raíz, menos 3 igual 0");
-* Lectura por carácter, palabra, liña e Verbalizar Todo implementada.
+* lectura por carácter, palabra, liña e Verbalizar Todo implementada;
 * Fala cando un bloque de texto está seleccionado ou é estendido
   (utilizando CTRL+B e SHIFT+CTRL+B);
 * Fala ao moverse polo texto con comandos de Windows e con comandos
@@ -114,16 +114,13 @@ Cada vez que o editor Lambda é arrincado, o complemento verifica se existe
 un perfil co nome "lambda". Se non existe crea automaticamente un perfil coa
 seguinte forma:
 
-``` filename : userData\profiles\lambda.ini :
+```
+nome de arquivo : userData\profiles\lambda.ini :
 
 [braille]
 	readByParagraph = False
 	tetherTo = focus
 	translationTable = path-to-the-addon-brailleTable-dir\tableName
-
-[lambda]
-	brailleFlatMode = True
-
 ```
 
 Onde :
@@ -134,7 +131,7 @@ Onde :
   italiana e española, "lambda-ita.utb" e "lambda-esp.utb" respectivamente,
   están presentes.
 
-## Atallos de Teclado do Complemento
+## Atallos de Teclado do Complemento:
 
 * **NVDA+Shift+f**: Alterna o modo plano do braille entre activado e
   desactivado;
@@ -157,7 +154,7 @@ seguintes situacións:
 ## Consellos útiles
 
 Este é un conxunto de consellos que lle axudará a utilizar o complemento dun
-xeito máis eficiente:
+xeito máis eficiente.
 
 * Lectura caracter por caracter: normalmente, cando está escribindo
   matemáticas gústalle que NVDA diga aquilo que está escribindo caracter por
@@ -186,6 +183,14 @@ estado de desenvolvemento. A versión actualmente en desenvolvemento non se
 inclúe xa que podería haber cambios ata que ésta sexa marcada coma estable
 ou descartada coma candidata.
 
+### Versión 1.3.0 (estable)
+
+* Soporte para a última versión do NVDA (Soporte para Python 3)
+* Resolto un problema ao premer o comando duplicar liña NVDA+d nunha liña en
+  branco que causaba que se pegase o contido do portapapeis. Agora cando
+  premas NVDA+d estando nunha liña en branco, aparece unha nova liña en
+  branco como se agarda.
+
 ### Versión 1.2.2 (estable)
 
 * Mellorada a compatibilidade con WX Python versión 4 (introducido con NVDA
@@ -208,7 +213,7 @@ durante o curso académico.
 
 * Engadida compatibilidade coa maneira que NVDA 2017.3 utiliza para
   administrar o braille. Compatibilidade con versións antigas mantida.
-* Arranxadas varias incidencias en relación co braille.
+* arranxadas varias incidencias en relación co braille.
 
 ### Versión 1.2.0 (desenvolvemento)
 

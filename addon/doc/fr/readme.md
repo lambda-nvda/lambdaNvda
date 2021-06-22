@@ -115,7 +115,8 @@ Chaque fois qu'on lance l'éditeur Lambda, cette extension vérifie si un
 profil nommé "lambda" existe. Si ce n'est pas le cas, elle génère
 automatiquement un profil de la forme suivante :
 
-``` nom de fichier : userData\profiles\lambda.ini :
+```
+filename : userData\profiles\lambda.ini :
 
 [braille]
 	readByParagraph = False
@@ -187,6 +188,13 @@ extension. À côté du numéro de version, entre parenthèses, se trouve le
 statut du développement. La version en cours de développement n'est pas
 incluse car elle peut subir des modifications jusqu'à ce qu'elle soit
 marquée comme stable ou rejetée en tant que candidate.
+
+### Version 1.3.0 (stable)
+
+* Support for newer version of NVDA (Support for Python 3)
+* Solved an issue while pressing duplicate line command NVDA+d in a blank
+  line caused clipboard content to be pasted. Now when you press NVDA+d and
+  you are in a blank line, a new blank line appears as expected.
 
 ### Version 1.2.2 (stable)
 

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lambda 1.1.8\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2017-06-20 06:07+1000\n"
 "PO-Revision-Date: 2017-06-22 00:06+0100\n"
 "Last-Translator: Nikola Jovic <wwenikola123@gmail.com>\n"
