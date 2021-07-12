@@ -4,8 +4,8 @@ This is not the source for the readme file of NVDA Addon. This is just for the G
 
 # Lambda Add-On for NVDA
 
-* [Download latest stable release](https://github.com/nvdaaddons/lambda/releases/download/latest/lambda.nvda-addon)
-* [Download latest development release](https://github.com/nvdaaddons/lambda/releases/download/dev/lambda-dev.nvda-addon)
+* [Download latest stable release](https://github.com/lambda-nvda/lambdaNvda/releases/download/latest/lambda.nvda-addon)
+* [Download latest development release](https://github.com/lambda-nvda/lambdaNvda/releases/download/dev/lambda-dev.nvda-addon)
 
 Se sei un utente italiano vista [questa pagina](https://github.com/nvdaaddons/lambda/wiki/Benvenuto)
 
