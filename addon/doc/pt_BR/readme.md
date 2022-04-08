@@ -93,7 +93,7 @@ complemento não o substituirá e você deverá ajustar manualmente seu perfil
 de configuração.
 
 Para evitar essa situação, se você tiver configurações específicas que
-gostaria de preservar, use o "Reverter o Assistente de Perfil LAMBDA". O
+gostaria de preservar, use o "Assistente para Reverter Perfil LAMBDA". O
 atalho para iniciar esta ferramenta é NVDA+alt+r (quando focalizado no
 LAMBDA).
 
@@ -116,12 +116,12 @@ um perfil com o nome "lambda". Caso contrário, ele gera automaticamente um
 perfil com o seguinte formato:
 
 ```
-filename : userData\profiles\lambda.ini :
+nome do arquivo : dadosDoUsuário\profiles\lambda.ini :
 
 [braille]
 	readByParagraph = False
 	tetherTo = focus
-	translationTable = path-to-the-addon-brailleTable-dir\tableName
+	translationTable = caminho-para-o-diretório-de-tabelasBraille-do-complemento\nomeDaTabela
 
 [lambda]
 	brailleFlatMode = True
@@ -131,7 +131,7 @@ filename : userData\profiles\lambda.ini :
 Onde :
 
 * caminho-para-diretório-da-tabelaBraille-do-complemento : é o caminho
-  absoluto do diretório do complemento + "\tabelaBraille"
+  absoluto do diretório do complemento + "	abelasBraille"
 * nomeDaTabela : depende do idioma ativo do NVDA. Atualmente, apenas as
   tabelas braille italiana e espanhola "lambda-ita.utb" e "lambda-esp.utb",
   respectivamente, estão presentes.
@@ -139,7 +139,7 @@ Onde :
 ## Atalhos de teclado do complemento:
 
 * **NVDA+Shift+f**: Ativa ou desativa o modo plano em braille;
-* **NVDA+alt+r**: Abra o "Reverter o Assistente de Perfil LAMBDA";
+* **NVDA+alt+r**: Abra o "Assistente para Reverter Perfil LAMBDA";
 * **NVDA+d: Linhas duplicadas (use isso em vez de control+d).
 
 ## Problemas conhecidos:
@@ -224,7 +224,7 @@ estabilidade e minimizar as mudanças durante o ano acadêmico.
 Essa versão não foi publicada como estável porque a versão 1.2.1 incluiu
 correções principais.
 
-* Novos locais (idiomas). Localizações (traduções) atualizadas.
+* Novas localidades (idiomas). Localizações (traduções) atualizadas.
 
 ### Versão 1.1.8 (estável)
 

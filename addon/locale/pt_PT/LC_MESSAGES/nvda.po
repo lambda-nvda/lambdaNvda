@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: lambda 1.1.8\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2017-06-20 06:07+1000\n"
-"PO-Revision-Date: 2020-03-16 12:01+0000\n"
-"Last-Translator: Ângelo Miguel Abrantes <ampa4374@gmail.com>\n"
+"PO-Revision-Date: 2021-11-18 23:16+0000\n"
+"Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; rui.fontes@tiflotecnia.com>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 3.0\n"
 
 #. Translators: Message presented in input help mode.
 msgid "Shows a dialog to revert lambda profile options to the default."
@@ -40,7 +40,7 @@ msgstr "Duplica a linha actual e move o cursor para a nova linha."
 
 #. Translators: This determines whether to use API or DisplayMode to render the editor window on a braille display. It is a toggle (on/off)
 msgid "flat mode "
-msgstr "modo extenso"
+msgstr "modo extenso "
 
 #. This script set the desired textInfo for braille, when flat mode is on, the LambdaEditorFlatTextInfo is used, otherwise the LambdaEditorTextInfo is set.
 msgid "Toggle the braille flat mode on or off."
@@ -70,7 +70,7 @@ msgstr "Escolha quais as opções que deseja redefinir para o valor padrão para
 #. Quick Profile Wizard dialog.
 #, python-format
 msgid "Keep the LAMBDA braille table for the current language (%s)"
-msgstr "Mantenha a tabela braille LAMBDA para o idioma actual (% s)"
+msgstr "Mantenha a tabela braille LAMBDA para o idioma actual (%s)"
 
 #. Translators: This is the label for a checkbox in the
 #. Quick Profile Wizard dialog.
@@ -89,7 +89,7 @@ msgstr "Desativar o envolvimento de palavras da linha braille"
 
 #. Translators: title of the message box that appears when the user is installing the addon and an older version prevents the update to be completed.
 msgid "Incompatible version of the addon detected"
-msgstr "Detectada Uma versão incompatível do extra."
+msgstr "Detectada Uma versão incompatível do extra"
 
 #. Translators: text of the message box that appears when the user is installing the addon and an older version prevents the update to be completed.
 msgid ""
@@ -103,7 +103,7 @@ msgstr ""
 
 #. Translators: title of the message box that appears when user is installing the addon in NVDA and a "lambda" profile is already present.
 msgid "lambda profile already exists"
-msgstr "O perfil lambda já existe"
+msgstr "o perfil lambda já existe"
 
 #. Translators: text of the message box that appears when user is installing the addon in NVDA and a "lambda" profile is already present.
 msgid ""
