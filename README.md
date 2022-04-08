@@ -110,6 +110,11 @@ You can subscribe from the website: <https://groups.io/g/lambda-nvda>.
 
 Below is a list of changes between the different add-on versions. Next to the version number, between parentheses, is the development status. The current development release isn't included as it could have changes until it is flagged as stable or discarded as candidate.
 
+### Version 1.3.2 (stable)
+
+* Updated compatibility flags to reflect support for NVDA 2022.1.
+* New languages. Updated translations.
+
 ### Version 1.3.1 (stable)
 
 * Updated compatibility flags to reflect support for NVDA 2021.1.
