@@ -55,7 +55,7 @@ class AppModule(appModuleHandler.AppModule):
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if (obj.windowClassName == u'TJvEditor') : #Main editor windows
 			clsList.insert(0, LambdaMainEditor)
-		if  (obj.windowClassName == u'TEdit') and (obj.role == controlTypes.ROLE_EDITABLETEXT) :
+		if  (obj.windowClassName == u'TEdit') and (obj.role == controlTypes.Role.EDITABLETEXT) :
 			#Dialogs with enhanced spoken math text
 			try :
 				dialogW = obj.parent.parent
