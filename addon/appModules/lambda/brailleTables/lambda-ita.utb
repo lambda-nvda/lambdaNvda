@@ -668,5 +668,5 @@ letter	\xFB4A	1256	#HEBREW LETTER TAV WITH DAGESH
 
 #---- Special Signs
 sign \xFEFF 0   #Zero width no-break Space
-include braille-patterns.cti
+#include braille-patterns.cti
 
