@@ -112,6 +112,11 @@ Below is a list of changes between the different add-on versions. Next to the ve
 
 ### Version 1.3.1 (stable)
 
+* Updated compatibility flags to reflect support for NVDA 2022.1.
+* New languages. Updated translations.
+
+### Version 1.3.1 (stable)
+
 * Updated compatibility flags to reflect support for NVDA 2021.1.
 * New languages. Updated translations.
 
