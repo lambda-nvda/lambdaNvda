@@ -19,7 +19,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("This addon provides access to the Lambda math editor with both braille and speech support."),
 	# version
-	"addon_version" : "1.4.0",
+	"addon_version" : "1.4.1",
 	# Author(s)
 	"addon_author" : "Alberto Zanella, Ivan Novegil",
 	# URL for the add-on documentation support
